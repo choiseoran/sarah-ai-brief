@@ -1,0 +1,336 @@
+{
+  "_comment": "테스트 픽스처입니다. 실제 보도된 기사가 아니며 기사 원문을 담지 않습니다.",
+  "date": "2026-09-01",
+  "generatedAt": "2026-08-31T08:00:00.000Z",
+  "anchor": "2026-08-31T23:00:00.000Z",
+  "windowStart": "2026-08-30T23:00:00.000Z",
+  "funnel": {
+    "collected": 1670,
+    "window24h": 60,
+    "excluded": 44,
+    "deduped": 15,
+    "fetchFailed": 0,
+    "scored": 15,
+    "published": 10
+  },
+  "excludedBy": {
+    "not-ai": 40,
+    "promo": 3,
+    "community-self": 1
+  },
+  "extraction": [
+    {
+      "source": "OpenAI Blog",
+      "tried": 2,
+      "ok": 2,
+      "via": {
+        "jsonld": 2,
+        "article": 0,
+        "density": 0
+      },
+      "failed": {}
+    },
+    {
+      "source": "TechCrunch",
+      "tried": 3,
+      "ok": 3,
+      "via": {
+        "jsonld": 3,
+        "article": 0,
+        "density": 0
+      },
+      "failed": {}
+    }
+  ],
+  "feedStatus": [],
+  "shortfall": null,
+  "primaryGuarantee": {
+    "required": 2,
+    "achieved": 2,
+    "availableInPool": 2,
+    "swaps": []
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "url": "https://example.com/fixture/1",
+      "canonicalUrl": "https://example.com/fixture/1",
+      "sourceTitle": "픽스처 기사 1 — 실제 보도가 아닙니다",
+      "source": "OpenAI Blog",
+      "sourceType": "primary",
+      "publishedAt": "2026-08-31T21:48:00.000Z",
+      "score": 99,
+      "scoreParts": {
+        "weight": 1,
+        "cross": 1,
+        "fresh": 0.95
+      },
+      "crossRefs": [
+        {
+          "source": "Reuters",
+          "url": "https://example.com/cross/1-0"
+        },
+        {
+          "source": "Bloomberg",
+          "url": "https://example.com/cross/1-1"
+        },
+        {
+          "source": "Financial Times",
+          "url": "https://example.com/cross/1-2"
+        },
+        {
+          "source": "Nikkei",
+          "url": "https://example.com/cross/1-3"
+        }
+      ],
+      "clusterSize": 5,
+      "clusterWhy": "shared-entities: openai, gpt",
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 2,
+      "url": "https://example.com/fixture/2",
+      "canonicalUrl": "https://example.com/fixture/2",
+      "sourceTitle": "픽스처 기사 2 — 실제 보도가 아닙니다",
+      "source": "Ars Technica",
+      "sourceType": "tech",
+      "publishedAt": "2026-08-31T20:36:00.000Z",
+      "score": 83,
+      "scoreParts": {
+        "weight": 0.85,
+        "cross": 0.75,
+        "fresh": 0.9
+      },
+      "crossRefs": [
+        {
+          "source": "Reuters",
+          "url": "https://example.com/cross/2-0"
+        },
+        {
+          "source": "Bloomberg",
+          "url": "https://example.com/cross/2-1"
+        },
+        {
+          "source": "Financial Times",
+          "url": "https://example.com/cross/2-2"
+        }
+      ],
+      "clusterSize": 4,
+      "clusterWhy": "shared-entities: openai, gpt",
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 3,
+      "url": "https://example.com/fixture/3",
+      "canonicalUrl": "https://example.com/fixture/3",
+      "sourceTitle": "픽스처 기사 3 — 실제 보도가 아닙니다",
+      "source": "TechCrunch",
+      "sourceType": "industry",
+      "publishedAt": "2026-08-31T19:24:00.000Z",
+      "score": 80,
+      "scoreParts": {
+        "weight": 0.8,
+        "cross": 0.75,
+        "fresh": 0.85
+      },
+      "crossRefs": [
+        {
+          "source": "Reuters",
+          "url": "https://example.com/cross/3-0"
+        },
+        {
+          "source": "Bloomberg",
+          "url": "https://example.com/cross/3-1"
+        },
+        {
+          "source": "Financial Times",
+          "url": "https://example.com/cross/3-2"
+        }
+      ],
+      "clusterSize": 4,
+      "clusterWhy": "shared-entities: openai, gpt",
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 4,
+      "url": "https://example.com/fixture/4",
+      "canonicalUrl": "https://example.com/fixture/4",
+      "sourceTitle": "픽스처 기사 4 — 실제 보도가 아닙니다",
+      "source": "The Verge",
+      "sourceType": "industry",
+      "publishedAt": "2026-08-31T18:12:00.000Z",
+      "score": 70,
+      "scoreParts": {
+        "weight": 0.8,
+        "cross": 0.5,
+        "fresh": 0.8
+      },
+      "crossRefs": [
+        {
+          "source": "Reuters",
+          "url": "https://example.com/cross/4-0"
+        },
+        {
+          "source": "Bloomberg",
+          "url": "https://example.com/cross/4-1"
+        }
+      ],
+      "clusterSize": 3,
+      "clusterWhy": "shared-entities: openai, gpt",
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 5,
+      "url": "https://example.com/fixture/5",
+      "canonicalUrl": "https://example.com/fixture/5",
+      "sourceTitle": "픽스처 기사 5 — 실제 보도가 아닙니다",
+      "source": "TechCrunch",
+      "sourceType": "industry",
+      "publishedAt": "2026-08-31T17:00:00.000Z",
+      "score": 68,
+      "scoreParts": {
+        "weight": 0.8,
+        "cross": 0.5,
+        "fresh": 0.75
+      },
+      "crossRefs": [
+        {
+          "source": "Reuters",
+          "url": "https://example.com/cross/5-0"
+        },
+        {
+          "source": "Bloomberg",
+          "url": "https://example.com/cross/5-1"
+        }
+      ],
+      "clusterSize": 3,
+      "clusterWhy": "shared-entities: openai, gpt",
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 6,
+      "url": "https://example.com/fixture/6",
+      "canonicalUrl": "https://example.com/fixture/6",
+      "sourceTitle": "픽스처 기사 6 — 실제 보도가 아닙니다",
+      "source": "OpenAI Blog",
+      "sourceType": "primary",
+      "publishedAt": "2026-08-31T15:48:00.000Z",
+      "score": 66,
+      "scoreParts": {
+        "weight": 1,
+        "cross": 0.25,
+        "fresh": 0.7
+      },
+      "crossRefs": [
+        {
+          "source": "Reuters",
+          "url": "https://example.com/cross/6-0"
+        }
+      ],
+      "clusterSize": 2,
+      "clusterWhy": "shared-entities: openai, gpt",
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 7,
+      "url": "https://example.com/fixture/7",
+      "canonicalUrl": "https://example.com/fixture/7",
+      "sourceTitle": "픽스처 기사 7 — 실제 보도가 아닙니다",
+      "source": "The Verge",
+      "sourceType": "industry",
+      "publishedAt": "2026-08-31T15:48:00.000Z",
+      "score": 58,
+      "scoreParts": {
+        "weight": 0.8,
+        "cross": 0.25,
+        "fresh": 0.7
+      },
+      "crossRefs": [
+        {
+          "source": "Reuters",
+          "url": "https://example.com/cross/7-0"
+        }
+      ],
+      "clusterSize": 2,
+      "clusterWhy": "shared-entities: openai, gpt",
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 8,
+      "url": "https://example.com/fixture/8",
+      "canonicalUrl": "https://example.com/fixture/8",
+      "sourceTitle": "픽스처 기사 8 — 실제 보도가 아닙니다",
+      "source": "Ars Technica",
+      "sourceType": "tech",
+      "publishedAt": "2026-08-31T14:36:00.000Z",
+      "score": 50,
+      "scoreParts": {
+        "weight": 0.85,
+        "cross": 0,
+        "fresh": 0.65
+      },
+      "crossRefs": [],
+      "clusterSize": 1,
+      "clusterWhy": null,
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 9,
+      "url": "https://example.com/fixture/9",
+      "canonicalUrl": "https://example.com/fixture/9",
+      "sourceTitle": "픽스처 기사 9 — 실제 보도가 아닙니다",
+      "source": "TechCrunch",
+      "sourceType": "industry",
+      "publishedAt": "2026-08-31T13:24:00.000Z",
+      "score": 47,
+      "scoreParts": {
+        "weight": 0.8,
+        "cross": 0,
+        "fresh": 0.6
+      },
+      "crossRefs": [],
+      "clusterSize": 1,
+      "clusterWhy": null,
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    },
+    {
+      "rank": 10,
+      "url": "https://example.com/fixture/10",
+      "canonicalUrl": "https://example.com/fixture/10",
+      "sourceTitle": "픽스처 기사 10 — 실제 보도가 아닙니다",
+      "source": "The Verge",
+      "sourceType": "industry",
+      "publishedAt": "2026-08-31T12:12:00.000Z",
+      "score": 46,
+      "scoreParts": {
+        "weight": 0.8,
+        "cross": 0,
+        "fresh": 0.55
+      },
+      "crossRefs": [],
+      "clusterSize": 1,
+      "clusterWhy": null,
+      "text": "이 문단은 테스트 픽스처의 자리표시 텍스트입니다. 실제 기사 본문이 아니며 어떤 매체의 저작물도 담고 있지 않습니다. 원문 확보 판정 기준인 300자를 넘기기 위한 길이만 갖습니다. 수집 파이프라인은 이 자리에 실제 기사 본문을 넣지만, 그 산출물은 runs/ 아래에만 두고 저장소에 커밋하지 않습니다. 저작권은 각 언론사에 있고 이 사이트는 자체 요약과 시사점만 싣습니다. 테스트는 본문의 내용이 아니라 길이와 존재 여부만 검사하므로 이 문장으로 충분합니다. 원문 확보에 실패한 기사는 후보에서 빠지고 그만큼 그날 브리핑이 짧아집니다. RSS 요약만 보고 요약을 쓰는 일은 하지 않기로 했으므로, 실패는 숨기지 않고 건수 감소로 드러냅니다. 그것이 원칙 P3 이 말하는 바입니다.",
+      "textChars": 381,
+      "extractedVia": "jsonld"
+    }
+  ]
+}

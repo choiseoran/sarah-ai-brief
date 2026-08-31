@@ -1,0 +1,10 @@
+# 수집 산출물. 기사 본문 전문이 들어 있으므로 저장소에 올리지 않는다 (SPEC 11 저작권).
+# 퍼널 숫자만 필요하면 runs/<date>/funnel.json 을 따로 복사해 커밋한다.
+runs/
+
+node_modules/
+.DS_Store
+*.log
+
+# API 키. 절대 커밋하지 않는다.
+.env

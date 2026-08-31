@@ -1,0 +1,22 @@
+{
+  "name": "sarahs-ai-brief",
+  "private": true,
+  "version": "0.2.0",
+  "description": "매일 오전 8시(KST) AI 뉴스 10건을 한국어와 영어로. 사이트는 순수 정적, 수집기는 의존성 0개.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "healthcheck": "node scripts/healthcheck.mjs",
+    "test": "node scripts/test/run.mjs",
+    "collect": "node scripts/collect.mjs",
+    "collect:dry": "node scripts/collect.mjs --dry-run",
+    "summarize": "node scripts/summarize.mjs",
+    "brief": "node scripts/collect.mjs && node scripts/summarize.mjs",
+    "serve": "python -m http.server 8000"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.122.0"
+  }
+}

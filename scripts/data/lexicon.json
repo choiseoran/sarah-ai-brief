@@ -1,0 +1,88 @@
+{
+  "_comment": [
+    "3단계 제외 필터와 4단계 토큰화가 쓰는 어휘.",
+    "",
+    "aiKeywords 를 strong/weak 으로 나눈 이유 —",
+    "  본문이나 요약 어디든 'AI'가 한 번 스치면 통과시키면 필터가 아무것도 걸러내지 못한다.",
+    "  실측에서 전기설비 수주 기사('AI 데이터센터 수요' 언급), 게임 업데이트 기사",
+    "  ('에이전트'가 캐릭터 이름), 항공우주 M&A 기사가 모두 통과했다.",
+    "  strong 은 그 말이 나오면 AI 기사인 것들, weak 은 AI 기사일 수도 아닐 수도 있는 것들이다.",
+    "",
+    "promo 는 제목에만 적용한다. 요약문에 '개최·협약'이 스치는 것만으로 걸면",
+    "  실측에서 휴머노이드 생태계 기사와 헬스케어 AI 도입 기사가 함께 죽었다.",
+    "  보도자료인지 아닌지는 표제가 말한다."
+  ],
+
+  "aiKeywords": {
+    "strong": {
+      "en": [
+        "ai", "a.i.", "artificial intelligence", "machine learning", "deep learning",
+        "neural network", "llm", "large language model", "generative ai", "genai",
+        "transformer model", "chatbot", "chatgpt", "gpt", "claude", "gemini", "llama",
+        "copilot", "openai", "anthropic", "deepmind", "mistral", "hugging face",
+        "foundation model", "multimodal", "agi", "superintelligence", "agentic",
+        "ai agent", "fine-tuning", "fine tuning", "open-weight", "open weights",
+        "deepfake", "hallucination", "red team", "red-teaming", "diffusion model"
+      ],
+      "ko": [
+        "인공지능", "에이아이", "머신러닝", "기계학습", "딥러닝", "심층학습", "신경망",
+        "챗봇", "챗gpt", "지피티", "생성형", "초거대", "거대언어모델", "언어모델",
+        "파운데이션 모델", "멀티모달", "초지능", "딥페이크", "파인튜닝", "미세조정",
+        "오픈웨이트", "환각현상", "레드팀", "ai반도체", "ai 반도체", "ai에이전트",
+        "ai 에이전트", "온디바이스 ai", "온디바이스ai", "생성 ai", "ai모델", "ai 모델",
+        "ai전환", "ai 전환"
+      ]
+    },
+    "weak": {
+      "en": [
+        "semiconductor", "gpu", "npu", "tpu", "hbm", "data center", "datacenter",
+        "robot", "robotics", "humanoid", "autonomous driving", "self-driving",
+        "algorithm", "agent", "inference", "alignment", "training data", "compute",
+        "nvidia", "ax"
+      ],
+      "ko": [
+        "반도체", "데이터센터", "로봇", "로보틱스", "휴머노이드", "자율주행",
+        "알고리즘", "에이전트", "추론", "정렬", "학습데이터", "학습 데이터",
+        "가속기", "엔비디아", "온디바이스", "디지털 전환"
+      ]
+    }
+  },
+
+  "promo": {
+    "en": [
+      "sponsored", "advertorial", "press release", "webinar", "best deals",
+      "deal alert", "% off", "save $", "coupon", "giveaway", "buying guide",
+      "we're hiring", "job opening"
+    ],
+    "ko": [
+      "채용", "모집", "공모전", "설명회", "세미나", "간담회", "워크숍",
+      "수상", "시상", "인사말", "부고", "신간", "기고", "칼럼", "부고",
+      "기념식", "출범식", "위촉", "임명", "정기인사"
+    ]
+  },
+
+  "communitySelf": ["show hn:", "ask hn:", "launch hn:", "tell hn:"],
+
+  "stopwords": {
+    "en": [
+      "the", "a", "an", "and", "or", "but", "of", "to", "in", "on", "for", "with",
+      "at", "by", "from", "as", "is", "are", "was", "were", "be", "been", "being",
+      "it", "its", "this", "that", "these", "those", "he", "she", "they", "we",
+      "you", "i", "his", "her", "their", "our", "your", "my", "has", "have", "had",
+      "will", "would", "can", "could", "should", "may", "might", "must", "not",
+      "no", "new", "now", "up", "down", "out", "off", "over", "under", "more",
+      "most", "some", "any", "all", "how", "what", "when", "where", "why", "who",
+      "which", "than", "then", "into", "about", "after", "before", "says", "say",
+      "said", "report", "reports", "first", "just", "get", "gets", "make",
+      "makes", "one", "two", "three", "s", "t", "re", "ve", "ll", "don", "vs"
+    ],
+    "ko": [
+      "그", "이", "저", "것", "수", "등", "및", "또", "또한", "하지만", "그러나",
+      "위해", "통해", "대한", "대해", "관련", "따르면", "밝혔다", "말했다", "전했다",
+      "했다", "한다", "된다", "됐다", "있다", "없다", "이다", "라며", "면서",
+      "지난", "올해", "내년", "작년", "오늘", "내일", "어제", "최근", "향후",
+      "가장", "더욱", "매우", "함께", "모두", "각각", "다시", "역시", "특히",
+      "기자", "뉴스", "기사", "사진", "영상", "단독", "속보", "종합", "인터뷰"
+    ]
+  }
+}

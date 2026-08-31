@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sarah's AI Brief — RSS 피드 (샘플)
+  전문 대신 '오늘의 인사이트'와 기사 제목만 담는다. — SPEC 4절
+  Phase 2 이후 수집 스크립트가 data/briefs.js 와 함께 이 파일을 생성한다.
+  배포 전 <link> 의 도메인을 실제 주소로 바꿀 것.
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sarah's AI Brief</title>
+    <link>https://insightai.art/</link>
+    <atom:link href="https://insightai.art/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>매일 오전 8시, 국내외 AI 기사 10건을 한국어와 영어로 요약하고 각 뉴스의 시사점과 하루를 관통하는 흐름을 전합니다.</description>
+    <language>ko</language>
+    <lastBuildDate>Mon, 31 Aug 2026 08:00:00 +0900</lastBuildDate>
+    <ttl>720</ttl>
+
+    <item>
+      <title>2026-08-31 · 규제는 미뤄지고, 청구서는 앞당겨진다</title>
+      <link>https://insightai.art/brief.html?d=2026-08-31</link>
+      <guid isPermaLink="true">https://insightai.art/brief.html?d=2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 08:00:00 +0900</pubDate>
+      <description><![CDATA[
+        <p>EU가 AI법 고위험 조항의 시행을 6개월 미루기로 한 날, 미국의 한 주에서는 데이터센터 전력 수요가 가정용 전기요금 인상 근거로 인용됐다. 규제의 시계는 늦춰졌지만 물리적 비용의 시계는 그렇지 않다.</p>
+        <ol>
+          <li>Anthropic, 장시간 도는 에이전트의 컨텍스트 관리 방식 공개</li>
+          <li>OpenAI, 기업용 에이전트에 권한 분리와 감사 로그 도입</li>
+          <li>EU, AI법 고위험 조항 시행 6개월 유예 합의</li>
+          <li>추론 전용 칩 스타트업, 20억 달러 유치</li>
+          <li>딥마인드, 단백질 설계 모델 후속 버전의 실험 검증률 공개</li>
+          <li>데이터센터 전력 수요, 가정용 전기요금 인상 근거로 인용</li>
+          <li>통신 3사, 소버린 AI 클라우드 공동 구축</li>
+          <li>AI 코딩 도구 도입 1년, 팀별 생산성 편차가 컸다</li>
+          <li>개인정보위, 생성형 AI 학습 데이터 가이드라인 초안 공개</li>
+          <li>소비자용 GPU에서 장문 컨텍스트를 처리하는 오픈소스 추론 엔진</li>
+        </ol>
+      ]]></description>
+    </item>
+
+    <item>
+      <title>2026-08-30 · 주간 회고: 능력에서 운영으로</title>
+      <link>https://insightai.art/brief.html?d=2026-08-30</link>
+      <guid isPermaLink="true">https://insightai.art/brief.html?d=2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 08:00:00 +0900</pubDate>
+      <description><![CDATA[
+        <p>8월 24일부터 29일까지 여섯 번의 브리핑에 56건이 실렸다. 주 초반에는 새 모델과 벤치마크 기사가 많았지만, 후반으로 갈수록 권한·감사·전력·조달처럼 "돌리는 일"에 관한 기사가 상위를 차지했다.</p>
+        <ol>
+          <li>규제의 시계가 느려졌다</li>
+          <li>병목은 모델이 아니라 전력이다</li>
+          <li>에이전트가 운영 문제가 됐다</li>
+          <li>평가가 흔들린다</li>
+        </ol>
+      ]]></description>
+    </item>
+
+    <item>
+      <title>2026-08-29 · 공개하는 쪽과 잠그는 쪽이 같은 날 움직였다</title>
+      <link>https://insightai.art/brief.html?d=2026-08-29</link>
+      <guid isPermaLink="true">https://insightai.art/brief.html?d=2026-08-29</guid>
+      <pubDate>Sat, 29 Aug 2026 08:00:00 +0900</pubDate>
+      <description><![CDATA[
+        <p>오늘은 8건입니다. 후보 3건의 원문 본문을 끝내 확보하지 못했고, 예비 후보로도 채우지 못했습니다.</p>
+        <ol>
+          <li>OpenAI, 음성 인터페이스 응답 지연 대폭 단축</li>
+          <li>Meta, 공개 가중치 모델 라이선스 상업 조건 완화</li>
+          <li>금융권 AI 도입 조사: 도입률은 높고 운영 전환율은 낮다</li>
+          <li>실제 서비스에서 프롬프트 인젝션이 성공한 사례 분석</li>
+          <li>창고 로봇 스타트업, 물류 대기업에 인수</li>
+          <li>국내 연구진, 한국어 평가 데이터셋 공개</li>
+          <li>학습 데이터 라이선싱 시장이 형성되고 있다</li>
+          <li>벡터 검색 라이브러리, 메모리 사용량 절반으로</li>
+        </ol>
+      ]]></description>
+    </item>
+
+    <item>
+      <title>2026-08-28 · 증명하는 쪽으로 무게가 옮겨갔다</title>
+      <link>https://insightai.art/brief.html?d=2026-08-28</link>
+      <guid isPermaLink="true">https://insightai.art/brief.html?d=2026-08-28</guid>
+      <pubDate>Fri, 28 Aug 2026 08:00:00 +0900</pubDate>
+      <description><![CDATA[
+        <p>오늘 상위 두 건은 성능 발표가 아니라 검증에 관한 것이다. 딥마인드는 수학 증명을 형식 검증기로 확인한 결과를 냈고, Anthropic은 모델 자율성 평가 프레임워크를 공개했다.</p>
+        <ol>
+          <li>딥마인드, 형식 검증기로 확인한 수학 증명 결과 공개</li>
+          <li>Anthropic, 모델 자율성 평가 프레임워크 공개</li>
+          <li>브라우저에 에이전트 기능 기본 탑재</li>
+          <li>의료 문서 자동화 스타트업, 시리즈B 3억 달러</li>
+          <li>액침 냉각 도입 데이터센터, PUE 개선치 공개</li>
+          <li>검색 증강 생성 도입 실패 사례 분석</li>
+          <li>AI 기본법 시행령 입법예고</li>
+          <li>국내 반도체사, 고대역폭 메모리 장기 공급 계약</li>
+          <li>대학 과제 평가 방식 변경 확산</li>
+          <li>단일 GPU 미세조정 도구, 커뮤니티 상위 진입</li>
+        </ol>
+      ]]></description>
+    </item>
+  </channel>
+</rss>

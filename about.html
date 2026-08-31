@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>소개 — Sarah's AI Brief</title>
+<meta name="description" content="무엇을 하는 곳인가, 기사를 고르는 방법, 요약과 해석을 나누는 이유, 독립성과 공유 정책.">
+<meta name="color-scheme" content="light dark">
+<link rel="alternate" type="application/rss+xml" title="Sarah's AI Brief" href="feed.xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  try {
+    var th = localStorage.getItem('sab.theme');
+    if (th === 'dark' || th === 'light') document.documentElement.setAttribute('data-theme', th);
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip-link" id="skip-link" href="#page">본문으로 건너뛰기</a>
+
+<header class="site-header" id="site-header"></header>
+<div class="demo-banner" id="demo-banner"></div>
+
+<main>
+  <div class="wrap" id="page">
+    <div id="about-head"></div>
+
+    <!-- 한국어 -->
+    <div class="prose" data-lang="ko" hidden>
+      <section>
+        <h2>무엇을 하는 곳인가</h2>
+        <p>Sarah's AI Brief는 매일 오전 8시(KST)에 그날의 AI 뉴스 10건을 골라 한국어와 영어로 각각 요약하고, 기사마다 “이 기사가 시사하는 점”을 덧붙입니다. 기사 목록 위에는 10건을 가로질러 읽은 ‘오늘의 인사이트’가 실립니다.</p>
+        <p>무료입니다. 유료 등급도, 광고도 없습니다.</p>
+      </section>
+
+      <section>
+        <h2>기사를 고르는 방법</h2>
+        <p>업계 매체, AI 연구소의 공식 발표, 기술 전문 매체, 국내 매체, 커뮤니티까지 12개 RSS 피드에서 최근 24시간에 발행된 기사를 모읍니다. 여기서 출처 가중치·여러 매체의 교차 보도 여부·신선도를 합산한 점수로 순위를 매기고, 한 출처가 최대 3건을 넘지 않도록 제한해 10건을 뽑습니다.</p>
+        <p>공식 발표(1차 출처)에는 최소 2자리를 보장합니다. 같은 사건을 다룬 기사는 하나만 남기고 나머지는 그 기사에 ‘같은 사건 다른 매체’로 함께 표시합니다. 이미 지난 브리핑에 나간 링크는 다시 뽑지 않습니다.</p>
+        <p>출처 가중치는 특정 매체를 우대하기 위한 것이 아니라, 발행량이 많은 매체가 순위를 독점하는 것을 막기 위한 장치입니다.</p>
+      </section>
+
+      <section>
+        <h2>고른 결과를 공개합니다</h2>
+        <p>선정 기준을 적어두는 것만으로는 그 기준이 실제로 어떻게 작동했는지 알 수 없습니다. 그래서 <a href="data.html">데이터 페이지</a>에 피드에서 읽어들인 기사 수부터 실린 10건까지의 경로와, 매체별 분포, 주제 분포, 용어 누적을 공개합니다.</p>
+        <p>이 숫자는 AI 업계 전체의 보도량이 아니라 이 사이트가 무엇을 골랐는지에 대한 기록입니다. 특정 매체가 적게 실렸다는 것이 그 매체의 품질을 뜻하지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>요약과 해석을 나누는 이유</h2>
+        <p>각 기사는 ‘요약’과 ‘이 기사가 시사하는 점’ 두 블록으로 나뉩니다. 요약은 원문에서 확인되는 사실만 담고, 시사점은 그 사실에 대한 판단입니다. 읽는 사람이 무엇이 보도된 내용이고 무엇이 이 사이트의 해석인지 구분할 수 있어야 한다고 보기 때문입니다.</p>
+        <p>모든 기사에는 원문 링크가 붙어 있어 직접 확인할 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>품질 관리와 한계</h2>
+        <p>원문을 끝내 읽지 못한 기사는 싣지 않습니다. 예비 후보로 교체하고, 그래도 안 되면 그날은 10건을 채우지 않고 더 적게 냅니다. RSS 요약만 보고 쓰는 것은 이 사이트가 하지 않기로 한 일이라, 자리를 채우려고 그렇게 하지는 않습니다. 10건에 못 미친 날은 그 사유를 브리핑 맨 위에 적습니다.</p>
+        <p>제품 홍보성 글과 커뮤니티 자기소개 글(Show HN 등)은 수집 단계에서 제외합니다.</p>
+        <p>오류를 발견하시면 알려주세요. 확인 후 해당 날짜 페이지를 수정합니다.</p>
+      </section>
+
+      <section>
+        <h2>발행과 보관</h2>
+        <p>매일 오전 8시(KST)에 발행합니다. 지난 브리핑은 날짜별 고유 주소로 영구 보관되며 삭제하지 않습니다. 일요일에는 그 주를 관통한 흐름을 다시 종합한 주간 회고를 냅니다.</p>
+        <p>브리핑에 등장한 어려운 용어는 <a href="glossary.html">용어사전</a>에 쌓이고, 기사는 12개 <a href="topics.html">주제</a>로 분류돼 주제별로도 모아 볼 수 있습니다. RSS로도 구독할 수 있습니다. 영어판 페이지에서 구독하면 확인 메일과 브리핑이 영어로 갑니다.</p>
+      </section>
+
+      <section>
+        <h2>독립성</h2>
+        <p>어떤 매체나 기업으로부터도 대가를 받지 않습니다. 광고, 협찬 기사, 제휴 링크가 없습니다. 특정 매체를 고정적으로 우대하지 않습니다.</p>
+        <p>이메일 주소는 브리핑 발송에만 쓰고 제3자에게 제공하거나 판매하지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>공유와 인용</h2>
+        <p>사내 슬랙이나 팀 채널, 사내 뉴스레터, 회의 자료에 그대로 옮기셔도 됩니다. 따로 알려주실 필요도 없습니다. 매일 아침 각자의 자리에서 그렇게 쓰이라고 만든 브리핑입니다.</p>
+        <p>뉴스레터나 블로그, 영상에서 소재로 쓰시는 것도 괜찮습니다. 출처와 링크만 남겨주세요. 하루치 전체를 그대로 옮겨 다른 곳에서 다시 발행하는 것만 삼가주시면 됩니다.</p>
+        <p>기사 원문의 저작권은 각 언론사에 있습니다. 이 사이트는 자체 요약과 시사점만 싣고 원문 전문은 게재하지 않으므로, 위 내용은 이 사이트가 쓴 글에 한합니다.</p>
+      </section>
+    </div>
+
+    <!-- English -->
+    <div class="prose" data-lang="en" hidden>
+      <section>
+        <h2>What this is</h2>
+        <p>Every morning at 8am KST, Sarah's AI Brief picks ten AI stories, summarizes each in Korean and in English, and adds a short note on what the story suggests. Above the list sits one insight read across all ten.</p>
+        <p>It is free. There is no paid tier and there are no ads.</p>
+      </section>
+
+      <section>
+        <h2>How stories get picked</h2>
+        <p>We collect items published in the last 24 hours from twelve RSS feeds — industry press, official lab announcements, technology publications, Korean outlets, and community feeds. Each candidate is ranked on a score combining source weight, whether independent outlets covered the same event, and freshness. No single source may take more than three of the ten slots.</p>
+        <p>At least two slots are reserved for primary sources. When several outlets cover one event, only one item runs and the rest appear beneath it as “also covered by.” Links that ran in an earlier briefing are never picked again.</p>
+        <p>Source weighting does not favor particular publications. It exists to stop high-volume outlets from crowding out everything else.</p>
+      </section>
+
+      <section>
+        <h2>The selection is published too</h2>
+        <p>Writing down selection criteria tells you nothing about how they actually behaved. So the <a href="data.html">data page</a> publishes the whole path — from the number of items read out of the feeds down to the ten that ran — along with distribution by publication, by topic, and the glossary terms that accumulated.</p>
+        <p>These numbers record what this site selected, not how much the AI industry was covered overall. A publication appearing rarely says nothing about its quality.</p>
+      </section>
+
+      <section>
+        <h2>Why summary and interpretation are separated</h2>
+        <p>Each story is split into two blocks: a summary and a note on what it suggests. The summary carries only what is verifiable in the original. The note is this site's judgment about those facts. A reader should always be able to tell which is which.</p>
+        <p>Every story links to its original so you can check it yourself.</p>
+      </section>
+
+      <section>
+        <h2>Quality and limits</h2>
+        <p>If we cannot retrieve the full text of an article, it does not run. We substitute a backup candidate, and if that fails too, the day publishes with fewer than ten items rather than filling the slot. Writing from an RSS summary alone is something this site has decided not to do. On days that come up short, the reason is stated at the top of the briefing.</p>
+        <p>Promotional posts and community self-introductions (Show HN and similar) are filtered out at collection.</p>
+        <p>If you find an error, tell us. We check it and correct that day's page.</p>
+      </section>
+
+      <section>
+        <h2>Publishing and archiving</h2>
+        <p>Published daily at 8am KST. Past briefings keep permanent addresses of their own and are never deleted. On Sundays a weekly review pulls together what ran through the week.</p>
+        <p>Difficult terms accumulate in the <a href="glossary.html">glossary</a>, and stories are filed under twelve <a href="topics.html">topics</a> you can browse on their own. An RSS feed is available. Subscribe from the English pages and both the confirmation and the briefing arrive in English.</p>
+      </section>
+
+      <section>
+        <h2>Independence</h2>
+        <p>We take no payment from any publication or company. No ads, no sponsored items, no affiliate links, and no standing preference for particular outlets.</p>
+        <p>Email addresses are used only to send the briefing. We never share or sell them.</p>
+      </section>
+
+      <section>
+        <h2>Sharing and citation</h2>
+        <p>Paste it into your team Slack, an internal newsletter, or a meeting deck. No need to ask. That is what this briefing was made for.</p>
+        <p>Using it as material in a newsletter, blog, or video is fine too — just keep the attribution and the link. The one request is not to republish a full day's briefing elsewhere as-is.</p>
+        <p>Copyright in the original articles rests with each publisher. This site carries only its own summaries and commentary and never reproduces full articles, so the permissions above apply to what this site wrote.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="data/meta.js"></script>
+<script src="data/briefs.js"></script>
+<script src="data/glossary.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages.js"></script>
+<script>SAB.page = SAB.pages.about;</script>
+</body>
+</html>

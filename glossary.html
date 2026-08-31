@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>용어사전 — Sarah's AI Brief</title>
+<meta name="description" content="브리핑에 등장한 어려운 용어의 정의와 첫 등장일, 누적 등장 횟수.">
+<meta name="color-scheme" content="light dark">
+<link rel="alternate" type="application/rss+xml" title="Sarah's AI Brief" href="feed.xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  try {
+    var th = localStorage.getItem('sab.theme');
+    if (th === 'dark' || th === 'light') document.documentElement.setAttribute('data-theme', th);
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip-link" id="skip-link" href="#page">본문으로 건너뛰기</a>
+
+<header class="site-header" id="site-header"></header>
+<div class="demo-banner" id="demo-banner"></div>
+
+<main>
+  <div class="wrap" id="page"></div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="data/meta.js"></script>
+<script src="data/briefs.js"></script>
+<script src="data/glossary.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages.js"></script>
+<script>SAB.page = SAB.pages.glossary;</script>
+</body>
+</html>
