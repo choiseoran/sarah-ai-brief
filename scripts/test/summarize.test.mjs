@@ -50,6 +50,26 @@ export function run(t) {
   t('"3.5%" 의 점은 문장 끝이 아니다', sentenceCount('성장률은 3.5% 였다.') === 1,
     '실제 ' + sentenceCount('성장률은 3.5% 였다.'));
 
+  /* 영어 약어를 문장 끝으로 세면 멀쩡한 기사가 규격 위반으로 빠진다.
+     실측에서 이 오판 하나로 기사 3건이 드랍됐다. */
+  t('"Aug. 31" 의 약어 마침표는 세지 않는다',
+    sentenceCount('Korea named the operator on Aug. 31. The plan starts in 2027.') === 2,
+    '실제 ' + sentenceCount('Korea named the operator on Aug. 31. The plan starts in 2027.'));
+  t('"Co." · "Inc." 도 세지 않는다',
+    sentenceCount('Samsung Electronics Co. and SK hynix Inc. supply memory. That is the point.') === 2,
+    '실제 ' + sentenceCount('Samsung Electronics Co. and SK hynix Inc. supply memory. That is the point.'));
+  /* 닫는 따옴표 뒤의 마침표를 못 세면 3문장 문단이 1문장으로 읽힌다 — 실측 드랍 사유 */
+  t('인용부호로 끝나는 문장도 센다',
+    sentenceCount('He called it an "irreplaceable node." The plan follows. It starts in 2027.') === 3,
+    '실제 ' + sentenceCount('He called it an "irreplaceable node." The plan follows. It starts in 2027.'));
+  t('한국어 인용부호도 센다',
+    sentenceCount('그는 “대체 불가능한 국가”라고 말했다. 계획은 2027년 시작한다.') === 2,
+    '실제 ' + sentenceCount('그는 “대체 불가능한 국가”라고 말했다. 계획은 2027년 시작한다.'));
+
+  t('"U.S." 도 세지 않는다',
+    sentenceCount('The U.S. and China shifted policy. Korea followed.') === 2,
+    '실제 ' + sentenceCount('The U.S. and China shifted policy. Korea followed.'));
+
   /* ── 기사 규격 ──────────────────────────────────────────────── */
   t('규격을 지킨 기사는 위반 0건', validateArticle(goodArticle(), CTX).length === 0,
     validateArticle(goodArticle(), CTX).join(' / '));
@@ -206,20 +226,26 @@ export function run(t) {
   t('용어 등장 횟수를 briefs 에서 다시 센다',
     counted[0].count === 2 && counted[0].firstSeen === '2026-09-01',
     'count ' + counted[0].count + ' · firstSeen ' + counted[0].firstSeen);
-  t('한 번도 안 나온 용어는 0이 된다', counted[1].count === 0);
+  /* 용어사전은 "브리핑에 등장한 용어"가 쌓이는 곳이다. 0회는 정의상 여기 있을 것이 아니다 */
+  t('어느 브리핑도 가리키지 않는 용어는 사전에서 빠진다',
+    counted.length === 1 && !counted.some((g) => g.id === 'agent'),
+    counted.map((g) => g.id).join(', '));
 
   const added = addNewTerms(
     [{ id: 'agent' }],
-    [{ id: 'agent', term: {}, definition: {} },
-     { id: 'World Model', term: {}, definition: {} },
-     { id: 'moe-router', term: {}, definition: {} },
-     { id: 'fourth', term: {}, definition: {} }],
+    [{ id: 'agent', term: {}, definition: {}, at: 0 },
+     { id: 'World Model', term: {}, definition: {}, at: 1 },
+     { id: 'moe-router', term: {}, definition: {}, at: 0 },
+     { id: 'fourth', term: {}, definition: {}, at: 1 }],
     '2026-09-01', 2
   );
+  const entry = added.glossary.find((g) => g.id === 'world-model');
   t('이미 있는 id 는 다시 넣지 않는다', added.added.every((x) => x.id !== 'agent'));
   t('신규 용어는 하루 2개까지', added.added.length === 2, added.added.map((x) => x.id).join(', '));
   t('id 는 소문자 하이픈으로 정리된다', added.added[0].id === 'world-model', added.added[0].id);
-  t('신규 용어의 firstSeen 은 그날', added.added[0].firstSeen === '2026-09-01');
+  t('신규 용어의 firstSeen 은 그날', entry && entry.firstSeen === '2026-09-01');
+  /* 제안한 기사에 붙이지 않으면 0회 등장으로 사전에서 다시 빠진다 */
+  t('제안한 기사의 자리를 함께 돌려준다', added.added[0].at === 1, String(added.added[0].at));
 
   /* ── 샘플 제거 ──────────────────────────────────────────────── */
   const withSamples = [brief, { date: SAMPLE_DATES[0], articles: [] }, { date: SAMPLE_DATES[1], articles: [] }];

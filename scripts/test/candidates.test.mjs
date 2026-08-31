@@ -30,10 +30,16 @@ const ROOT = join(HERE, '..', '..');
 
 export const name = '후보 산출물 규칙';
 
-/** 이미 발행된 URL 집합 — P5 의 판정 기준 (별도 저장소 없이 아카이브가 곧 상태다) */
-function publishedUrls() {
+/**
+ * 이미 발행된 URL 집합 — P5 의 판정 기준 (별도 저장소 없이 아카이브가 곧 상태다).
+ *
+ * P5 는 **지난** 브리핑에 대한 규칙이다. 지금 검사하는 날짜의 브리핑이 이미 발행돼 있다면
+ * 그 산출물과 겹치는 것이 당연하다 — 같은 날짜를 다시 만든 것이기 때문이다. 그 날짜는 뺀다.
+ */
+function publishedUrls(exceptDate) {
   const set = new Set();
   for (const b of loadBriefs()) {
+    if (exceptDate && b.date === exceptDate) continue;
     for (const a of b.articles ?? []) {
       const u = canonicalUrl(a.url);
       if (u) set.add(u);
@@ -111,14 +117,12 @@ function checkRun(run, t, tag, seen) {
 }
 
 export function run(t) {
-  const seen = publishedUrls();
-
   const fixture = JSON.parse(
     readFileSync(join(HERE, 'fixtures', 'candidates.sample.json'), 'utf8')
   );
-  checkRun(fixture, t, '[픽스처]', seen);
+  checkRun(fixture, t, '[픽스처]', publishedUrls(fixture.date));
 
   const real = latestRun();
-  if (real) checkRun(real.data, t, `[실제 ${real.date}]`, seen);
+  if (real) checkRun(real.data, t, `[실제 ${real.date}]`, publishedUrls(real.date));
   else t('[실제] runs/ 에 산출물 없음 — 픽스처만 검사', true, 'npm run collect 로 만들 수 있다');
 }

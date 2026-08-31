@@ -70,7 +70,7 @@ const weightOf = weightIndex(meta);
 const filters = buildFilters(lexicon);
 const entityIndex = buildEntityIndex(entities);
 const stopset = new Set([...lexicon.stopwords.en, ...lexicon.stopwords.ko]);
-const seenUrls = seenUrlSet(briefs, canonicalUrl);
+const seenUrls = seenUrlSet(briefs, canonicalUrl, DATE);
 
 say('Sarah\'s AI Brief · 수집');
 say('  기준일    ' + DATE + '  (발행 ' + DATE + ' 08:00 KST)');

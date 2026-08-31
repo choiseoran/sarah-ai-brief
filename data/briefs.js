@@ -2,9 +2,10 @@
  * Sarah's AI Brief — 브리핑 데이터 (최신순)
  * SPEC.md 7절 데이터 계약 참조.
  *
- * ⚠ 이 파일의 내용은 구조 확인용 샘플이다. 실제 보도된 기사가 아니며,
- *   출처 링크는 가짜 기사 URL 대신 각 매체 홈으로 연결한다.
- *   Phase 3에서 수집·요약 파이프라인이 같은 형식으로 이 파일을 생성한다.
+ * 이 파일은 scripts/summarize.mjs 가 생성한다. 손으로 고치지 않는다.
+ *
+ * ⚠ 2026-08-31 · 2026-08-30 · 2026-08-29 · 2026-08-28 는 구조 확인용 샘플이다. 실제 보도된 기사가 아니며
+ *   출처 링크는 각 매체 홈으로 연결한다. `--drop-samples` 로 제거할 수 있다.
  *
  * 점수 규칙 (SPEC 6.2)
  *   weight = 출처 유형 가중치, cross = min(교차보도 매체 수, 4) / 4,
@@ -15,6 +16,245 @@
 window.SAB = window.SAB || {};
 
 SAB.briefs = [
+  {
+    "date": "2026-09-01",
+    "weekday": {
+      "ko": "화요일",
+      "en": "Tuesday"
+    },
+    "type": "daily",
+    "note": {
+      "ko": "오늘은 5건입니다. 후보는 충분했지만 한 출처에서 최대 3건까지만 싣기 때문에 여기까지입니다. 창 안에 AI 기사를 낸 매체가 2곳이었습니다. 요약 규격을 맞추지 못한 1건도 뺐습니다. 자리를 채우려고 RSS 요약만 보고 쓰지는 않습니다.",
+      "en": "Today's brief carries 5 stories. There were enough candidates, but no single outlet gets more than three slots. 2 outlets published AI stories inside the window. 1 more was dropped for failing the writing spec. We do not fill the gap by writing from RSS blurbs alone."
+    },
+    "funnel": {
+      "collected": 1690,
+      "window24h": 80,
+      "excluded": 40,
+      "deduped": 37,
+      "fetchFailed": 5,
+      "scored": 32,
+      "published": 5
+    },
+    "insight": {
+      "title": {
+        "ko": "석 달 비었던 자리가 채워진 날, 8002억 과제도 함께 풀렸다",
+        "en": "An empty AI chair filled, a stalled chip project finally unblocked"
+      },
+      "body": {
+        "ko": [
+          "오늘 기사는 멈춰 있던 두 가지가 같은 날 동시에 움직였다는 사실로 묶인다. 국가AI전략위원회 상근부위원장 자리는 지난 5월부터 석 달 넘게 비어 있었고(5번), 그 자리를 채운 하정우 부위원장 본인이 리더십 공백기에 세계 AI 시장은 크게 변했는데 보안 외에는 대응이 빠르지 않았다고 인정했다(1번). 같은 8월 31일, 올해 1월 공고 예정이었다가 3월로 밀린 뒤 일정 없이 표류하던 8002억원 규모 K-온디바이스 AI 반도체 과제의 컨소시엄 매칭이 최종 확정됐다(4번). 두 지연을 만든 것은 기술이 아니었다. 하나는 리더십 공백이었고 다른 하나는 부처 간 예산 갈등이었다.",
+          "조정이 멈춘 자리를 채운 것은 현장이었다. 하 부위원장이 3대 축의 하나로 내건 '피지컬 AI'는(5번) 이미 칩 과제에서 LG전자 휴머노이드, 두산로보틱스 협동로봇, 대동 무인 농기계로 배분이 끝나 있었다(4번). 대구 DIP가 6월부터 8월까지 운영한 교육 과정의 실습 주제도 온디바이스 기술과 모빌리티 데이터 로깅, 제조공장 에이전트였고, 대구는 위원회가 비어 있던 그 기간에 5개년 인재 양성 목표를 조기 초과 달성했다(2번). 교육 커리큘럼과 컨소시엄 과제 목록이 사실상 같은 문서처럼 읽힌다. 정책이 이름을 붙이기 전에 수요 기업과 지역 교육기관이 같은 것을 먼저 만들고 있었다는 뜻이다.",
+          "그래서 오늘 읽어야 할 것은 새 부위원장의 비전이 아니라 그가 다시 손댈 목록이다. 위원회는 차세대 모델 개발 수요와 미국·중국의 정책 변화에 맞춰 독자 AI 파운데이션 모델을 포함한 기존 사업의 방향과 방법론을 재조정하겠다고 밝혔고(1번), 이는 이미 진행 중인 국책 과제의 목표와 평가 기준이 3대 메가프로젝트 틀에 맞춰 다시 정렬될 수 있다는 뜻이다(5번). 반년 넘게 늦게 출발한 온디바이스 칩 과제는 현대차 ADAS 칩의 2030년 양산 목표를 그대로 둔 채 시작한다(4번). 조정자가 돌아온 것이 잃어버린 시간을 되찾는 쪽으로 갈지, 또 한 번의 재조정으로 다음 지연을 만들지가 하반기를 가른다."
+        ],
+        "en": [
+          "Two things that had been stuck moved on the same day. The standing vice-chair seat at the presidential AI strategy committee had sat empty since May (item 5), and the man who filled it said plainly that during the leadership gap the global AI market shifted while Korea moved quickly on little beyond security (item 1). Dated the same 31 August: the 800.2 billion won K-on-device AI chip program — due to be posted in January, pushed to March, then adrift with no date — finally locked in its consortium matches (item 4). Neither delay was technical. One was an empty chair; the other was a budget fight between ministries.",
+          "What filled the coordination gap was the field. 'Physical AI,' one of the three pillars the new vice-chair named on arrival (item 5), had already been parceled out inside the chip program to LG Electronics humanoids, Doosan cobots and Daedong's driverless farm machines (item 4). In Daegu, the June-to-August training track taught on-device technology, mobility data logging and factory-floor agents, and the city cleared its five-year workforce target early — during the same months the committee had no deputy (item 2). The curriculum and the consortium task list read like the same document. Demand-side manufacturers and a regional training center were building the pillar before the policy gave it a name.",
+          "So the thing worth watching is not the vision but the list he reopens. The committee says it will re-scope existing programs, the sovereign foundation model effort among them, against next-generation model demand and US and Chinese policy shifts (item 1) — meaning goals and evaluation criteria for work already underway may be realigned to the three mega-projects (item 5). The chip program, meanwhile, starts more than six months late while Hyundai's ADAS silicon still carries its original 2030 production target (item 4). A returning coordinator either recovers those months or spends them on one more round of re-scoping."
+        ]
+      }
+    },
+    "articles": [
+      {
+        "id": "2026-09-01-01",
+        "rank": 1,
+        "title": {
+          "ko": "하정우 부위원장 “AI 핵심 공급망 국가로 만들겠다”",
+          "en": "Korea's new AI vice chair sets supply-chain goal"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20260831000357",
+        "publishedAt": "2026-08-31T09:28:48.000Z",
+        "topic": "policy",
+        "score": 41,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.44
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "하정우 국가AI전략위원회 상근 부위원장은 8월 31일 서울 중구 위원회 대회의실에서 취임 기자간담회를 열고, 대한민국을 대체 불가능한 'AI 핵심 공급망 국가'로 만드는 방향으로 정책을 추진하겠다고 밝혔다. 그는 정부·민간 전문가가 부처별 'AI 행동계획'을 수립한 성과는 있었지만 위원회 리더십 공백기에 세계 AI 시장에 큰 변화가 있었고 보안 외에는 대응이 빠르게 이뤄지지 않은 부분이 있었다고 말했다.",
+            "하 부위원장은 삼성전자·SK하이닉스가 AI 분야 메모리 반도체 핵심 공급사인 것처럼 개발도상국의 소버린 AI 공동 개발과 AI 기본사회 구현 등 글로벌 AI 공급망에서 우리나라가 맡을 역할을 찾겠다고 설명했으며, AI 3대 강국 실현도 모델 역량 확보뿐 아니라 세계 AI 공급망에 어느 정도 기여할 수 있는지에 달려 있다고 말했다. 위원회는 앤트로픽 '미토스'발 차세대 모델 개발 수요나 미국·중국의 정책 변화에 맞춰 주요 AI 전략을 조정하고, 독자 AI 파운데이션 모델(독파모) 등 기존 사업도 과학기술정보통신부 등 관계부처와 함께 점검해 프론티어 모델 개발 방향과 방법론을 재조정할 계획이다.",
+            "그는 “AI 활용도 중요하지만 우리 스스로 강력한 AI 모델을 만드는 역량도 중요하다”며 독파모를 통해 기업 단독으로는 어렵더라도 정부 지원이 있으면 글로벌 기업과 경쟁할 수 있다는 점이 입증됐다고 말했다. 또 첫 성과로 '모두의 AI'처럼 국민이 체감할 수 있는 AI를 제시하며 위원회가 관계부처 간 조율·중재·자문 역할을 맡고, 선거기간에 확인한 중앙과 지역 간 AI 접근성 격차를 좁히는 지역 성장 노력도 병행하겠다고 밝혔다."
+          ],
+          "en": [
+            "Ha Jung-woo, the newly appointed full-time vice chair of Korea's National AI Strategy Committee, told his first press briefing at the committee's offices in central Seoul on August 31 that he will steer policy toward making the country an irreplaceable \"core AI supply chain nation.\" He said that while government and private-sector experts had produced ministry-level \"AI action plans,\" the global AI market shifted significantly during the committee's leadership vacancy and responses outside of security were not made quickly.",
+            "Ha argued that just as Samsung Electronics and SK hynix are key memory-chip suppliers for AI, Korea should find its role in the global AI supply chain through work such as co-developing sovereign AI with developing countries, and he said that becoming one of the world's top three AI powers depends not only on model capability but on how much the country contributes to that supply chain. The committee plans to adjust national AI strategy in step with developments including demand for next-generation models triggered by Anthropic's \"Mythos\" and policy changes in the United States and China, and it will review existing programs such as the state-backed independent foundation model initiative with the Ministry of Science and ICT to recalibrate the direction and methodology of frontier model development.",
+            "He said that building strong models domestically matters as much as using AI, adding that the foundation model program has proven that companies which cannot compete with global firms alone can do so with government support. He named citizen-facing services such as \"AI for All\" as the committee's first deliverable, describing the body's role as coordinating, mediating and advising across ministries, and said he will pair that with regional growth efforts to close the gap in AI access between the capital and other regions that he observed during the election period."
+          ]
+        },
+        "implication": {
+          "ko": "공급망 언급은 한국의 AI 전략 무게중심이 '따라잡는 모델 개발'에서 '남들이 대체할 수 없는 자리 확보'로 옮겨가고 있음을 보여준다. 메모리 반도체처럼 다른 나라의 AI 개발이 한국을 거치게 만드는 지점을 만들겠다는 것으로, 개발도상국 소버린 AI 공동 개발은 그 지점을 모델과 인프라 수출 쪽에서 찾겠다는 신호다. 독파모 재조정 방침은 이미 진행 중인 국책 모델 사업의 목표와 평가 기준이 바뀔 수 있다는 뜻이어서, 참여 기업은 하반기 사업 계획을 다시 볼 필요가 있다.",
+          "en": "The supply-chain framing signals a shift in Korea's AI strategy from catching up on model performance to securing a position other countries cannot route around. The stated aim is to build chokepoints in AI development comparable to what Samsung and SK hynix hold in memory, and co-developing sovereign AI with developing countries points to model and infrastructure exports as where Korea will look for them. The plan to recalibrate the state-funded foundation model program is the most immediate consequence, since it means goals and evaluation criteria for an ongoing national project may change and participating companies should expect their roadmaps to be revisited."
+        },
+        "terms": [
+          "sovereign-ai"
+        ]
+      },
+      {
+        "id": "2026-09-01-02",
+        "rank": 2,
+        "title": {
+          "ko": "대구 DIP, SW·AI 인재 5개년 목표 조기 달성…누적 844명",
+          "en": "Daegu tech agency hits 5-year SW talent goal a year early"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20260831000352",
+        "publishedAt": "2026-08-31T09:03:17.000Z",
+        "topic": "society",
+        "score": 41,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.42
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "대구디지털혁신진흥원(DIP)이 지역산업 SW인재양성 기반조성 사업으로 2022년부터 지난해까지 780명을 배출한 데 이어 올해 64명을 추가로 길러내며 5개년 누적 인재 양성 목표를 조기 초과 달성했다고 밝혔다. 2022년부터 올해까지 배출한 인재는 총 844명이다.",
+            "DIP는 대구시, 정보통신산업진흥원(NIPA)과 공동으로 문제해결형 프로젝트 학습(PBL)을 수료한 교육생이 참석한 가운데 대구스마트시티센터 내 SW산학캠퍼스 '코드알파'에서 성과교류회 '2026 라스트 프로젝트'를 열었다. 과학기술정보통신부와 NIPA가 주관하는 이 사업은 지역산업에 필요한 현장 밀착형 SW인재를 양성하고 이들이 지역에 정착하도록 돕는 것을 목적으로 한다.",
+            "지난 6월부터 8월까지 온·오프라인으로 운영한 '2026년 SW파일럿 학습과정'에는 93명이 입과해 64명이 최종 수료했으며, 교육생들은 자바·파이썬·모빌리티·로봇제어 등 분야별 팀을 이뤄 지역 기업이 제시한 현장 문제를 분석하고 실무 SW 서비스를 기획·개발했다. DIP는 신라시스템·광명테크·오토아이티·골든시스·브레인웍스 등 지역 5개 기업과 연계해 교육생 15명을 대상으로 온디바이스 기술, 모빌리티 데이터 로깅, 네트워크 자동화, 제조공장 에이전트 등 현업 프로젝트를 수행하는 하계 인턴십을 운영했고 우수 평가자는 해당 기업에 정규 채용됐다. DIP는 심화 과정인 'SW랜딩 대구'를 운영해 청년 인재의 지역 정착과 취업 연계를 강화할 방침이다."
+          ],
+          "en": [
+            "The Daegu Digital Innovation Promotion Agency (DIP), the southeastern Korean city's public technology arm, said it has passed its five-year software talent target ahead of schedule, having trained 780 people between 2022 and last year and 64 more this year. Its cumulative total from 2022 through this year now stands at 844 graduates, produced under a regional software workforce program run by the Ministry of Science and ICT and the National IT Industry Promotion Agency (NIPA) to train practice-ready developers for local industry and help them settle in the region.",
+            "DIP marked the milestone with a showcase event called \"2026 Last Project,\" held with the Daegu city government and NIPA at Code Alpha, a software campus inside the Daegu Smart City Center, and attended by trainees who had completed problem-based learning projects. Of the 93 people who enrolled in the 2026 software pilot course, run online and offline from June through August, 64 completed it, working in teams organized around Java, Python, mobility and robot control to analyze problems posed by local companies and build working software services.",
+            "Fifteen trainees went on to summer internships arranged with five Daegu-area companies — Silla System, Kwangmyung Tech, Auto IT, Golden Sys and Brainworks — on projects covering on-device technology, mobility data logging, network automation and factory-floor agents, and those rated highly were hired into full-time roles. DIP said it will run a follow-on advanced course, \"SW Landing Daegu,\" to further tie young graduates to local employers."
+          ]
+        },
+        "implication": {
+          "ko": "수도권 밖 지방 도시가 겪는 문제는 인재를 못 키우는 것이 아니라 키운 인재가 떠나는 것이다. DIP가 교육 인원 숫자보다 지역 5개 기업 인턴십과 정규 채용 연계를 앞세우고 후속 과정 이름을 '랜딩'으로 붙인 것은, 사업의 성과 지표가 배출 인원에서 지역 정착률로 옮겨가고 있다는 신호다. 온디바이스·모빌리티 데이터·제조 에이전트 같은 실습 주제는 대구 제조업 기반과 맞물려 있어, AI 인력 수요가 대기업 연구조직이 아니라 지역 제조 현장의 소프트웨어 수요에서도 나오고 있음을 보여준다.",
+          "en": "For a Korean city outside the Seoul capital region, the hard part is not training developers but keeping them, since graduates routinely leave for Seoul. DIP's emphasis on internships that converted into full-time offers at five local firms, and its naming of the follow-on course \"SW Landing,\" points to a program whose real metric is retention rather than headcount. The project topics — on-device software, mobility data logging, factory agents — map onto Daegu's manufacturing base, a reminder that AI-adjacent hiring is emerging on shop floors and not only in corporate research labs."
+        },
+        "terms": [
+          "agent"
+        ]
+      },
+      {
+        "id": "2026-09-01-03",
+        "rank": 3,
+        "title": {
+          "ko": "안양스마T움축제 이틀간 4만3000명…AI·로봇 체험 운영",
+          "en": "Anyang tech festival draws 43,000 for AI and robot demos"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20260831000348",
+        "publishedAt": "2026-08-31T08:06:03.000Z",
+        "topic": "society",
+        "score": 40,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.38
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "경기 안양시가 8월 29일부터 30일까지 안양종합운동장 체육관 일원에서 제23회 안양스마T움축제를 열어 이틀간 관람객 4만3000여 명을 모았다고 31일 밝혔다. 축제는 '상상이 일상으로! 내 삶을 바꾸는 안양스마T움!'을 주제로 인공지능(AI), 도심항공교통(UAM), 자율주행, 로봇, 드론 등 미래 기술 체험 프로그램으로 구성됐다.",
+            "행사장에는 UAM 기체 OPPAV 전시와 안양시 자율주행버스 '주야로' 탑승 체험, 사격 시뮬레이터, 감찰 로봇 시연이 마련됐고, 29일 개회식에서는 휴머노이드 로봇 공연과 레이저 쇼가 진행됐다. 함께 열린 AI 코딩·로봇·드론 경진대회는 7개 종목으로 치러졌으며 우수 참가자에게 과학기술정보통신부 장관상 등 상장 85점이 수여됐다.",
+            "정보화 체험관에서는 방 탈출 과학 버스와 천체 관측 버스 '루체리움 스타카', 가상현실(VR)·확장현실(XR) 체험이 운영됐고 관내 중·고교생 16개 팀이 참여한 과학 탐구 체험관도 함께 꾸려졌다. 2002년 '안양사이버축제'로 시작한 이 행사는 2024년부터 현재 이름을 쓰고 있으며, 최대호 시장은 축제를 대한민국을 대표하는 정보과학 축제로 발전시키고 스마트도시 안양의 미래 인재 양성에도 힘쓰겠다고 말했다."
+          ],
+          "en": [
+            "Anyang, a city of about 550,000 just south of Seoul, said on August 31 that its 23rd Anyang SmarT-um Festival drew roughly 43,000 visitors over two days at the Anyang Sports Complex gymnasium on August 29 and 30. Held under the theme \"Imagination into everyday life,\" the municipal science festival was built around hands-on programs in artificial intelligence, urban air mobility, autonomous driving, robots and drones.",
+            "Exhibits included the OPPAV air taxi airframe and rides on Anyang's self-driving bus \"Juyaro,\" alongside a shooting simulator and a patrol-robot demonstration, while the opening ceremony on August 29 featured a humanoid robot performance and a laser show. A companion competition in AI coding, robotics and drones ran across seven events and awarded 85 certificates, including prizes from South Korea's Ministry of Science and ICT.",
+            "A digital exhibition hall offered an escape-room science bus, an astronomy observation bus called Lucerium Starka, and virtual and extended reality demos, with 16 teams from local middle and high schools staffing a science inquiry pavilion. The event began in 2002 as the Anyang Cyber Festival and has carried its current name since 2024; Mayor Choi Dae-ho said the city will grow it into a national science festival and invest in training future talent for a smart-city Anyang."
+          ]
+        },
+        "implication": {
+          "ko": "지방자치단체가 AI를 별도 행사가 아니라 UAM·자율주행·로봇과 묶어 시민 체험 프로그램으로 내놓는 방식이 자리를 잡았다는 신호다. 자율주행버스 탑승과 감찰 로봇 시연처럼 실제 운행 중이거나 도입을 검토하는 장비를 그대로 전시했다는 점에서, 이런 축제는 홍보를 넘어 신기술에 대한 주민 수용성을 미리 확인하는 자리로 기능한다. 장관상이 걸린 청소년 AI 코딩·드론 경진대회를 함께 운영한 것은 체험과 인재 발굴을 한 행사에 담으려는 구성이며, 스마트도시를 표방하는 다른 기초자치단체들이 참고할 만한 모델이다.",
+          "en": "South Korean municipalities are converging on a template in which AI is presented not as a standalone theme but bundled with air mobility, self-driving vehicles and robots into a single civic showcase. Because Anyang exhibited equipment it actually operates or is weighing for deployment, such as the Juyaro autonomous bus, the festival doubles as an early read on how residents respond to technology the city plans to put on public roads. Pairing the demos with a youth coding and drone contest carrying national ministry awards folds talent scouting into the same event, a structure other mid-sized cities pursuing smart-city branding are likely to copy."
+        },
+        "terms": [
+          "uam"
+        ]
+      },
+      {
+        "id": "2026-09-01-04",
+        "rank": 4,
+        "title": {
+          "ko": "K-온디바이스 AI 반도체 과제 컨소시엄 확정, 8002억원 집행",
+          "en": "Korea's on-device AI chip program locks in its consortiums"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20260831105007",
+        "publishedAt": "2026-08-31T06:28:34.000Z",
+        "topic": "compute",
+        "score": 38,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.31
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "부처 간 예산 갈등으로 수개월간 표류했던 'K-온디바이스 AI 반도체' 국책 과제가 수요 기업과 팹리스·디자인하우스 간 컨소시엄 매칭을 최종 확정했다고 31일 반도체 업계가 전했다. 당초 올해 1월 공고 예정이었다가 3월로 연기된 뒤 일정이 정해지지 않은 채 늦어졌던 과제다.",
+            "이 사업에는 총 8002억원이 투입되며 이 가운데 국비가 약 5111억원, 나머지는 수요 기업이 부담한다. 현대자동차 과제에는 팹리스 LX세미콘과 AI 반도체 스타트업 하이퍼엑셀, 디자인하우스 가온칩스가 함께 참여해 하이퍼엑셀이 NPU를, LX세미콘이 SoC를 맡고 차량용 반도체 경험이 가장 많은 가온칩스가 전 과정에 들어간다.",
+            "AI 반도체 스타트업 모빌린트는 LG전자 휴머노이드, 두산로보틱스 산업용 협동로봇, 대동 무인 농기계 로봇 등 로봇 분야 3개 과제를 모두 따낸 데 이어 LG전자 가전 과제 1개를 추가해 참여 기업 중 최다인 4개를 확보했다. LG전자의 남은 가전 과제 1개는 하이퍼엑셀이, 한국항공우주산업(KAI)과 함께 개발하는 방산용 칩 과제는 가온칩스와 수퍼게이트가 맡는다."
+          ],
+          "en": [
+            "South Korea's government-funded \"K-On Device AI chip\" program, stalled for months by a budget dispute between ministries, has finalized the matching of demand-side companies with fabless design firms and design houses, semiconductor industry sources said on Aug. 31. The program had been slated for a January announcement, was pushed to March, and then slipped with no fixed date.",
+            "The program carries a total budget of 800.2 billion won, of which roughly 511.1 billion won is state funding and the rest comes from the participating demand-side companies. Hyundai Motor's project brings in the fabless firm LX Semicon alongside AI chip startup HyperAccel and design house Gaonchips, with HyperAccel handling the NPU, LX Semicon the SoC, and Gaonchips — the participant with the most automotive chip experience — involved across the whole process.",
+            "AI chip startup Mobilint won all three robotics projects, covering LG Electronics' humanoid, Doosan Robotics' industrial collaborative robot and Daedong's driverless farm machinery robot, then added one LG Electronics home appliance project for a total of four, the most of any participating company. HyperAccel takes LG Electronics' remaining appliance project, while Gaonchips and Supergate handle the defense chip project developed with Korea Aerospace Industries (KAI)."
+          ]
+        },
+        "implication": {
+          "ko": "이 과제의 의미는 예산 규모보다 배분 결과에 있다. 대기업 수요처가 삼성전자나 LX세미콘 같은 기존 대형 설계사 대신 모빌린트·하이퍼엑셀 같은 신생 NPU 업체를 직접 파트너로 골랐다는 것은, 국내 로봇·가전·차량 업체들이 자사 제품에 맞춘 전용 온디바이스 추론 칩을 범용 GPU 조달과 다른 경로로 확보하려 한다는 신호다. 다만 현대차 ADAS 칩의 원래 양산 목표가 2030년이었던 만큼, 반년 넘게 늦어진 출발이 실제 상용화 일정에 얼마나 반영될지가 이 사업의 성패를 가른다.",
+          "en": "The allocation matters more than the budget line. Large domestic buyers in robotics, home appliances and automotive chose young NPU startups rather than only established design houses as their silicon partners, which signals that Korean manufacturers want purpose-built on-device inference chips tuned to their own products instead of relying on general-purpose accelerators bought off the shelf. The open question is schedule: with the Hyundai ADAS chip originally targeted for 2030 volume production and the program starting more than half a year late, whether participants can compress the lost time will determine whether this money produces shipping silicon or another delayed roadmap."
+        },
+        "terms": [
+          "npu",
+          "fabless",
+          "adas"
+        ]
+      },
+      {
+        "id": "2026-09-01-05",
+        "rank": 5,
+        "title": {
+          "ko": "하정우, 국가AI전략위 상근부위원장 취임",
+          "en": "Ha Jung-woo named vice chair of Korea's AI strategy body"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20260831150234",
+        "publishedAt": "2026-08-31T06:03:45.000Z",
+        "topic": "policy",
+        "score": 37,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.29
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "하정우 전 대통령실 AI미래기획수석이 국가인공지능전략위원회 상근부위원장에 취임했다고 위원회가 8월 31일 밝혔다. 임문영 전 부위원장이 떠난 뒤 지난 5월부터 석 달여간 비어 있던 자리가 채워졌다. 국가인공지능전략위원회는 이재명 대통령이 위원장을 맡고 있는 대통령 직속 기구다.",
+            "하 상근부위원장은 취임하면서 AI 3대 강국 도약을 위한 국가적 역량 결집, 산업과 공공·국민 생활 전반의 AI 대전환, 모든 국민이 혜택을 누리는 '모두의 AI' 실현을 위원회 운영의 중점 방향으로 제시했다. 그는 반도체와 피지컬 AI, AI 데이터센터를 3대 축으로 하는 '대한민국 대도약 3대 메가프로젝트'를 중심으로 범정부 정책 조정과 민관 협력을 강화하고, 반도체와 AI 인프라, 피지컬 AI와 제조·로봇 산업이 연결되는 '혁신 AI 생태계'를 구축하겠다고 밝혔다.",
+            "그는 산업과 연구, 교육과 의료, 행정과 공공서비스 전반에서 AI가 혁신 동력으로 자리 잡도록 범부처 협력을 이끌고, 3대 메가프로젝트를 수도권과 지역이 함께 성장하는 한국형 AI 산업혁명으로 잇겠다는 방침을 내놨다. 한국 AI 행동계획과 3대 메가프로젝트가 실제 정책과 사업, 투자와 국민이 체감하는 변화로 이어지도록 추진 상황을 점검하고 끝까지 지원하겠다고 강조했다. 그는 \"국가인공지능전략위원회가 국가 AI 비전을 제시하고 민간의 혁신 역량과 정부의 정책 역량을 연결해 실제로 성과를 만들어내는 국가 AI 거버넌스의 중심축이 돼야 한다\"고 말했다."
+          ],
+          "en": [
+            "South Korea's National AI Strategy Committee announced on August 31 that Ha Jung-woo, previously the presidential office's senior secretary for AI future planning, has taken office as its full-time vice chair, filling a post left vacant since May by the departure of predecessor Lim Moon-young. The committee reports directly to the president, with President Lee Jae-myung serving as its chair.",
+            "Ha set out three priorities for the committee: marshalling national capacity to make Korea one of the world's top three AI powers, driving an AI transition across industry, the public sector and daily life, and delivering an \"AI for all\" in which every citizen shares in the benefits. He said he would strengthen cross-ministry policy coordination and public-private cooperation around the \"three mega-projects\" of semiconductors, physical AI and AI data centers, building an innovation ecosystem that links chips and AI infrastructure to manufacturing and robotics.",
+            "He also pledged to lead cross-ministry cooperation so that AI takes hold as a driver of change in industry, research, education, medicine, administration and public services, and to extend the three mega-projects into a Korean-style AI industrial revolution in which the capital region and outlying provinces grow together, promising to monitor and support implementation of the national AI action plan until it translates into actual policies, projects, investment and changes citizens feel. Ha said the committee \"must become the central axis of national AI governance, presenting the national AI vision and connecting private-sector innovation capacity with the government's policy capacity to actually produce results.\""
+          ]
+        },
+        "implication": {
+          "ko": "석 달 공석이던 2인자 자리를 네이버 AI 연구 출신 인사로 채웠다는 점에서, 위원회의 무게중심이 비전 선언에서 집행 관리로 옮겨간다는 신호로 읽힌다. 하 부위원장이 내세운 3대 축 가운데 반도체와 데이터센터는 이미 예산과 전력 배분이 걸린 사안이고, 피지컬 AI는 제조·로봇 대기업의 투자 계획과 직결된다. 국내 AI 기업과 부처에는 앞으로의 조달·보조금·인허가 우선순위가 이 3대 프로젝트 틀에 맞춰 재편될 가능성을 뜻한다.",
+          "en": "Filling a No.2 post that had sat empty for three months signals that the committee is shifting its center of gravity from writing strategy to policing execution. Two of Ha's three pillars — semiconductors and AI data centers — are already fights over budget and grid power, while the third, physical AI, ties directly to the investment plans of Korea's manufacturing and robotics conglomerates. For companies and ministries, the practical message is that procurement, subsidies and permitting priorities are likely to be reorganized around this three-project frame, and that the committee intends to be judged on delivery rather than on plans."
+        },
+        "terms": [
+          "sovereign-ai",
+          "physical-ai"
+        ]
+      }
+    ]
+  },
   {
     "date": "2026-08-31",
     "weekday": {

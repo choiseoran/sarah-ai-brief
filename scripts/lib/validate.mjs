@@ -21,9 +21,24 @@ export const MAX_TERMS = 3;
 const HEDGE_KO = /(?:으?로|것으로)\s*(?:보인다|예상된다|전망된다|관측된다|풀이된다|분석된다)|전망이다|알려졌다|듯하다|주목된다/;
 const HEDGE_EN = /\b(?:is|are|was|were)\s+(?:expected|likely|poised|set)\s+to\b|\bappears?\s+to\b|\bcould\s+(?:be|see|reach)\b|\bmay\s+(?:be|see|reach)\b/i;
 
+/*
+ * 영어 약어의 마침표를 문장 끝으로 세면 멀쩡한 기사가 규격 위반으로 빠진다.
+ * 실측에서 "Aug. 31", "Samsung Electronics Co.", "U.S." 때문에 3문장짜리 문단이
+ * 4~5문장으로 세어져 기사 3건이 드랍됐다. 세는 방식이 틀리면 규격이 아니라 검사기가 문제다.
+ */
+const ABBREV = /\b(?:Mr|Mrs|Ms|Dr|Prof|St|Jr|Sr|Inc|Ltd|Co|Corp|Gov|Sen|Rep|Univ|Dept|Est|vs|etc|approx|No|Nos|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\./gi;
+const DOTTED = /\b(?:[A-Z]\.){1,3}/g;            /* U.S. · U.K. · J.R. · 이니셜 */
+const LATIN = /\b(?:e\.g|i\.e|a\.m|p\.m)\./gi;
+
 /** 마침표·물음표·느낌표 뒤에 공백이나 끝이 오는 것만 문장 끝으로 센다. "3.5%" 는 세지 않는다. */
 export function sentenceCount(text) {
-  return (String(text).match(/[.!?](?=\s|$)/g) ?? []).length;
+  const t = String(text)
+    .replace(LATIN, 'X')
+    .replace(ABBREV, 'X')
+    .replace(DOTTED, 'X');
+  /* 닫는 따옴표·괄호가 마침표 뒤에 오는 문장이 있다 — `... AI supply chain."`
+     이것을 못 세면 3문장짜리 영어 문단이 1문장으로 세어져 규격 위반이 된다. */
+  return (t.match(/[.!?]["'”’)\]]*(?=\s|$)/g) ?? []).length;
 }
 
 const isStr = (v) => typeof v === 'string' && v.trim().length > 0;

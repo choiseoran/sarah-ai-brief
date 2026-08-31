@@ -106,10 +106,15 @@ export function applyExclusions(items, ctx) {
 /**
  * P5 — 이미 발행한 URL 집합. 별도 저장소를 두지 않는다.
  * 발행된 아카이브(data/briefs.js)가 곧 상태이므로 둘이 어긋날 수 없다.
+ *
+ * exceptDate 는 지금 만들고 있는 날짜다. P5 는 **지난** 브리핑에 대한 규칙이지
+ * 지금 다시 만드는 날짜에 대한 것이 아니다. 이것을 빼지 않으면 한 번 발행한 날짜를
+ * 다시 수집할 때 자기가 방금 실은 URL을 스스로 걸러 후보가 0건이 된다.
  */
-export function seenUrlSet(briefs, canonical) {
+export function seenUrlSet(briefs, canonical, exceptDate = null) {
   const set = new Set();
   for (const b of briefs) {
+    if (exceptDate && b.date === exceptDate) continue;
     for (const a of b.articles ?? []) {
       const u = canonical(a.url);
       if (u) set.add(u);

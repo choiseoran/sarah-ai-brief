@@ -73,17 +73,24 @@ function cmp(a, b) {
   return a.url < b.url ? -1 : a.url > b.url ? 1 : 0;
 }
 
-/** 10건에 못 미친 이유를 Phase 3 에 넘길 초안으로 만든다. */
+/**
+ * 10건에 못 미친 이유를 Phase 3 에 넘길 초안으로 만든다.
+ *
+ * 사유를 틀리게 적는 것은 안 적는 것보다 나쁘다. 점수 산정까지 온 후보가 10건을 넘었는데도
+ * 못 채웠다면 원인은 확보 실패가 아니라 상한이다 — 한 출처 3건, 그리고 창 안에 기사를 낸
+ * 매체가 몇 곳이냐. 실측에서 후보 32건에 확정 6건이 나온 날이 바로 이 경우였다.
+ */
 export function shortfallNote(result, funnel) {
   if (!result.shortfall) return null;
   return {
     missing: result.shortfall,
     fetchFailed: funnel.fetchFailed,
     scored: funnel.scored,
-    reason: funnel.fetchFailed > 0 && funnel.scored < TARGET
-      ? 'fetch-failed-and-thin-window'
+    sources: new Set(result.chosen.map((c) => c.source)).size,
+    reason: funnel.scored >= TARGET
+      ? 'source-cap'
       : funnel.fetchFailed > 0
-        ? 'fetch-failed'
+        ? 'fetch-failed-and-thin-window'
         : 'thin-window'
   };
 }

@@ -84,24 +84,36 @@ node scripts/collect.mjs --from runs/2026-09-01/raw   # 네트워크 없이 재�
 기사 1건당 호출 1회 + 인사이트 1회입니다.
 
 ```bash
-# API 키 — 환경변수로 두거나 저장소 루트 .env 에 (.gitignore 에 있습니다)
-echo 'ANTHROPIC_API_KEY=sk-ant-...' > .env
-
 npm run summarize                                     # 이미 지나간 마지막 발행분
 node scripts/summarize.mjs --date 2026-09-01
 node scripts/summarize.mjs --dry-run                  # 호출 없이 프롬프트·스키마만
-node scripts/summarize.mjs --limit 1                  # 앞의 1건만 (비용 확인용)
+node scripts/summarize.mjs --limit 1                  # 앞의 1건만 (확인용)
 node scripts/summarize.mjs --drop-samples             # 샘플 4일치를 지우고 실데이터만
 npm run brief                                         # 수집 → 요약을 한 번에
 ```
 
-기본 모델은 `claude-opus-5` 이고 `--model` 로 바꿉니다. 하루 10건이면 대략 $1 안팎이며,
-실제 사용량과 비용은 실행이 끝날 때 출력됩니다.
+### 두 가지 경로
+
+| | 경로 | 인증 | 언제 |
+|---|---|---|---|
+| **기본** | `claude -p` (Claude Code CLI) | `claude auth login` 으로 이미 로그인된 구독 | **API 크레딧을 쓰지 않습니다.** 별도 준비가 없습니다 |
+| 선택 | Anthropic API | `ANTHROPIC_API_KEY` (환경변수 또는 `.env`) | `--provider api`. JSON 스키마를 API가 강제해 형식 오류가 덜 납니다 |
+
+```bash
+node scripts/summarize.mjs --provider api             # API 키로
+node scripts/summarize.mjs --model sonnet             # cli 경로의 모델 별칭
+```
+
+기본 모델은 `opus`(cli) / `claude-opus-5`(api) 입니다. cli 경로는 구독으로 돌기 때문에
+출력에 찍히는 금액은 **청구액이 아니라 API 정가 환산값**입니다.
+
+두 경로의 결과 형식은 같고, 아래 검증도 똑같이 통과해야 발행됩니다.
+경로를 바꾸는 것이 규격을 바꾸지 않습니다.
 
 **발행 전 사람 검토를 두지 않습니다.** 대신 `lib/validate.mjs` 가 규격을 검사하고,
-어긴 기사는 무엇이 틀렸는지 붙여 한 번 다시 만듭니다. 두 번째도 어기면 **그 기사를 빼고**
+어긴 기사는 무엇이 틀렸는지 붙여 다시 만듭니다(최대 두 번). 그래도 어기면 **그 기사를 빼고**
 발행하고 그 사실을 브리핑 상단(`note`)과 `runs/<date>/report.txt` 에 남깁니다.
-인사이트가 두 번 실패하면 그날은 발행하지 않습니다.
+인사이트가 끝내 실패하면 그날은 발행하지 않습니다.
 
 생성 결과는 발행 여부와 관계없이 `runs/<date>/brief.json` 에 남습니다.
 

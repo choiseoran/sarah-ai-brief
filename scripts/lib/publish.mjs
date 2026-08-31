@@ -70,6 +70,9 @@ export function dropSamples(briefs) {
  * count·firstSeen 재계산.
  * 사이트의 glossary.html 과 data.html 이 이 두 값을 그대로 읽으므로
  * 브리핑이 늘어날 때마다 다시 세지 않으면 화면이 조용히 틀린 수를 보여 준다.
+ *
+ * 어느 브리핑도 가리키지 않는 용어는 사전에서 뺀다. 용어사전은 "브리핑에 등장한 용어"가
+ * 쌓이는 곳이므로(SPEC 4절) 0회 등장 항목은 정의상 여기 있을 것이 아니다.
  */
 export function recountGlossary(glossary, briefs) {
   const count = new Map();
@@ -84,23 +87,28 @@ export function recountGlossary(glossary, briefs) {
     }
   }
 
-  return glossary.map((g) => ({
-    ...g,
-    firstSeen: first.get(g.id) ?? g.firstSeen,
-    count: count.get(g.id) ?? 0
-  }));
+  return glossary
+    .filter((g) => count.has(g.id))
+    .map((g) => ({ ...g, firstSeen: first.get(g.id), count: count.get(g.id) }));
 }
 
-/** 모델이 제안한 신규 용어를 하루 최대 max 개까지 받는다. 이미 있는 id 는 무시한다. */
+/**
+ * 모델이 제안한 신규 용어를 하루 최대 max 개까지 받는다. 이미 있는 id 는 무시한다.
+ *
+ * added 에는 제안한 기사의 자리(at)를 함께 돌려준다. 그 기사의 terms 에 붙여야
+ * 용어가 실제로 브리핑에 등장한 것이 되고, 등장 횟수 0으로 사전에 쌓이지 않는다.
+ */
 export function addNewTerms(glossary, proposals, date, max = 2) {
   const have = new Set(glossary.map((g) => g.id));
+  const entries = [];
   const added = [];
   for (const p of proposals) {
     if (added.length >= max) break;
     const id = String(p.id ?? '').trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-|-$/g, '');
     if (!id || have.has(id)) continue;
     have.add(id);
-    added.push({ id, term: p.term, definition: p.definition, firstSeen: date, count: 0 });
+    entries.push({ id, term: p.term, definition: p.definition, firstSeen: date, count: 0 });
+    added.push({ id, at: p.at });
   }
-  return { glossary: [...glossary, ...added], added };
+  return { glossary: [...glossary, ...entries], added };
 }
