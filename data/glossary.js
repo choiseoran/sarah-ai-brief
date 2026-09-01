@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-08-28",
-    "count": 6
+    "count": 8
   },
   {
     "id": "context-window",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-08-31",
-    "count": 1
+    "count": 3
   },
   {
     "id": "open-weights",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-08-29",
-    "count": 2
+    "count": 3
   },
   {
     "id": "fine-tuning",
@@ -110,7 +110,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-08-28",
-    "count": 4
+    "count": 6
   },
   {
     "id": "alignment",
@@ -123,7 +123,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-08-28",
-    "count": 1
+    "count": 3
   },
   {
     "id": "red-teaming",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-08-29",
-    "count": 1
+    "count": 3
   },
   {
     "id": "guardrails",
@@ -149,7 +149,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-08-29",
-    "count": 3
+    "count": 5
   },
   {
     "id": "sovereign-ai",
@@ -162,7 +162,7 @@ SAB.glossary = [
       "en": "A national push to build and run AI on domestic infrastructure with domestic-language data, reducing dependence on foreign providers."
     },
     "firstSeen": "2026-08-31",
-    "count": 3
+    "count": 1
   },
   {
     "id": "hbm",
@@ -189,70 +189,5 @@ SAB.glossary = [
     },
     "firstSeen": "2026-08-28",
     "count": 2
-  },
-  {
-    "id": "uam",
-    "term": {
-      "ko": "도심항공교통(UAM)",
-      "en": "Urban air mobility (UAM)"
-    },
-    "definition": {
-      "ko": "도시 안팎의 짧은 구간을 소형 항공기로 오가며 사람이나 화물을 실어 나르는 교통 체계다. 대부분 전기로 수직 이착륙하는 기체를 써서 활주로 대신 건물 옥상 같은 좁은 이착륙장을 이용한다. 여러 나라가 아직 시범 비행 단계에 있어 상용 노선은 드물다.",
-      "en": "A transport system in which small aircraft carry people or cargo on short routes within and around cities. Most designs are electric and take off vertically, so they use compact landing pads such as building rooftops rather than runways. In most countries the technology is still at the test-flight stage, with few commercial routes in service."
-    },
-    "firstSeen": "2026-09-01",
-    "count": 1
-  },
-  {
-    "id": "npu",
-    "term": {
-      "ko": "신경망처리장치(NPU)",
-      "en": "Neural processing unit (NPU)"
-    },
-    "definition": {
-      "ko": "인공신경망 연산에 특화된 프로세서로, 스마트폰·자동차·로봇처럼 기기 안에서 직접 AI를 돌려야 하는 제품에 들어간다. 같은 연산을 CPU나 GPU로 처리할 때보다 전력을 훨씬 적게 쓰는 것이 핵심 장점이다.",
-      "en": "A processor built specifically for neural network math, used inside devices such as phones, cars, and robots that need to run AI locally. Its main advantage over a CPU or GPU is doing the same work at far lower power, which matters when the device runs on a battery or a tight thermal budget."
-    },
-    "firstSeen": "2026-09-01",
-    "count": 1
-  },
-  {
-    "id": "fabless",
-    "term": {
-      "ko": "팹리스",
-      "en": "Fabless"
-    },
-    "definition": {
-      "ko": "반도체를 설계만 하고 생산 공장(팹)은 갖지 않는 회사를 뜻한다. 설계도를 만든 뒤 삼성 파운드리나 TSMC 같은 위탁생산 업체에 제조를 맡긴다. 공장 건설에 드는 막대한 비용을 피할 수 있어 스타트업이 칩 사업에 뛰어드는 일반적인 방식이다.",
-      "en": "A fabless company designs chips but owns no fabrication plant, sending its designs to a contract manufacturer such as Samsung Foundry or TSMC to be built. Avoiding the cost of a fab is what lets small startups compete in silicon at all. In Korea's chip policy the term specifically marks the domestic design firms the government is trying to grow alongside its manufacturing giants."
-    },
-    "firstSeen": "2026-09-01",
-    "count": 1
-  },
-  {
-    "id": "adas",
-    "term": {
-      "ko": "첨단운전자지원시스템(ADAS)",
-      "en": "ADAS"
-    },
-    "definition": {
-      "ko": "차량이 카메라와 센서로 주변을 인식해 운전자를 돕는 기능을 묶어 부르는 말이다. 차선 유지, 자동 긴급제동, 어댑티브 크루즈 컨트롤 등이 여기 속한다. 완전 자율주행 이전 단계이지만 실시간 영상 인식이 필요해 차 안에서 직접 연산하는 AI 칩이 쓰인다.",
-      "en": "Advanced driver assistance systems are the camera- and sensor-based features that help a driver rather than replace one, including lane keeping, automatic emergency braking and adaptive cruise control. They fall short of full autonomy but still require real-time perception, which is why they run on dedicated AI chips inside the vehicle instead of in the cloud."
-    },
-    "firstSeen": "2026-09-01",
-    "count": 1
-  },
-  {
-    "id": "physical-ai",
-    "term": {
-      "ko": "피지컬 AI",
-      "en": "Physical AI"
-    },
-    "definition": {
-      "ko": "화면 속 텍스트나 이미지가 아니라 로봇·기계·차량처럼 실제로 움직이는 물체를 제어하는 AI를 가리킨다. 카메라와 센서로 주변 상황을 인식하고 그에 맞춰 동작을 결정한다는 점에서, 대화형 AI와 달리 물리 세계의 제약을 함께 다뤄야 한다.",
-      "en": "AI that controls things that move in the real world — robots, machines, vehicles — rather than producing text or images on a screen. It takes in camera and sensor data about its surroundings and decides on physical actions, so unlike a chatbot it has to cope with the constraints of the physical world."
-    },
-    "firstSeen": "2026-09-01",
-    "count": 1
   }
 ];
