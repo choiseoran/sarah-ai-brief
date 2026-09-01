@@ -119,6 +119,40 @@ node scripts/summarize.mjs --model sonnet             # cli 경로의 모델 별
 
 ---
 
+## 자동 발행 (Phase 4)
+
+Windows 작업 스케줄러가 매일 08:00 에 `scripts/daily.ps1` 을 부릅니다.
+수집 → 요약 → 커밋 → 푸시까지 하고, 배포는 GitHub Pages 가 이어서 합니다.
+
+```powershell
+# 등록 (한 번만)
+$action  = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-NoProfile -ExecutionPolicy Bypass -File "D:\workspace\sarah-ai-brief\scripts\daily.ps1"' -WorkingDirectory 'D:\workspace\sarah-ai-brief'
+$trigger = New-ScheduledTaskTrigger -Daily -At 08:00
+$set     = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopIfGoingOnBatteries -AllowStartIfOnBatteries -ExecutionTimeLimit (New-TimeSpan -Minutes 30)
+$who     = New-ScheduledTaskPrincipal -UserId "$env:USERDOMAIN\$env:USERNAME" -LogonType Interactive -RunLevel Limited
+Register-ScheduledTask -TaskName 'SarahsAIBrief' -Action $action -Trigger $trigger -Settings $set -Principal $who -Force
+
+Start-ScheduledTask  -TaskName 'SarahsAIBrief'      # 지금 한 번 돌려보기
+Get-ScheduledTaskInfo -TaskName 'SarahsAIBrief'     # 다음 실행 시각·마지막 결과
+Unregister-ScheduledTask -TaskName 'SarahsAIBrief'  # 해제
+```
+
+로그는 `runs/daily.log` 에 쌓입니다(`runs/` 는 gitignore 대상이라 커밋되지 않습니다).
+
+**PC 가 켜져 있고 로그인돼 있어야 합니다.** `claude -p` 가 로그인된 구독을 쓰기 때문에
+사용자 세션이 필요합니다. 08:00 에 꺼져 있었다면 `-StartWhenAvailable` 로 켜진 뒤 한 번 돕니다.
+
+### 왜 08:00 인가
+
+날짜 T 의 브리핑은 T 08:00 KST 직전 24시간을 봅니다. 수집기는 **이미 닫힌 창만** 겨냥하므로
+(같은 날 두 번 돌려도 결과가 같아야 합니다) 08:00 **이후**에 시작해야 그날 창을 볼 수 있습니다.
+그래서 실제 반영은 08:05~08:10 이 됩니다. 자세한 이유는 SPEC 10절에 있습니다.
+
+`.ps1` 은 **UTF-8 BOM** 으로 저장해야 합니다. PowerShell 5.1 은 BOM 이 없으면 시스템
+코드페이지로 읽어 한글이 깨지고 구문 오류가 납니다.
+
+---
+
 ## 검증
 
 ```bash
