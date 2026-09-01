@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 3
+    "count": 7
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 2
+    "count": 6
   },
   {
     "id": "open-weights",
@@ -45,7 +45,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 1
+    "count": 2
   },
   {
     "id": "eval",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 2
+    "count": 4
   },
   {
     "id": "alignment",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 2
+    "count": 3
   },
   {
     "id": "red-teaming",
@@ -97,6 +97,32 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 2
+    "count": 3
+  },
+  {
+    "id": "expedited-discovery",
+    "term": {
+      "ko": "신속 증거개시",
+      "en": "Expedited discovery"
+    },
+    "definition": {
+      "ko": "미국 민사소송에서 정해진 일정보다 앞당겨 상대방의 자료를 확보하도록 법원에 요청하는 절차다. 로그나 기기 기록처럼 시간이 지나면 덮어쓰이거나 사라지는 증거가 있을 때 주로 쓰인다.",
+      "en": "A request to a U.S. court for permission to gather evidence from the other side ahead of the normal schedule. It is typically used when the material at issue is transient, such as device logs or metadata that can be overwritten or lost while a case proceeds."
+    },
+    "firstSeen": "2026-09-02",
+    "count": 1
+  },
+  {
+    "id": "zero-data-retention",
+    "term": {
+      "ko": "데이터 무보존",
+      "en": "Zero data retention"
+    },
+    "definition": {
+      "ko": "AI 사업자가 요청을 처리한 뒤 입력과 출력을 저장하지 않고 곧바로 버리는 운영 방식이다. 외부 업체에 기록이 남는 것 자체가 규정 위반이 될 수 있는 규제 산업에서 계약 조건으로 요구하는 경우가 많다. 대신 기록이 남지 않으므로 여러 세션에 걸쳐 이뤄지는 오남용을 나중에 되짚어 찾아내기는 어려워진다.",
+      "en": "A mode of operation in which an AI provider processes a request and then discards the input and output instead of storing them. Regulated industries often require it by contract, because records held by an outside vendor can themselves create compliance exposure. The trade-off is that misuse spread across many sessions becomes hard to detect once nothing is kept to compare against."
+    },
+    "firstSeen": "2026-09-02",
+    "count": 1
   }
 ];
