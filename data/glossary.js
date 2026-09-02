@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 7
+    "count": 10
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 6
+    "count": 8
   },
   {
     "id": "open-weights",
@@ -45,7 +45,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 2
+    "count": 3
   },
   {
     "id": "eval",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 4
+    "count": 7
   },
   {
     "id": "alignment",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 3
+    "count": 4
   },
   {
     "id": "red-teaming",
@@ -84,7 +84,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 2
+    "count": 3
   },
   {
     "id": "guardrails",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 3
+    "count": 4
   },
   {
     "id": "expedited-discovery",
@@ -123,6 +123,19 @@ SAB.glossary = [
       "en": "A mode of operation in which an AI provider processes a request and then discards the input and output instead of storing them. Regulated industries often require it by contract, because records held by an outside vendor can themselves create compliance exposure. The trade-off is that misuse spread across many sessions becomes hard to detect once nothing is kept to compare against."
     },
     "firstSeen": "2026-09-02",
+    "count": 1
+  },
+  {
+    "id": "frontier-model",
+    "term": {
+      "ko": "프런티어 모델",
+      "en": "Frontier model"
+    },
+    "definition": {
+      "ko": "현재 기술 수준에서 가장 앞선 성능을 가진 대규모 AI 모델을 가리키는 말이다. 능력이 크기 때문에 사이버 공격이나 무기 개발처럼 국가 안보와 얽힌 위험도 함께 커진다고 보아, 각국 규제 논의에서 별도의 검토 대상으로 다뤄진다.",
+      "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
+    },
+    "firstSeen": "2026-09-03",
     "count": 1
   }
 ];

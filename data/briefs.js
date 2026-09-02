@@ -14,6 +14,380 @@ window.SAB = window.SAB || {};
 
 SAB.briefs = [
   {
+    "date": "2026-09-03",
+    "weekday": {
+      "ko": "목요일",
+      "en": "Thursday"
+    },
+    "type": "daily",
+    "note": {
+      "ko": "오늘은 9건입니다. 요약 규격을 맞추지 못한 1건도 뺐습니다. 자리를 채우려고 RSS 요약만 보고 쓰지는 않습니다.",
+      "en": "Today's brief carries 9 stories. 1 more was dropped for failing the writing spec. We do not fill the gap by writing from RSS blurbs alone."
+    },
+    "funnel": {
+      "collected": 1699,
+      "window24h": 97,
+      "excluded": 49,
+      "deduped": 43,
+      "fetchFailed": 2,
+      "scored": 41,
+      "published": 9
+    },
+    "insight": {
+      "title": {
+        "ko": "감시할 수 있게 만드는 쪽과 감시를 줄이는 쪽이 같은 날 나왔다",
+        "en": "One day, two directions: building oversight in, and quietly taking it out"
+      },
+      "body": {
+        "ko": [
+          "오늘 기사를 가로지르는 축은 '누가 안을 들여다볼 수 있는가'다. 구글은 취약점을 자동으로 고치는 도구를 심사받은 정부·기업 650곳에만 열었고(1번), 그 바탕이 되는 사이버 전용 모델도 '신뢰받는 방어자'에게만 준다(2번). 반대편에서 오픈AI 아스트라는 사고 과정을 덜 드러내는 순환 깊이 구조를 택했다는 보도가 나왔고, 사고 사슬은 지금까지 오남용을 사전에 잡아내는 거의 유일한 창구였다(5번). 한쪽은 능력의 접근을 좁혀 통제하고 다른 쪽은 능력의 내부를 좁혀 통제 자체를 어렵게 만든다. 같은 주에 나온 두 선택이 정반대 방향을 가리킨다.",
+          "그런데 이 판정을 검증할 공적 장치가 오늘 기사에서 가장 약한 고리다. 프런티어 모델 공개 전 안전성 검토 기준이 비공개라는 이유로 연방기관 네 곳이 피소됐고, 기준을 만든 기업의 신원조차 공개되지 않았다(3번). 구글이 누구를 방어자로 판정하는지도(1번, 2번), 오픈AI가 어느 정도의 불투명성까지 허용되는지도(5번) 결국 각 사의 재량에 남아 있다. 아키텍처 투명성을 규제 대상으로 삼은 곳이 아직 없다는 사실과, 검토 기준을 묻는 정보공개 청구에 네 기관 모두 답하지 않았다는 사실은 같은 공백의 앞뒤다.",
+          "반면 기업 현장에서는 정확히 반대되는 규율이 자리를 잡고 있다. 메타는 컴플라이언스 판단을 파인튜닝된 가중치가 아니라 사람이 읽는 200여 개 지식 파일에 담아 모든 개선이 30초 안에 검토되는 diff 로 남게 했고(6번), 자빌은 AI 도입에 앞서 100여 사업장의 데이터 배관을 먼저 잇는 '단순화 먼저' 순서를 못박았다(9번). 감사할 수 있는 형태로 지식을 저장하는 쪽이 도입 속도를 늦추더라도 결국 빠르다는 판단이다. 프런티어 모델 쪽에서 사라지고 있는 성질이 기업 배포 쪽에서는 설계 원칙으로 채택되고 있다는 것이 오늘의 대비다."
+        ],
+        "en": [
+          "The thread running through today's items is a question about visibility: who gets to look inside. Google opened its automated vulnerability-repair tooling only to 650-plus vetted governments and enterprises (item 1), and gates the underlying cyber model to \"trusted defenders\" alone (item 2). Pointing the other way, OpenAI's Astra was reported to use a looped-transformer design that exposes far less of its reasoning than rival frontier models — and chain-of-thought has been close to the only channel for catching misuse before it happens (item 5). One approach narrows who can reach a capability; the other narrows what can be seen inside it. Same week, opposite directions.",
+          "What is missing is any public mechanism to check either judgment. Four federal agencies are being sued because the criteria used to review frontier models before release are undisclosed — down to the identity of the firms that wrote them (item 3). Who counts as a defender is Google's call (items 1 and 2); how opaque an architecture may be is OpenAI's (item 5). No regulator treats architectural transparency as something to review, and all four agencies declined the same records request. Those are two faces of one gap.",
+          "Enterprise deployment, meanwhile, is converging on the opposite discipline. Meta encoded compliance judgment not in fine-tuned weights but in 200-plus human-readable knowledge files, so every improvement lands as a diff an expert can review in 30 seconds, with version control and audit trails coming along for free (item 6). Jabil froze its sequence at integrate, standardize, then AI — wiring together data across 100-plus sites before running anything on it (item 9). Both bet that auditable structure beats speed. The property quietly draining out of frontier models is the one enterprises are writing into their architecture."
+        ]
+      }
+    },
+    "articles": [
+      {
+        "id": "2026-09-03-01",
+        "rank": 1,
+        "title": {
+          "ko": "구글, 정부·기업용 취약점 자동 수정 프로그램 개시",
+          "en": "Google Opens Gemini Cyber Models to Vetted Defenders"
+        },
+        "source": "Google DeepMind Blog",
+        "sourceType": "primary",
+        "url": "https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises",
+        "publishedAt": "2026-09-02T16:24:24.000Z",
+        "topic": "safety",
+        "score": 58,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.73
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "구글 딥마인드가 정부기관과 구글 클라우드 고객, 보안 파트너를 대상으로 한 제한 접근 프로그램 '페어윈드(Fairwind)'를 시작했다. 참여 조직은 사이버 전용 모델 Gemini 3.8 Flash Cyber 와 취약점 수정 도구 CodeMender 를 함께 받아, 조직의 보안 클라우드 환경 안에서 취약점을 자동으로 찾고 고칠 수 있다.",
+            "구글은 현재 전 세계 650곳 이상이 이 프로그램에 참여하고 있다고 밝혔다. 또한 Google.org 를 통한 누적 사이버보안 지원금이 1억 달러를 넘었으며, 이 가운데 3600만 달러가 미국 내 사이버 클리닉 35곳에 투입돼 병원·공립 교육구·지방 공공시설 1250곳 이상을 지원했다고 덧붙였다."
+          ],
+          "en": [
+            "Google DeepMind has launched Fairwind, a limited-access program that gives government agencies, Google Cloud customers, and cybersecurity partners its most advanced cyber defense tools. Participants pair Gemini 3.8 Flash Cyber, a model specialized for security work, with the CodeMender harness to autonomously find, verify, and patch software vulnerabilities inside their own secure cloud environments.",
+            "Google says more than 650 partners worldwide are already taking part, and that entry is restricted to internal security, incident response, and penetration testing staff under mandatory controls such as multi-factor authentication. The company also reported that its cumulative Google.org cybersecurity funding has passed $100 million, including $36 million for 35 cyber clinics serving over 1,250 U.S. hospitals, school districts, and municipal utilities."
+          ]
+        },
+        "implication": {
+          "ko": "방어 도구와 공격 도구는 사실상 같은 물건이다. 취약점을 자동으로 찾아 고치는 능력은 그대로 뒤집으면 자동으로 찾아 악용하는 능력이 되고, 구글이 접근 대상을 심사된 정부·기업으로 좁히고 다단계 인증까지 계약 조건에 넣은 이유가 여기 있다. 구글은 이를 '적응 기간(adaptation window)'이라고 부르는데, 공격자가 같은 수준의 도구를 손에 넣기 전에 중요 인프라를 먼저 손보라는 뜻이다. 공개 가중치 모델로도 비슷한 능력이 확산되는 흐름을 감안하면, 이 심사 방식이 얼마나 오래 유효할지가 다음 쟁점이 된다.",
+          "en": "Defensive and offensive security tooling are largely the same artifact viewed from two sides: a system that autonomously locates and patches flaws is one configuration change away from one that locates and exploits them. That is why Google is gating Fairwind behind vetted partners and contractual controls rather than shipping the cyber model broadly, and why it frames early access as an \"adaptation window\" for critical infrastructure. The bet is that hardening the most systemically important targets first buys time before comparable capability becomes widely available. Given how quickly open-weight models close capability gaps, the open question is how long a vetting-based moat holds."
+        },
+        "terms": [
+          "open-weights",
+          "agent"
+        ]
+      },
+      {
+        "id": "2026-09-03-02",
+        "rank": 2,
+        "title": {
+          "ko": "구글, 제미나이 3.8 플래시와 보안 전용 모델 공개",
+          "en": "Google Releases Gemini 3.8 Flash and a Cyber Variant"
+        },
+        "source": "Google DeepMind Blog",
+        "sourceType": "primary",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
+        "publishedAt": "2026-09-02T16:18:31.000Z",
+        "topic": "models",
+        "score": 58,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.72
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "구글 딥마인드가 3일 제미나이 3.8 플래시와 신뢰받는 방어자에게만 제공하는 제미나이 3.8 플래시 사이버 두 종을 공개했다. 두 모델은 같은 기반 지능을 공유하며, 구글은 사이버보안 영역의 훈련이 추론·코딩 성능 향상을 끌어냈다고 밝혔다.",
+            "3주 전 3.7 플래시에 이어 6주 만의 세 번째 플래시 공개로, 가격과 속도는 3.7과 같은 수준을 유지한다. 3.8 플래시는 HLE-Verified에서 54.9%를 기록했고, 사이버 모델은 20개 프로그래밍 언어에 걸친 내부 취약점 탐지 평가에서 70% 이상의 성공률을 보였다."
+          ],
+          "en": [
+            "Google DeepMind released two models on Tuesday: Gemini 3.8 Flash and Gemini 3.8 Flash Cyber, the latter restricted to vetted defenders through the company's Fairwind Program. Both run on the same foundational intelligence, and Google attributes the reasoning and coding gains partly to training in cybersecurity.",
+            "It is the third Flash release in six weeks and arrives three weeks after 3.7 Flash, at the same speed and cost as that model. Gemini 3.8 Flash scored 54.9% on HLE-Verified, while the Cyber variant exceeded a 70% success rate on an internal vulnerability-discovery benchmark spanning 20 programming languages and reached 47.2% pass@1 on the CWE-Bench patching benchmark, against 47.8% for a leading frontier model."
+          ]
+        },
+        "implication": {
+          "ko": "6주에 세 번이라는 출시 간격은 모델 공개가 연례 행사에서 분기도 아닌 월 단위 갱신으로 내려왔다는 뜻이다. 가격을 올리지 않고 성능만 올린 릴리스가 반복되면, 지금 상위 모델에 지불하는 비용의 상당 부분은 몇 주 뒤 저가 등급에서 회수된다. 보안 모델을 심사받은 방어자에게만 여는 방식은 공격에도 쓰일 수 있는 능력을 다루는 현실적인 절충안이지만, 누가 방어자인지를 구글이 판정한다는 문제를 남긴다. 취약점 발견보다 수정을 먼저 투자했다는 설명도 같은 맥락에서 읽을 필요가 있다.",
+          "en": "Three Flash releases in six weeks means model launches have dropped from annual events to something closer to a monthly refresh cycle. When each iteration raises capability while holding price flat, much of what teams pay today for frontier-tier reasoning gets recovered weeks later in the cheap tier. Gating the security model behind a vetted-defender program is a workable compromise for capabilities that cut both ways, but it leaves Google deciding who counts as a defender. The stated choice to invest in patching before exploitation should be read in that same light."
+        },
+        "terms": [
+          "agent",
+          "eval",
+          "tokens"
+        ]
+      },
+      {
+        "id": "2026-09-03-03",
+        "rank": 3,
+        "title": {
+          "ko": "연방기관 4곳, AI 안전성 검토 비공개 기준 두고 피소",
+          "en": "Four US agencies sued over secret AI safety review rules"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing",
+        "publishedAt": "2026-09-02T17:58:33.000Z",
+        "topic": "policy",
+        "score": 54,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.79
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "비영리단체 프로텍트 데모크라시가 프런티어 AI 모델 공개 전 안전성 검토에 쓰이는 비공개 기준을 밝히라며 연방기관 네 곳을 상대로 소송을 냈다. 소장은 검토 절차의 내용, 기준을 만든 기업의 신원, 검토를 수행할 법적 근거가 대중과 의회에 공개되지 않았다고 적었다.",
+            "백악관은 8월 3일 공개 전 모델 검토를 위한 자율 기준을 완성했다고 발표했고, 이 기준 자체는 기밀로 지정돼 있지 않다. 단체는 국가사이버국장실, 과학기술정책실, 재무부, 상무부에 같은 정보공개 청구를 냈으나 어느 기관도 자료를 내놓지 않았다."
+          ],
+          "en": [
+            "Protect Democracy, a nonpartisan nonprofit, sued four federal agencies to force disclosure of the undisclosed framework the Trump administration uses to review frontier AI models before release. The complaint states that the framework's text, the identity of the companies helping build it, and the legal authority for the reviews have not been shared with the public or Congress.",
+            "The White House announced on August 3 that it had completed the voluntary pre-release review framework, which the complaint notes is not itself designated as classified. Identical records requests went to the Office of the National Cyber Director, the Office of Science and Technology Policy, the Treasury Department, and the Commerce Department, and none has produced any records."
+          ]
+        },
+        "implication": {
+          "ko": "검토 기준이 공개되지 않으면 어떤 모델이 왜 통과했는지 외부에서 검증할 수 없고, 실제로 사고가 났을 때 검사가 부실했던 것인지조차 판별할 수 없다. 더 큰 문제는 배포 승인 권한이 사실상 행정부 손에 들어간다는 점이다 — 기준이 비공개면 승인과 보류가 안전성 판단인지 정치적 판단인지 구분할 방법이 없다. 소장이 지목한 9월 30일은 이 프로그램의 법적 근거로 지목된 CISA 조항 연장 표결 시점과 겹친다. 의회가 근거 법을 연장할지 정하는 시점에 프로그램의 실체를 모른다는 것이 이 소송의 실질적 쟁점이다.",
+          "en": "If the criteria stay hidden, no one outside the executive branch can check which models were approved and why — or, when something goes wrong in the wild, whether the review was simply inadequate. The deeper issue is that deployment approval effectively sits with the administration: with the rules undisclosed, there is no way to separate a safety call from a political one. The September 30 date in the complaint overlaps with the window for Congress to vote on extending the CISA provision that the administration cites as the legal basis for the program. Lawmakers being asked to renew that authority without knowing how the program operates is the practical stake here."
+        },
+        "terms": [
+          "eval",
+          "frontier-model"
+        ]
+      },
+      {
+        "id": "2026-09-03-04",
+        "rank": 4,
+        "title": {
+          "ko": "아마존, 알렉사로 사칭 메일·문자 진위 확인 기능 추가",
+          "en": "Amazon's Alexa can now verify if a message is real"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/tech/988518/amazon-alexa-for-shopping-verify-emails",
+        "publishedAt": "2026-09-02T17:52:56.000Z",
+        "topic": "products",
+        "score": 52,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.79
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "아마존이 사칭 사기에 대응해 이메일·문자·전화가 실제 아마존에서 온 것인지 AI 비서로 확인하는 기능을 내놨다. 이용자가 받은 메시지를 알렉사 포 쇼핑에 물으면 아마존이 보낸 모든 메시지 기록과 대조하고 내용·형식·발신자를 함께 분석한다.",
+            "아마존은 이 비서가 \"완전히 확실한\" 경우에만 진짜라고 확인해 준다고 밝혔다. 아마존이 보낸 것이 아니라고 판단하면 앱에서 주문 내역을 확인하고 고객지원에 직접 연락하라고 안내한다."
+          ],
+          "en": [
+            "Amazon has added a way to ask its AI assistant whether an email, text, or phone call genuinely came from the company, aimed at impersonation scams. A user can describe a received message to Alexa for Shopping, which checks it against a record of every message Amazon has sent while analyzing the contents, formatting, and sender.",
+            "Amazon says the assistant confirms a message as real only when it is \"completely certain.\" If it decides a message did not come from Amazon, it tells the customer to check their orders in the app and contact Amazon support directly."
+          ]
+        },
+        "implication": {
+          "ko": "사칭 사기 방어의 무게중심이 이용자의 눈썰미에서 발신자 본인의 발송 기록으로 옮겨 가고 있다. 아마존은 자기가 무엇을 보냈는지 아는 유일한 주체이므로, 이 대조는 외부 백신이나 스팸 필터가 흉내 낼 수 없는 판정 근거를 갖는다. 다만 판정 창구가 알렉사 하나로 모이면 그 창구 자체를 사칭하는 수법이 다음 표적이 되고, \"확실할 때만 확인\"이라는 보수적 설계가 실제로 얼마나 자주 판단을 유보하는지가 유용성을 가른다.",
+          "en": "The center of gravity in anti-impersonation defense is shifting from the user's eye for detail to the sender's own record of what it dispatched. Amazon is the only party that knows what Amazon actually sent, which gives this check a grounding that no external filter or antivirus can reproduce. The risk is concentration: once verification runs through a single assistant, spoofing that assistant becomes the next attack surface, and the conservative \"only when completely certain\" design means its usefulness hinges on how often it simply declines to answer."
+        },
+        "terms": []
+      },
+      {
+        "id": "2026-09-03-05",
+        "rank": 5,
+        "title": {
+          "ko": "오픈AI 아스트라, 추론 과정 불투명성 논란",
+          "en": "Researchers warn OpenAI's Astra may resist monitoring"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
+        "publishedAt": "2026-09-02T16:40:50.000Z",
+        "topic": "safety",
+        "score": 51,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.74
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "오픈AI가 화요일 최상위 모델 아스트라의 출시를 안전 문제 보완을 이유로 미룬 직후, 디인포메이션은 이 모델이 다른 프런티어 모델보다 '사고 과정'을 훨씬 적게 드러낸다고 보도했다. 익명 소식통을 인용한 이 보도는 아스트라가 정보를 내부 층에서 순환시키는 '순환 깊이(looped transformer)' 기법을 쓴다고 전했다.",
+            "레드우드리서치 수석과학자 라이언 그린블랫은 이 선택을 \"지금까지 AI 보안·안전에 있어 최악의 전개\"라고 적었고, 그는 오픈AI가 허깅페이스 해킹 조사를 허용한 외부 연구자 세 명 중 한 명이다. 오픈AI 수석과학자 야쿠프 파호츠키는 아스트라의 내부 연산 깊이가 \"GPT-4의 두 배 이내\"라고 반박했다."
+          ],
+          "en": [
+            "OpenAI said Tuesday it had delayed the release of Astra, its most powerful model, to work on safety issues; The Information then reported that Astra shows far less of its \"thinking\" than other frontier models. Citing an unnamed source, the report said Astra uses a looped transformer, or recurrent depth, architecture that cycles information through internal layers before producing an output.",
+            "Ryan Greenblatt, chief scientist at Redwood Research and one of three outsiders OpenAI permitted to research the Hugging Face hack, called the choice \"the single worst development for AI security/safety to date.\" OpenAI chief scientist Jakub Pachocki responded that the depth of Astra's computation is \"within a factor of two of GPT-4.\""
+          ]
+        },
+        "implication": {
+          "ko": "논쟁의 핵심은 모델의 성능이 아니라 감시 가능성이다. 사고 사슬은 지금까지 오남용을 사전에 잡아내는 거의 유일한 창구였고, 허깅페이스 해킹 조사도 여기에 기댔다. 그린블랫이 경계하는 것은 아스트라 한 건이 아니라 경쟁사들이 성능을 얻으려 더 불투명한 구조로 옮겨 가는 흐름이며, 파호츠키조차 사고 사슬 감시가 \"취약하고 부정적인 방향으로 가고 있다\"고 인정했다. 어느 회사도 아키텍처 투명성을 규제 대상으로 삼지 않은 상태에서 이 선택은 각 사의 재량에 남아 있다.",
+          "en": "The dispute is about observability, not capability. Chain-of-thought has been the main window into a model's intentions before it acts, and the Hugging Face investigation leaned on exactly that. Greenblatt's concern is structural rather than about one release: if opacity buys performance, rivals follow, and Pachocki himself concedes that chain-of-thought monitoring is \"fragile and trending in a negative direction.\" No regulator currently treats architectural transparency as a safety requirement, which leaves the tradeoff entirely to the labs making it."
+        },
+        "terms": [
+          "alignment",
+          "guardrails",
+          "red-teaming"
+        ]
+      },
+      {
+        "id": "2026-09-03-06",
+        "rank": 6,
+        "title": {
+          "ko": "메타, 사내 전문가 판단을 코드화한 컴플라이언스 AI 공개",
+          "en": "Meta Builds Compliance Agent That Codifies Expert Reasoning"
+        },
+        "source": "Meta Engineering",
+        "sourceType": "primary",
+        "url": "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts",
+        "publishedAt": "2026-09-02T09:00:29.000Z",
+        "topic": "enterprise",
+        "score": 51,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.42
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "메타 엔지니어링이 특정 컴플라이언스 영역의 전문가 판단을 AI 에이전트로 옮긴 시스템 구조를 공개했다. 조직의 해석과 판단 기준을 미리 구조화한 지식 파일, 전문가의 분석 절차를 단계별로 지시하는 '레시피', 평가 체계, 그리고 전문가 피드백을 파일 수정으로 자동 반영하는 개선 루프의 네 층으로 구성된다.",
+            "지식 파일은 200개가 넘으며 각 파일이 YAML 머리말에 의존 관계와 참조 관계를 선언해 양방향 의존 그래프를 만든다. 초기에는 단일 지시문과 의미 검색으로 모든 자료를 불러왔으나 레시피 단계로 나눈 뒤 한 번의 처리에 쓰는 토큰이 약 80% 줄었고, 개발은 6주 동안 세 번의 스프린트로 진행됐다."
+          ],
+          "en": [
+            "Meta Engineering has published the architecture of an AI agent that encodes how its experts reason in one compliance domain. The system has four layers: knowledge files that distill the organization's own positions and boundaries, imperative \"recipes\" that prescribe each step of an analytical workflow, an evaluation framework, and an improvement loop that turns expert corrections into file edits without retraining the model.",
+            "The knowledge base holds over 200 files, each declaring its dependencies and consumers in YAML frontmatter to form a bidirectional dependency graph. Restructuring from a single flat instruction file with semantic search into recipe-driven stages cut tokens consumed per turn by roughly 80%, and the system was built over three sprints spanning six weeks."
+          ]
+        },
+        "implication": {
+          "ko": "기업용 AI의 경쟁축이 모델 성능에서 '조직의 판단을 어디에 저장하는가'로 옮겨가고 있다. 메타의 선택은 파인튜닝된 가중치가 아니라 사람과 에이전트가 함께 읽는 텍스트 파일이다. 모든 개선이 전문가가 30초 안에 검토할 수 있는 diff 로 남고, 버전 관리·되돌리기·감사가 그대로 따라온다. 수정된 사례가 회귀 테스트로 자동 편입돼 같은 실수가 두 번 나오지 않게 막는 구조는, 컴플라이언스처럼 일관성 자체가 리스크인 영역에서 재학습 없이 지식을 갱신하려는 조직이 참고할 만한 형태다.",
+          "en": "The competitive question in enterprise AI is shifting from model capability to where an organization's judgment is stored. Meta's answer is text files legible to both humans and agents rather than fine-tuned weights, so every improvement lands as a diff an expert can review in seconds and remains versioned, diffable, and reversible. Notably, the loop closes itself: each validated fix is folded into the regression suite, so a corrected mistake cannot quietly return. For regulated functions where inconsistency is itself the risk, this is a concrete template for updating institutional knowledge without retraining anything."
+        },
+        "terms": [
+          "agent",
+          "tokens",
+          "eval"
+        ]
+      },
+      {
+        "id": "2026-09-03-07",
+        "rank": 7,
+        "title": {
+          "ko": "인천시, 490억원으로 AI 대드론 방산클러스터 조성",
+          "en": "Incheon Funds Edge-AI Counter-Drone Defense Cluster"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20260903000002",
+        "publishedAt": "2026-09-02T18:31:03.000Z",
+        "topic": "compute",
+        "score": 50,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.81
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "인천시가 2일 '인천 방산혁신클러스터 지역협의회'를 출범하고 2026~2030년 사업계획안을 심의·의결했다. 이 사업은 'AI 항공'을 특화 분야로 삼아 엣지 AI 기반 대드론 산업 생태계를 조성하는 것으로, 북방한계선(NLL) 인근과 도심에 침입하는 불법 무인기를 탐지하고 무력화·요격하는 기술 개발이 핵심이다.",
+            "인천시는 지난 6월 방위사업청 공모에 선정돼 올해부터 2030년까지 국비 245억원과 지방비 245억원 등 총 490억원을 투입한다. 이날 출범한 지역협의회에는 산업계·대학·연구기관·군·행정기관의 방위산업 전문가 19명이 참여했다."
+          ],
+          "en": [
+            "The city of Incheon has launched a regional council for its defense innovation cluster and approved a five-year plan running from 2026 to 2030. The cluster designates \"AI aviation\" as its specialty, centering on edge-AI systems that detect, disable and intercept unauthorized drones entering the airspace near the Northern Limit Line — the disputed inter-Korean sea boundary — and over urban areas.",
+            "Incheon was selected in June by the Defense Acquisition Program Administration, South Korea's arms procurement agency, and will spend 49 billion won (about $35 million) through 2030, split evenly between national and municipal budgets. The council seated 19 defense experts drawn from industry, universities, research institutes, the military and government."
+          ]
+        },
+        "implication": {
+          "ko": "국가 예산이 아니라 광역시 예산이 절반을 대는 AI 방산 사업이라는 점이 눈에 띈다. 대드론 대응은 탐지에서 요격까지 초 단위로 끝나야 해 클라우드로 데이터를 보낼 여유가 없고, 그래서 엣지 AI가 선택이 아니라 전제 조건이 된다. 인천은 NLL과 인천국제공항을 동시에 끼고 있어 실증 환경 자체가 자산인데, 사업 설계가 R&D보다 지역 중소기업의 방산 공급망 진입에 무게를 둔 것도 그 때문으로 읽힌다. 관건은 5년 뒤 남는 것이 시제품이냐 아니면 실제로 군에 납품하는 기업들이냐다.",
+          "en": "Half the money here comes from a city budget, not the national one — a sign that counter-drone AI has become concrete enough for local governments to bet on directly. Intercepting a drone is a problem measured in seconds, which leaves no room to ship sensor data to a data center and wait; edge inference is a precondition rather than a design preference. Incheon's geography is the real asset, sitting between the contested maritime boundary with North Korea and the country's largest international airport, which gives the program testing conditions that are hard to reproduce elsewhere. The plan's emphasis on getting small local firms into defense supply chains, rather than on research alone, suggests the outcome to watch is how many suppliers exist in 2030, not how many prototypes."
+        },
+        "terms": []
+      },
+      {
+        "id": "2026-09-03-08",
+        "rank": 8,
+        "title": {
+          "ko": "미 행정부, NYT 저작권 소송에서 오픈AI 편에 섰다",
+          "en": "US Government Backs OpenAI in NYT Copyright Suit"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/988344/trump-administration-new-york-times-openai-lawsuit",
+        "publishedAt": "2026-09-02T16:12:25.000Z",
+        "topic": "data",
+        "score": 50,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.72
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "트럼프 행정부가 뉴욕타임스가 오픈AI를 상대로 낸 저작권 소송에 이번 주 이해관계 진술서를 제출하고, 저작물로 AI 모델을 학습시키는 것이 공정이용이라는 오픈AI 측 주장을 지지했다. 미 정부 측 변호인단은 진술서에서 뉴욕타임스가 대규모 언어모델 학습을 배제하는 방향으로 공정이용 원칙을 좁히려 한다며, 그 결과는 저작권법의 기본 원칙에 어긋나고 \"과학과 유용한 기술의 진보\"를 심각하게 저해한다고 밝혔다.",
+            "이 소송은 2023년 12월 제기됐고 뉴욕타임스는 마이크로소프트와 오픈AI 양측에 \"수십억 달러\" 규모의 손해배상을 요구하고 있다. 2025년에는 판사가 앤스로픽이 정식 구매한 책으로 모델을 학습시킨 것은 합법이지만 불법 복제물에 대해서는 책임을 물을 수 있다고 판단했고, 이는 저자들과의 15억 달러 합의로 이어졌다."
+          ],
+          "en": [
+            "The Trump administration filed a statement of interest this week in The New York Times' copyright suit against OpenAI, backing the lab's position that training a model on copyrighted text is fair use. Government attorneys wrote that the Times seeks to narrow fair-use doctrine to exclude the training of large language models, a result they called inconsistent with basic copyright principles and one that would severely hamper \"the Progress of Science and useful Arts.\"",
+            "The suit was filed in December 2023 and seeks to recoup \"billions of dollars\" in damages from both Microsoft and OpenAI. In a 2025 decision, a judge found that Anthropic could lawfully train on purchased books but could still be held liable for piracy, an outcome that produced a $1.5 billion settlement with authors."
+          ]
+        },
+        "implication": {
+          "ko": "학습 데이터 분쟁의 무게중심이 법정 안에서 밖으로 옮겨가고 있다. 행정부가 사적 소송에 이해관계 진술서를 넣는 것은 판결을 직접 바꾸지는 못하지만, 공정이용 해석의 기준선을 정부 입장으로 제시해 이후 언론사들의 소송 전략과 협상 조건을 미리 흔든다. 이미 AP·악셀 슈프링거·복스미디어가 오픈AI와 라이선스를 맺었고 뉴욕타임스도 아마존과는 계약했다는 점을 보면, 실제 쟁점은 \"학습이 허용되느냐\"보다 \"소송 없이 얼마를 받느냐\"에 가까워졌다. 국내 언론사와 콘텐츠 기업도 이 판례가 라이선스 협상 테이블의 시작 가격을 결정한다는 점을 염두에 둘 만하다.",
+          "en": "The center of gravity in training-data disputes is shifting from the courtroom to policy. A statement of interest does not decide the case, but it plants the government's reading of fair use as the reference point that shapes how other outlets litigate and what they can demand at the negotiating table. Given that the AP, Axel Springer and Vox Media have already licensed to OpenAI — and that the Times itself signed with Amazon — the operative question is less whether training is permitted than what it costs without a lawsuit. For any publisher weighing litigation against licensing, this filing lowers the expected value of the first option."
+        },
+        "terms": []
+      },
+      {
+        "id": "2026-09-03-09",
+        "rank": 9,
+        "title": {
+          "ko": "자빌, AI 도입 전 100여 공장 시스템 통합부터",
+          "en": "Jabil puts system integration ahead of AI across 100+ plants"
+        },
+        "source": "MIT Technology Review",
+        "sourceType": "tech",
+        "url": "https://technologyreview.com/2026/09/02/1142879/facilitating-ai-integration-with-simplicity-at-scale",
+        "publishedAt": "2026-09-02T14:00:00.000Z",
+        "topic": "enterprise",
+        "score": 50,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.63
+        },
+        "crossRefs": [],
+        "summary": {
+          "ko": [
+            "30여 개국에 100곳이 넘는 사업장을 둔 전자제품 위탁생산 기업 자빌이 사업장마다 흩어진 도구와 스프레드시트, 레거시 시스템을 정리하고 SAP 통합 스위트를 축으로 시스템을 잇는 작업을 진행 중이다. 하리시 마노하르 자빌 SAP IT 디렉터는 \"단순화 먼저, 혁신은 그다음\"이라는 원칙을 세웠다고 MIT 테크놀로지 리뷰 팟캐스트에서 말했다.",
+            "마노하르는 최적화나 자동화, AI 적용에 앞서 데이터가 시스템 사이를 막힘없이 흘러야 한다고 설명했다. 자빌은 우선 40여 개 공장에 공통 프로세스를 적용하는 것을 목표로 잡았으며, 통합 기반 위에서 예측형 공급망 인사이트와 지능형 예외 처리, AI 기반 계획·수요예측을 검토하고 있다."
+          ],
+          "en": [
+            "Jabil, a contract manufacturer running more than 100 sites in over 30 countries, is consolidating site-specific tools, spreadsheets and legacy systems around SAP Integration Suite. Harish Manohar, the company's SAP IT director, told an MIT Technology Review podcast that Jabil adopted a \"simplify-first, then-innovate\" mindset because innovation layered on top of complexity only adds more of it.",
+            "Manohar said data has to flow across systems before a company can optimize, automate or apply AI, and that every modernization project at Jabil requires a business case signed off by the business side. The initial target is roughly 40 plants sharing consistent processes, after which Jabil is looking at predictive supply chain insights, intelligent exception handling and AI-driven planning and forecasting."
+          ]
+        },
+        "implication": {
+          "ko": "AI 도입을 가로막는 것이 모델 성능이 아니라 사내 데이터 배관이라는 점을 보여 주는 사례다. 25년간 쌓인 커스터마이징과 사업장별 도구가 남아 있으면 AI는 신뢰할 수 없는 데이터 위에서 돌게 되고, 그래서 자빌은 도입 순서를 통합 → 표준화 → AI 로 못박았다. 다만 이 콘텐츠는 SAP 와의 파트너십으로 제작된 후원 기획이며 MIT 테크놀로지 리뷰 편집국이 만든 기사가 아니라는 점은 감안해서 읽어야 한다. 제조업처럼 사업장별 공정 성숙도가 제각각인 조직이라면, AI 파일럿보다 데이터 단일 출처를 먼저 세우는 이 순서가 참고할 만하다.",
+          "en": "This is a case study in what actually blocks enterprise AI: not model quality but internal data plumbing. Twenty-five years of heavy customization and site-by-site tooling means any AI layer would run on data nobody trusts, which is why Jabil fixed the order as integration, then standardization, then AI. Readers should weigh it knowing the piece is sponsored content produced in partnership with SAP, not MIT Technology Review editorial. For organizations whose sites each grew their own processes, the sequencing lesson — a single source of truth before the AI pilot — is the transferable part."
+        },
+        "terms": []
+      }
+    ]
+  },
+  {
     "date": "2026-09-02",
     "weekday": {
       "ko": "수요일",
