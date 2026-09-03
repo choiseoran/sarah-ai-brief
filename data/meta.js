@@ -17,7 +17,15 @@ SAB.meta = {
     publishTime: '08:00',
     timezone: 'Asia/Seoul',
     email: 'sarah@insightai.art',
-    rss: 'feed.xml'
+    rss: 'feed.xml',
+
+    /* 발행 언어 — 화면과 파이프라인이 함께 읽는 하나의 스위치다 (SPEC 5·7절).
+       'en' 을 빼면 Phase 3 이 한국어만 만들어 호출당 출력 토큰이 절반으로 준다.
+       화면의 EN 버튼은 지우지 않고 남겨 두되 눌리면 이유를 말한다 —
+       없어진 기능과 잠시 멈춘 기능은 독자에게 다른 것이다.
+       되돌리려면 'en' 을 다시 넣는다. 주석 처리해 둔 코드는 없다.
+       2026-09-03 토큰 절약을 위해 'en' 을 뺐다. */
+    languages: ['ko']
   },
 
   /* 출처 유형과 가중치 — SPEC 6.1 */

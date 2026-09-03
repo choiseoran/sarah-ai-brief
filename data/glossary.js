@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 10
+    "count": 14
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 8
+    "count": 9
   },
   {
     "id": "open-weights",
@@ -45,7 +45,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 3
+    "count": 4
   },
   {
     "id": "eval",
@@ -136,6 +136,28 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
+    "count": 3
+  },
+  {
+    "id": "uptime",
+    "term": {
+      "ko": "가동률 / Uptime"
+    },
+    "definition": {
+      "ko": "일정 기간 서비스가 정상 작동한 시간의 비율이다. 99.4%는 90일 중 약 13시간이 정상이 아니었다는 뜻으로, 소수점 한 자리 차이가 실제로는 몇 시간의 차이가 된다. 클라우드 서비스가 신뢰성을 공개하는 표준 지표다."
+    },
+    "firstSeen": "2026-09-04",
+    "count": 1
+  },
+  {
+    "id": "key-value-store",
+    "term": {
+      "ko": "키-값 저장소"
+    },
+    "definition": {
+      "ko": "이름표(키) 하나로 값을 넣고 꺼내는 가장 단순한 형태의 데이터베이스다. 표와 관계를 다루는 관계형 데이터베이스보다 기능은 적지만 그만큼 빠르고, 여러 대에 나눠 담기 쉬워 대규모 서비스의 설정값·카운터·메타데이터 보관에 널리 쓰인다."
+    },
+    "firstSeen": "2026-09-04",
     "count": 1
   }
 ];
