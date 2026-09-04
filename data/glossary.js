@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 14
+    "count": 17
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 9
+    "count": 10
   },
   {
     "id": "open-weights",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 7
+    "count": 9
   },
   {
     "id": "alignment",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 4
+    "count": 5
   },
   {
     "id": "red-teaming",
@@ -84,7 +84,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 3
+    "count": 4
   },
   {
     "id": "guardrails",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 4
+    "count": 8
   },
   {
     "id": "expedited-discovery",
@@ -110,7 +110,7 @@ SAB.glossary = [
       "en": "A request to a U.S. court for permission to gather evidence from the other side ahead of the normal schedule. It is typically used when the material at issue is transient, such as device logs or metadata that can be overwritten or lost while a case proceeds."
     },
     "firstSeen": "2026-09-02",
-    "count": 1
+    "count": 2
   },
   {
     "id": "zero-data-retention",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 3
+    "count": 4
   },
   {
     "id": "uptime",
@@ -158,6 +158,39 @@ SAB.glossary = [
       "ko": "이름표(키) 하나로 값을 넣고 꺼내는 가장 단순한 형태의 데이터베이스다. 표와 관계를 다루는 관계형 데이터베이스보다 기능은 적지만 그만큼 빠르고, 여러 대에 나눠 담기 쉬워 대규모 서비스의 설정값·카운터·메타데이터 보관에 널리 쓰인다."
     },
     "firstSeen": "2026-09-04",
+    "count": 1
+  },
+  {
+    "id": "reverse-proxy",
+    "term": {
+      "ko": "리버스 프록시"
+    },
+    "definition": {
+      "ko": "여러 클라이언트와 실제 서버 사이에 놓여 요청을 대신 받아 뒤로 전달하는 중간 계층이다. 클라이언트는 서버 대신 이 계층에만 연결하므로, 서버가 감당할 연결 수와 부하를 운영자가 직접 통제할 수 있다. 요청을 묶거나 캐시하는 등 개별 클라이언트가 할 수 없는 일도 이 자리에서 가능해진다."
+    },
+    "firstSeen": "2026-09-04",
+    "count": 1
+  },
+  {
+    "id": "numerical-weather-prediction",
+    "term": {
+      "ko": "수치예보 / Numerical weather prediction"
+    },
+    "definition": {
+      "ko": "대기의 물리 법칙을 방정식으로 풀어 미래 날씨를 계산하는 전통적 예보 방식이다. 슈퍼컴퓨터로 대규모 시뮬레이션을 돌려야 해서 결과가 나오기까지 몇 시간이 걸리며, 그 지연 때문에 비나 지표 기온처럼 빠르게 변하는 값에서 오차가 생긴다."
+    },
+    "firstSeen": "2026-09-04",
+    "count": 1
+  },
+  {
+    "id": "rag",
+    "term": {
+      "ko": "검색증강생성 / RAG"
+    },
+    "definition": {
+      "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
+    },
+    "firstSeen": "2026-09-05",
     "count": 1
   }
 ];
