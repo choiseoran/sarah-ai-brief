@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 20
+    "count": 21
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 10
+    "count": 11
   },
   {
     "id": "open-weights",
@@ -202,7 +202,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 1
+    "count": 3
   },
   {
     "id": "proof-of-concept",
@@ -213,6 +213,28 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
+    "count": 1
+  },
+  {
+    "id": "zero-trust",
+    "term": {
+      "ko": "제로트러스트"
+    },
+    "definition": {
+      "ko": "네트워크 내부에 있다는 이유만으로 사용자나 기기를 신뢰하지 않고, 접근 요청마다 신원과 권한을 다시 확인하는 보안 모델이다. 경계 방어가 뚫리면 내부가 무방비가 되는 기존 방식의 약점을 보완하기 위해 나왔다."
+    },
+    "firstSeen": "2026-09-07",
+    "count": 1
+  },
+  {
+    "id": "k-rmf",
+    "term": {
+      "ko": "한국형 위험관리프레임워크"
+    },
+    "definition": {
+      "ko": "정보체계를 도입하고 운영하는 전 과정에서 보안 위험을 식별하고 통제 수준을 정하는 국방 분야의 관리 체계다. 미국 국방부의 RMF를 한국 환경에 맞게 조정한 것으로, 체계별로 위험을 평가해 운영 승인 여부를 판단한다."
+    },
+    "firstSeen": "2026-09-07",
     "count": 1
   }
 ];
