@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 21
+    "count": 23
   },
   {
     "id": "tokens",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 6
+    "count": 7
   },
   {
     "id": "red-teaming",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 8
+    "count": 9
   },
   {
     "id": "expedited-discovery",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 5
+    "count": 6
   },
   {
     "id": "uptime",
@@ -158,7 +158,7 @@ SAB.glossary = [
       "ko": "이름표(키) 하나로 값을 넣고 꺼내는 가장 단순한 형태의 데이터베이스다. 표와 관계를 다루는 관계형 데이터베이스보다 기능은 적지만 그만큼 빠르고, 여러 대에 나눠 담기 쉬워 대규모 서비스의 설정값·카운터·메타데이터 보관에 널리 쓰인다."
     },
     "firstSeen": "2026-09-04",
-    "count": 1
+    "count": 2
   },
   {
     "id": "reverse-proxy",
@@ -191,7 +191,7 @@ SAB.glossary = [
       "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
     },
     "firstSeen": "2026-09-05",
-    "count": 1
+    "count": 2
   },
   {
     "id": "embodied-intelligence",
@@ -202,7 +202,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 3
+    "count": 4
   },
   {
     "id": "proof-of-concept",
@@ -213,7 +213,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 1
+    "count": 2
   },
   {
     "id": "zero-trust",
@@ -235,6 +235,28 @@ SAB.glossary = [
       "ko": "정보체계를 도입하고 운영하는 전 과정에서 보안 위험을 식별하고 통제 수준을 정하는 국방 분야의 관리 체계다. 미국 국방부의 RMF를 한국 환경에 맞게 조정한 것으로, 체계별로 위험을 평가해 운영 승인 여부를 판단한다."
     },
     "firstSeen": "2026-09-07",
+    "count": 1
+  },
+  {
+    "id": "recursive-self-improvement",
+    "term": {
+      "ko": "재귀적 자기 개선"
+    },
+    "definition": {
+      "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
+    },
+    "firstSeen": "2026-09-08",
+    "count": 1
+  },
+  {
+    "id": "warrant",
+    "term": {
+      "ko": "신주인수권 / Warrant"
+    },
+    "definition": {
+      "ko": "정해진 가격에 특정 회사의 주식을 나중에 살 수 있는 권리를 담은 증권이다. 권리를 행사하기 전까지는 실제 주주가 아니어서 지분 보유나 경영 참여로 공시할 의무가 없다는 해석이 나오고, 이 때문에 실질적 영향력이 장부에 드러나지 않는 문제가 생긴다."
+    },
+    "firstSeen": "2026-09-08",
     "count": 1
   }
 ];
