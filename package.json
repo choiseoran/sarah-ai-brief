@@ -14,9 +14,12 @@
     "collect:dry": "node scripts/collect.mjs --dry-run",
     "summarize": "node scripts/summarize.mjs",
     "brief": "node scripts/collect.mjs && node scripts/summarize.mjs",
+    "mail": "node scripts/mail.mjs",
+    "mail:dry": "node scripts/mail.mjs --dry-run",
     "serve": "python -m http.server 8000"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.122.0"
+    "@anthropic-ai/sdk": "^0.122.0",
+    "nodemailer": "^9.1.0"
   }
 }

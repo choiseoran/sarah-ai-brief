@@ -20,8 +20,10 @@ import * as cluster from './cluster.test.mjs';
 import * as select from './select.test.mjs';
 import * as candidates from './candidates.test.mjs';
 import * as summarize from './summarize.test.mjs';
+import * as env from './env.test.mjs';
+import * as mail from './mail.test.mjs';
 
-const suites = [score, robots, cluster, select, candidates, summarize];
+const suites = [score, robots, cluster, select, candidates, summarize, env, mail];
 let pass = 0;
 let fail = 0;
 const failures = [];

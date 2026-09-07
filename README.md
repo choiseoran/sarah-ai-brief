@@ -88,7 +88,6 @@ npm run summarize                                     # 이미 지나간 마지�
 node scripts/summarize.mjs --date 2026-09-01
 node scripts/summarize.mjs --dry-run                  # 호출 없이 프롬프트·스키마만
 node scripts/summarize.mjs --limit 1                  # 앞의 1건만 (확인용)
-node scripts/summarize.mjs --drop-samples             # 샘플 4일치를 지우고 실데이터만
 npm run brief                                         # 수집 → 요약을 한 번에
 ```
 
@@ -153,10 +152,59 @@ Unregister-ScheduledTask -TaskName 'SarahsAIBrief'  # 해제
 
 ---
 
+## 브리핑 메일 받기 (Phase 5a)
+
+발행이 끝나면 `daily.ps1` 이 브리핑 **전문**을 한국어 메일 한 통으로 보냅니다.
+받는 사람은 구독자 명단이 아니라 `.env` 에 적은 주소 하나입니다.
+
+```bash
+npm run mail:dry     # 보내지 않고 runs/<date>/mail.html 로 렌더만
+npm run mail         # 실제 발송
+```
+
+### 설정 (한 번만)
+
+1. **2단계 인증을 켭니다** — [myaccount.google.com](https://myaccount.google.com) → 보안.
+   켜지 않으면 다음 단계의 메뉴가 아예 보이지 않습니다.
+2. **앱 비밀번호를 발급받습니다** — [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords).
+   `abcd efgh ijkl mnop` 처럼 공백이 섞여 표시되니 **공백을 지우고** 복사하세요.
+   창을 닫으면 다시 볼 수 없습니다. 회사 Workspace 계정이면 관리자가 막아 두었을 수 있습니다.
+3. 저장소 루트 `.env` 에 세 줄을 넣습니다 (`.gitignore` 에 있어 커밋되지 않습니다).
+
+```
+MAIL_USER=보내는사람@gmail.com
+MAIL_PASS=앱비밀번호16자
+MAIL_TO=받는사람@example.com
+```
+
+선택 항목은 `MAIL_FROM`(표시 이름), `MAIL_HOST`·`MAIL_PORT`(기본 `smtp.gmail.com:465`),
+`MAIL_REPLY_TO`, `SITE_URL` 입니다. **`SITE_URL` 이 비어 있으면 메일에 사이트 링크를 넣지 않습니다** —
+공개 주소가 아직 없어도 메일만으로 브리핑이 끝나야 하기 때문입니다.
+
+`MAIL_FROM` 에 발신 **주소**를 따로 넣어도 소용이 없습니다. Gmail SMTP 는 인증 계정이 아닌
+From 주소를 인증 계정으로 바꿔 씁니다. 여기서 정하는 것은 표시 이름뿐입니다.
+
+### 무엇이 오는가
+
+| 그날 상태 | 오는 것 |
+|---|---|
+| 발행 성공 | 인사이트 + 기사 전부의 제목·요약·시사점·원문 링크 + 그날 용어의 정의 |
+| 커밋·푸시 실패 | 위와 같은 전문 + 상단에 "어느 단계가 실패했다" 경고 한 줄 |
+| 수집·요약 실패 | 짧은 실패 알림 — 멈춘 단계와 `runs/daily.log` 마지막 40줄 |
+| 설정 없음 | 아무것도 보내지 않고 안내만 남깁니다. **발행은 실패로 치지 않습니다** |
+
+같은 날 두 번 보내지 않습니다. 발송하면 `runs/<date>/mail.json` 에 기록이 남고,
+다시 보내려면 `node scripts/mail.mjs --force` 를 씁니다.
+
+메일이 실패해도 그날 발행의 성패는 바뀌지 않습니다. 사이트에는 이미 올라가 있고,
+스케줄러가 보는 종료 코드는 발행 결과 그대로입니다.
+
+---
+
 ## 검증
 
 ```bash
-npm test        # 125개 · 오프라인 · 몇 초
+npm test        # 201개 · 오프라인 · 몇 초
 ```
 
 검사하는 것은 구현 세부가 아니라 **SPEC 이 약속한 규칙**입니다.
@@ -183,9 +231,7 @@ SPEC 을 먼저 고치고 테스트를 함께 고치는 것이 맞습니다.
 
 ## 샘플 데이터
 
-저장소에 처음부터 들어 있던 `2026-08-28` ~ `2026-08-31` 네 건은 **구조 확인용 예시이며 실제 보도된 내용이 아닙니다.** 화면 상단에 그 사실을 알리는 배너가 뜹니다. 출처 링크는 가짜 기사 URL 대신 각 매체 홈으로 연결됩니다.
-
-`node scripts/summarize.mjs --drop-samples` 로 한 번에 지울 수 있습니다. 배너까지 없애려면 `assets/js/app.js` 의 `renderBanner` 호출부와 각 HTML의 `<div id="demo-banner">` 를 지웁니다 — 사이트 코드를 건드리는 유일한 지점입니다.
+저장소에 처음부터 들어 있던 `2026-08-28` ~ `2026-08-31` 네 건은 구조 확인용 예시였습니다. **2026-09-01 첫 실발행과 함께 지웠고, 그 사실을 알리던 상단 배너도 걷어냈습니다.** 지금 사이트에 실린 브리핑은 전부 실제 수집·요약 결과입니다.
 
 `data/meta.js` 의 12개 피드 주소는 실제 주소입니다(2026-08-31 기준 응답 확인).
 
@@ -236,8 +282,9 @@ SPEC 10절 로드맵 기준으로 Phase 1(사이트)·2(수집)·3(요약)이 �
 |---|---|
 | ~~2~~ | ~~Node 수집 스크립트~~ — 완료. `runs/<date>/candidates.json` 생성 |
 | ~~3~~ | ~~Claude API 로 한/영 요약·시사점·인사이트 생성~~ — 완료. `data/briefs.js` 생성 |
-| 4 | 스케줄러가 매일 07:40 KST 실행, 08:00 배포 |
-| 5 | 구독 접수 API + 이메일 발송 (구독 폼의 `TODO(Phase 5)` 주석 참조) |
+| ~~4~~ | ~~스케줄러가 매일 08:00 KST 실행~~ — 완료. `scripts/daily.ps1` |
+| 5a | 브리핑 전문을 본인 메일로 발송 — `scripts/mail.mjs`. `.env` 설정만 남았습니다 |
+| 5b | 구독 접수 API + 구독자 발송 (구독 폼의 `TODO(Phase 5)` 주석 참조) |
 
 ### 아직 남은 문제
 

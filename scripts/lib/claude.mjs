@@ -8,29 +8,15 @@
  * 시스템 프롬프트는 그 전부가 공유하므로 캐시를 건다.
  */
 import Anthropic from '@anthropic-ai/sdk';
-import { readFileSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
-import { ROOT } from './meta.mjs';
+import { envValue } from './env.mjs';
 
 export const DEFAULT_MODEL = 'claude-opus-5';
 
 /* $/1M 토큰. 비용을 화면에 보여 주기 위한 것이고 청구서가 아니다. */
 const PRICE = { input: 5, cacheWrite: 6.25, cacheRead: 0.5, output: 25 };
 
-/** 환경변수가 없으면 저장소 루트의 .env 를 본다. .env 는 .gitignore 에 있다. */
-function keyFromEnvOrFile() {
-  if (process.env.ANTHROPIC_API_KEY) return process.env.ANTHROPIC_API_KEY;
-  const p = join(ROOT, '.env');
-  if (!existsSync(p)) return null;
-  for (const line of readFileSync(p, 'utf8').split('\n')) {
-    const m = line.match(/^\s*(?:export\s+)?ANTHROPIC_API_KEY\s*=\s*(.+?)\s*$/);
-    if (m) return m[1].replace(/^["']|["']$/g, '');
-  }
-  return null;
-}
-
 export function createClient() {
-  const apiKey = keyFromEnvOrFile();
+  const apiKey = envValue('ANTHROPIC_API_KEY');
   if (!apiKey) {
     throw new Error(
       'ANTHROPIC_API_KEY 가 없습니다.\n' +
