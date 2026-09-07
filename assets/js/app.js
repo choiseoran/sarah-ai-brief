@@ -26,9 +26,6 @@
       'a11y.lang': '언어 선택',
       'a11y.nav': '주요 메뉴',
 
-      'banner.demo.strong': '샘플 데이터입니다.',
-      'banner.demo.text': '아래 기사는 구조 확인용 예시이며 실제 보도된 내용이 아닙니다. 출처 링크는 각 매체 홈으로 연결됩니다.',
-
       'brief.today': '오늘의 브리핑',
       'brief.archived': '지난 브리핑',
       'brief.insight': '오늘의 인사이트',
@@ -121,7 +118,11 @@
       'footer.independence': '어떤 매체나 기업으로부터도 대가를 받지 않습니다. 광고, 협찬 기사, 제휴 링크가 없습니다.',
       'footer.copyright': '기사 원문의 저작권은 각 언론사에 있습니다. 이 사이트는 자체 요약과 시사점만 싣습니다.',
 
-      'lang.switchTo': 'English'
+      'lang.switchTo': 'English',
+      'lang.paused': '영어판은 잠시 멈춰 두었습니다. 요약을 만들 때 쓰는 토큰을 아끼려고 영어 생성을 꺼 둔 상태이며, 한국어판은 평소대로 매일 오전 8시에 나갑니다.',
+      'lang.pausedShort': '영어판 일시 중단',
+
+      'toast.close': '닫기'
     },
 
     en: {
@@ -136,9 +137,6 @@
       'a11y.theme': 'Toggle theme',
       'a11y.lang': 'Select language',
       'a11y.nav': 'Main',
-
-      'banner.demo.strong': 'This is sample data.',
-      'banner.demo.text': 'The items below are placeholders for checking the structure, not real reporting. Source links go to each outlet’s home page.',
 
       'brief.today': 'Today’s briefing',
       'brief.archived': 'Archived briefing',
@@ -232,7 +230,11 @@
       'footer.independence': 'We take no payment from any publication or company. No ads, no sponsored items, no affiliate links.',
       'footer.copyright': 'Copyright in the original articles rests with each publisher. This site carries only its own summaries and commentary.',
 
-      'lang.switchTo': '한국어'
+      'lang.switchTo': '한국어',
+      'lang.paused': 'The English edition is paused. We turned off English generation to save the tokens it costs to write each summary; the Korean edition still goes out at 8am KST every day.',
+      'lang.pausedShort': 'English edition paused',
+
+      'toast.close': 'Dismiss'
     }
   };
 
@@ -258,7 +260,23 @@
     } catch (e) { return null; }
   }
 
+  /* 발행 언어는 data/meta.js 의 site.languages 가 정한다 — 파이프라인이 읽는 것과 같은 값이다.
+     영어를 끄면 Phase 3 이 영어를 만들지 않으므로 화면에도 보여 줄 영어가 없다.
+     그래도 EN 버튼은 지우지 않는다. 없어진 기능과 잠시 멈춘 기능은 독자에게 다른 것이다. */
+  function langList() {
+    var list = SAB.meta && SAB.meta.site && SAB.meta.site.languages;
+    return (list && list.length) ? list : ['ko', 'en'];
+  }
+  function langEnabled(lang) { return langList().indexOf(lang) !== -1; }
+
   function resolveLang() {
+    var picked = pickLang();
+    /* 저장값이나 ?lang=en 으로 꺼진 언어에 들어오는 길이 남아 있으면 안 된다 —
+       영어를 멈춘 날 예전 링크로 들어온 독자가 빈 화면을 보게 된다. */
+    return langEnabled(picked) ? picked : langList()[0];
+  }
+
+  function pickLang() {
     var q = readParam('lang');
     if (q === 'en' || q === 'ko') return q;
     var saved = storeGet(LANG_KEY);
@@ -469,6 +487,8 @@
       }),
       el('button', {
         type: 'button', text: 'EN', 'aria-pressed': state.lang === 'en' ? 'true' : 'false',
+        'aria-disabled': langEnabled('en') ? null : 'true',
+        title: langEnabled('en') ? null : t('lang.pausedShort'),
         onclick: function () { setLang('en'); }
       })
     ]);
@@ -491,17 +511,6 @@
       ]),
       nav,
       el('div', { class: 'header-tools' }, [langToggle, themeBtn])
-    ]));
-  }
-
-  function renderBanner(host) {
-    clear(host);
-    host.appendChild(el('div', { class: 'wrap' }, [
-      el('p', {}, [
-        el('strong', { text: t('banner.demo.strong') }),
-        ' ',
-        t('banner.demo.text')
-      ])
     ]));
   }
 
@@ -573,6 +582,8 @@
      ========================================================== */
 
   function setLang(lang) {
+    /* 버튼을 disabled 로 만들면 아무 일도 일어나지 않아 고장으로 읽힌다. 눌리게 두고 이유를 말한다. */
+    if (!langEnabled(lang)) { toast(t('lang.paused')); return; }
     if (lang === state.lang) return;
     state.lang = lang;
     storeSet(LANG_KEY, lang);
@@ -584,6 +595,38 @@
       window.history.replaceState({}, '', url);
     } catch (e) { /* file:// 등에서 실패해도 렌더는 계속한다 */ }
     render();
+  }
+
+  /**
+   * 화면 아래 안내 한 줄. 라이브러리가 없으므로 직접 만든다.
+   *
+   * alert() 는 쓰지 않는다 — 페이지 전체를 멈춰 세우고, 어느 브라우저에서는
+   * "이 사이트가 다시 묻지 않게" 체크 한 번으로 이후 안내가 통째로 사라진다.
+   * 토스트는 헤더가 다시 그려져도 살아남도록 body 에 붙인다.
+   */
+  var toastTimer = null;
+
+  function toast(message) {
+    var host = document.getElementById('sab-toast');
+    if (!host) {
+      host = el('div', { id: 'sab-toast', class: 'toast', role: 'status', 'aria-live': 'polite' });
+      document.body.appendChild(host);
+    }
+    clear(host);
+    host.appendChild(el('p', { text: message }));
+    host.appendChild(el('button', {
+      type: 'button', class: 'toast__close', text: '×',
+      'aria-label': t('toast.close'), onclick: hideToast
+    }));
+    host.classList.add('is-open');
+    if (toastTimer) window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(hideToast, 8000);
+  }
+
+  function hideToast() {
+    var host = document.getElementById('sab-toast');
+    if (host) host.classList.remove('is-open');
+    if (toastTimer) { window.clearTimeout(toastTimer); toastTimer = null; }
   }
 
   /** [data-lang] 요소는 현재 언어일 때만 보인다 (소개 페이지 본문용) */
@@ -600,10 +643,8 @@
     if (skip) skip.textContent = t('a11y.skip');
 
     var header = document.getElementById('site-header');
-    var banner = document.getElementById('demo-banner');
     var footer = document.getElementById('site-footer');
     if (header) renderHeader(header);
-    if (banner) renderBanner(banner);
     if (footer) renderFooter(footer);
 
     var pageFn = SAB.page;
@@ -640,6 +681,8 @@
     formatDateTime: formatDateTime,
     numberFmt: numberFmt,
     readParam: readParam,
+    langEnabled: langEnabled,
+    toast: toast,
     data: data,
     subscribeBlock: subscribeBlock,
     render: render,

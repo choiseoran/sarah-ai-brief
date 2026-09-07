@@ -9,11 +9,47 @@
  */
 import { scoreFrom } from './score.mjs';
 
+/*
+ * 발행 언어. data/meta.js 의 site.languages 가 정하고 부르는 쪽이 ctx.langs 로 넘긴다.
+ * 넘기지 않으면 한/영 둘 다 — 게이트는 기본값이 느슨한 쪽이 아니라 **엄한 쪽**이어야 한다.
+ * 끈 언어는 검사하지 않을 뿐 규격이 달라지지는 않는다. 켠 언어는 예전과 똑같이 본다.
+ */
+export const ALL_LANGS = ['ko', 'en'];
+const langsOf = (ctx) => (Array.isArray(ctx?.langs) && ctx.langs.length ? ctx.langs : ALL_LANGS);
+
 export const TITLE_MAX = 60;
-export const SUMMARY_PARAS = [2, 3];
-export const SUMMARY_SENTENCES = [2, 3];
-export const IMPLICATION_SENTENCES = [2, 4];
-export const INSIGHT_PARAS = [2, 3];
+/*
+ * 요약은 2문단 × 2문장 고정이다 — 범위가 아니다.
+ * 상한을 열어 두면 모델이 늘 상한을 채우므로 상한이 곧 실측 분량이 된다.
+ * 09-01·09-02 두 번의 발행에서 19건 전부가 3문단을 채워 한국어 요약이 평균 750자였다.
+ * 첫 문단은 사건, 둘째 문단은 그 사건을 재는 숫자. 가용성·요금·일정은 원문 링크가 진다.
+ */
+export const SUMMARY_PARAS = [2, 2];
+/*
+ * 문장은 상한만 규격이다 — 프롬프트는 2문장을 부탁하고 검증기는 1문장도 통과시킨다.
+ * 관측된 실패 방식은 늘 "넘친다" 쪽이었지 "모자란다" 쪽이 아니었다. 하한을 2로 조이면
+ * 줄이려는 목적에 아무 보탬도 없이 드랍 사유만 하나 늘어난다 — 약어 오판으로
+ * 멀쩡한 기사 3건이 빠진 전례가 있다.
+ */
+export const SUMMARY_SENTENCES = [1, 2];
+/*
+ * 시사점도 상한이 곧 실측 분량이었다 — 09-01~09-04 서른일곱 건 중 서른세 건이
+ * 상한인 4문장을 채워 평균 313자였다. 판단은 길다고 깊어지지 않는다.
+ * 하한을 2에서 1로 내린 것은 요약·인사이트와 같은 규율이다(문장은 상한만 규격).
+ */
+export const IMPLICATION_SENTENCES = [1, 2];
+/*
+ * 인사이트도 2문단 고정이다 — 요약과 같은 이유로 상한이 곧 실측 분량이 된다.
+ * 09-01~09-04 네 번의 발행이 전부 3문단 상한을 채워 976~1088자였다.
+ * 아침에 가장 먼저 읽는 글이고 메일에서는 맨 위에 오므로 그 길이는 길다.
+ */
+export const INSIGHT_PARAS = [2, 2];
+/*
+ * 문장은 상한만 규격이다. 요약과 같은 판단이지만 여기서는 이유가 하나 더 있다 —
+ * 인사이트가 끝내 실패하면 **그날은 발행하지 않는다.** 하한을 조여도 분량은 줄지 않고
+ * 하루치가 통째로 멈출 사유만 늘어난다. 편집 지침은 2~3문장을 부탁한다(lib/prompt.mjs).
+ */
+export const INSIGHT_SENTENCES = [1, 3];
 export const INSIGHT_MIN_REFS = 3;
 export const MAX_TERMS = 3;
 
@@ -43,19 +79,21 @@ export function sentenceCount(text) {
 
 const isStr = (v) => typeof v === 'string' && v.trim().length > 0;
 const between = (n, [lo, hi]) => n >= lo && n <= hi;
+/* 위반 문구는 그대로 모델에게 되돌아가는 재시도 지시다. "2~2문단" 이라고 쓰면 안 된다. */
+const range = ([lo, hi]) => (lo === hi ? String(lo) : lo + '~' + hi);
 
-/** {ko,en} 쌍 중 한쪽만 있는 곳을 전부 찾는다 — SPEC 7절 불변 규칙 */
-export function missingPairs(node, path = '') {
+/** 발행 언어 중 값이 빠진 곳을 전부 찾는다 — SPEC 7절 불변 규칙 */
+export function missingPairs(node, path = '', langs = ALL_LANGS) {
   const out = [];
   if (Array.isArray(node)) {
-    node.forEach((v, i) => out.push(...missingPairs(v, path + '[' + i + ']')));
+    node.forEach((v, i) => out.push(...missingPairs(v, path + '[' + i + ']', langs)));
     return out;
   }
   if (!node || typeof node !== 'object') return out;
 
   const keys = Object.keys(node);
-  if (keys.includes('ko') || keys.includes('en')) {
-    for (const lang of ['ko', 'en']) {
+  if (keys.some((k) => ALL_LANGS.includes(k))) {
+    for (const lang of langs) {
       const v = node[lang];
       const empty = v === undefined || v === null ||
         (typeof v === 'string' && !v.trim()) ||
@@ -63,15 +101,16 @@ export function missingPairs(node, path = '') {
       if (empty) out.push((path || '(루트)') + '.' + lang + ' 이 비어 있다');
     }
   }
-  for (const k of keys) out.push(...missingPairs(node[k], path ? path + '.' + k : k));
+  for (const k of keys) out.push(...missingPairs(node[k], path ? path + '.' + k : k, langs));
   return out;
 }
 
 /** 기사 1건. 모델이 방금 만든 결과를 검사한다. */
-export function validateArticle(a, { topicIds, glossaryIds }) {
+export function validateArticle(a, ctx) {
+  const { topicIds, glossaryIds } = ctx;
   const v = [];
 
-  for (const lang of ['ko', 'en']) {
+  for (const lang of langsOf(ctx)) {
     if (!isStr(a.title?.[lang])) v.push(`title.${lang} 이 비어 있다`);
     else if ([...a.title[lang]].length > TITLE_MAX) {
       v.push(`title.${lang} 이 ${[...a.title[lang]].length}자다 — ${TITLE_MAX}자 이내여야 한다`);
@@ -82,12 +121,12 @@ export function validateArticle(a, { topicIds, glossaryIds }) {
       v.push(`summary.${lang} 이 문단 배열이 아니다`);
     } else {
       if (!between(paras.length, SUMMARY_PARAS)) {
-        v.push(`summary.${lang} 이 ${paras.length}문단이다 — ${SUMMARY_PARAS[0]}~${SUMMARY_PARAS[1]}문단이어야 한다`);
+        v.push(`summary.${lang} 이 ${paras.length}문단이다 — ${range(SUMMARY_PARAS)}문단이어야 한다`);
       }
       paras.forEach((p, i) => {
         const n = sentenceCount(p);
         if (!between(n, SUMMARY_SENTENCES)) {
-          v.push(`summary.${lang} ${i + 1}번째 문단이 ${n}문장이다 — ${SUMMARY_SENTENCES[0]}~${SUMMARY_SENTENCES[1]}문장이어야 한다`);
+          v.push(`summary.${lang} ${i + 1}번째 문단이 ${n}문장이다 — ${range(SUMMARY_SENTENCES)}문장이어야 한다`);
         }
       });
       const hedge = lang === 'ko' ? HEDGE_KO : HEDGE_EN;
@@ -102,7 +141,7 @@ export function validateArticle(a, { topicIds, glossaryIds }) {
     else {
       const n = sentenceCount(imp);
       if (!between(n, IMPLICATION_SENTENCES)) {
-        v.push(`implication.${lang} 이 ${n}문장이다 — ${IMPLICATION_SENTENCES[0]}~${IMPLICATION_SENTENCES[1]}문장이어야 한다`);
+        v.push(`implication.${lang} 이 ${n}문장이다 — ${range(IMPLICATION_SENTENCES)}문장이어야 한다`);
       }
     }
   }
@@ -120,17 +159,27 @@ export function validateArticle(a, { topicIds, glossaryIds }) {
 }
 
 /** 오늘의 인사이트. 10건을 가로질러 읽었는지 — 근거 3건이 그 증거다. */
-export function validateInsight(ins, { articleCount }) {
+export function validateInsight(ins, ctx) {
+  const { articleCount } = ctx;
+  const langs = langsOf(ctx);
   const v = [];
   const need = Math.min(INSIGHT_MIN_REFS, articleCount);
 
-  for (const lang of ['ko', 'en']) {
+  for (const lang of langs) {
     if (!isStr(ins.title?.[lang])) v.push(`insight.title.${lang} 이 비어 있다`);
     const paras = ins.body?.[lang];
     if (!Array.isArray(paras) || paras.some((p) => !isStr(p))) {
       v.push(`insight.body.${lang} 이 문단 배열이 아니다`);
-    } else if (!between(paras.length, INSIGHT_PARAS)) {
-      v.push(`insight.body.${lang} 이 ${paras.length}문단이다 — ${INSIGHT_PARAS[0]}~${INSIGHT_PARAS[1]}문단이어야 한다`);
+    } else {
+      if (!between(paras.length, INSIGHT_PARAS)) {
+        v.push(`insight.body.${lang} 이 ${paras.length}문단이다 — ${range(INSIGHT_PARAS)}문단이어야 한다`);
+      }
+      paras.forEach((para, i) => {
+        const n = sentenceCount(para);
+        if (!between(n, INSIGHT_SENTENCES)) {
+          v.push(`insight.body.${lang} ${i + 1}번째 문단이 ${n}문장이다 — ${range(INSIGHT_SENTENCES)}문장이어야 한다`);
+        }
+      });
     }
   }
 
@@ -146,15 +195,20 @@ export function validateInsight(ins, { articleCount }) {
   const ko = (ins.body?.ko ?? []).join(' ');
   const en = (ins.body?.en ?? []).join(' ');
   for (const r of refs) {
-    if (!new RegExp('(?:^|[^\d])' + r + '\s*번').test(ko)) v.push(`refs 의 ${r}번이 한국어 본문에 "${r}번" 으로 나오지 않는다`);
-    if (!new RegExp('(?:^|[^\d])' + r + '(?![\d])').test(en)) v.push(`refs 의 ${r}번이 영어 본문에 숫자로 나오지 않는다`);
+    if (langs.includes('ko') && !new RegExp('(?:^|[^\d])' + r + '\s*번').test(ko)) {
+      v.push(`refs 의 ${r}번이 한국어 본문에 "${r}번" 으로 나오지 않는다`);
+    }
+    if (langs.includes('en') && !new RegExp('(?:^|[^\d])' + r + '(?![\d])').test(en)) {
+      v.push(`refs 의 ${r}번이 영어 본문에 숫자로 나오지 않는다`);
+    }
   }
 
   return v;
 }
 
 /** 발행 직전 브리핑 전체. 데이터 계약(SPEC 7절)을 여기서 마지막으로 본다. */
-export function validateBrief(brief, { topicIds, glossaryIds }) {
+export function validateBrief(brief, ctx) {
+  const langs = langsOf(ctx);
   const v = [];
 
   if (!/^\d{4}-\d{2}-\d{2}$/.test(brief.date)) v.push('date 가 YYYY-MM-DD 가 아니다');
@@ -173,14 +227,16 @@ export function validateBrief(brief, { topicIds, glossaryIds }) {
     if (!/^\d{4}-\d{2}-\d{2}T/.test(a.publishedAt ?? '')) v.push(`${at}.publishedAt 이 ISO8601 UTC 가 아니다`);
     const again = scoreFrom(a.scoreParts ?? {});
     if (again !== a.score) v.push(`${at}.score 가 ${a.score} 인데 scoreParts 에서는 ${again} 이 나온다 — 데이터 페이지가 점수를 재현할 수 없다`);
-    v.push(...validateArticle(a, { topicIds, glossaryIds }).map((m) => at + ' ' + m));
+    v.push(...validateArticle(a, ctx).map((m) => at + ' ' + m));
   });
 
   v.push(...validateInsight({ ...brief.insight, refs: brief.insight?.refs ?? [] },
-    { articleCount: brief.articles.length })
+    { articleCount: brief.articles.length, langs })
     .filter((m) => !m.startsWith('refs'))); /* refs 는 발행 데이터에 남기지 않는다 */
 
-  v.push(...missingPairs({ weekday: brief.weekday, insight: brief.insight, note: brief.note ?? undefined, articles: brief.articles }));
+  v.push(...missingPairs(
+    { weekday: brief.weekday, insight: brief.insight, note: brief.note ?? undefined, articles: brief.articles },
+    '', langs));
 
   return v;
 }

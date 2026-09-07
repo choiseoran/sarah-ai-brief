@@ -24,7 +24,7 @@
 import { readFileSync, writeFileSync, existsSync, appendFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { ROOT, loadMeta, loadBriefs, loadGlossary } from './lib/meta.mjs';
+import { ROOT, loadMeta, loadBriefs, loadGlossary, enabledLangs } from './lib/meta.mjs';
 import { defaultDate } from './lib/time.mjs';
 import { createClient, askJson, tally, describeError, DEFAULT_MODEL } from './lib/claude.mjs';
 import { askJsonViaCli, cliAvailable, DEFAULT_CLI_MODEL } from './lib/claude-code.mjs';
@@ -35,7 +35,7 @@ import {
 import { validateArticle, validateInsight, validateBrief } from './lib/validate.mjs';
 import {
   writeBriefs, writeGlossary, mergeBrief, dropSamples,
-  recountGlossary, addNewTerms
+  recountGlossary, addNewTerms, keepLangs
 } from './lib/publish.mjs';
 
 /* ── 인자 ─────────────────────────────────────────────────────────── */
@@ -87,12 +87,17 @@ let glossary = loadGlossary();
 const topicIds = meta.topics.map((t) => t.id);
 const glossaryIds = glossary.map((g) => g.id);
 
+/* 발행 언어 — data/meta.js 의 site.languages. 사이트가 읽는 것과 같은 값이다(SPEC 5절).
+   영어를 끄면 프롬프트·스키마·검증기가 함께 한국어만 본다. 여기서 갈라지지 않는 것이 요점이다. */
+const LANGS = enabledLangs(meta);
+
 const candidates = LIMIT ? run.candidates.slice(0, LIMIT) : run.candidates;
 
 say("Sarah's AI Brief · 요약 생성");
 say('  기준일    ' + DATE + '  (발행 ' + DATE + ' 08:00 KST)');
 say('  후보      ' + run.candidates.length + '건' + (LIMIT ? ' 중 ' + candidates.length + '건만' : ''));
 say('  생성      ' + (PROVIDER === 'cli' ? 'claude -p (구독)' : 'Anthropic API (크레딧)') + ' · 모델 ' + MODEL);
+say('  언어      ' + LANGS.join('+') + (LANGS.includes('en') ? '' : '  (영어 중단 — data/meta.js 의 site.languages)'));
 say('');
 
 if (!candidates.length) {
@@ -100,8 +105,8 @@ if (!candidates.length) {
   process.exit(1);
 }
 
-const SYSTEM_ARTICLE = articleSystem(meta, glossary);
-const SCHEMA_ARTICLE = articleSchema(topicIds, glossaryIds);
+const SYSTEM_ARTICLE = articleSystem(meta, glossary, LANGS);
+const SCHEMA_ARTICLE = articleSchema(topicIds, glossaryIds, LANGS);
 
 /* ── dry-run — 호출 없이 무엇이 나갈지만 본다 ────────────────────── */
 if (DRY_RUN) {
@@ -153,7 +158,7 @@ for (const c of candidates) {
         maxTokens: 8000
       });
       usage.add(u);
-      violations = validateArticle(data, { topicIds, glossaryIds });
+      violations = validateArticle(data, { topicIds, glossaryIds, langs: LANGS });
       if (!violations.length) { made = data; break; }
       say(label + '  x 규격 위반 ' + violations.length + '건' + (attempt < MAX_ATTEMPTS ? ' — 다시 만듭니다' : ''));
       for (const v of violations) say('        · ' + v);
@@ -171,7 +176,7 @@ for (const c of candidates) {
   }
 
   /* 제안한 기사의 자리를 함께 기록한다 — 채택되면 그 기사의 terms 에 붙는다. */
-  proposals.push(...(made.newTerms ?? []).map((n) => ({ ...n, at: articles.length })));
+  proposals.push(...keepLangs(made.newTerms ?? [], LANGS).map((n) => ({ ...n, at: articles.length })));
   articles.push({
     id: null, rank: null,
     title: made.title,
@@ -212,8 +217,8 @@ const glossaryIdsAfter = glossary.map((g) => g.id);
 say('');
 say('인사이트 생성 — 기사 ' + articles.length + '건을 가로질러');
 
-const SYSTEM_INSIGHT = insightSystem();
-const SCHEMA_INSIGHT = insightSchema(articles.length);
+const SYSTEM_INSIGHT = insightSystem(LANGS);
+const SCHEMA_INSIGHT = insightSchema(articles.length, LANGS);
 let insight = null;
 let insightViolations = null;
 
@@ -226,7 +231,7 @@ for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
       maxTokens: 4000
     });
     usage.add(u);
-    insightViolations = validateInsight(data, { articleCount: articles.length });
+    insightViolations = validateInsight(data, { articleCount: articles.length, langs: LANGS });
     if (!insightViolations.length) { insight = data; break; }
     say('  x 규격 위반 ' + insightViolations.length + '건' + (attempt < MAX_ATTEMPTS ? ' — 다시 만듭니다' : ''));
     for (const v of insightViolations) say('      · ' + v);
@@ -246,7 +251,7 @@ if (!insight) {
 say('  o ' + insight.title.ko + '  (근거 ' + insight.refs.join(', ') + '번)');
 
 /* ── 브리핑 조립 ──────────────────────────────────────────────────── */
-const brief = {
+const brief = keepLangs({
   date: DATE,
   weekday: WEEKDAYS[new Date(DATE + 'T00:00:00Z').getUTCDay()],
   type: 'daily',
@@ -254,13 +259,13 @@ const brief = {
   funnel: { ...run.funnel, published: articles.length },
   insight: { title: insight.title, body: insight.body },
   articles
-};
+}, LANGS);
 
 /* 생성 결과는 발행 여부와 무관하게 남긴다. 여기까지 쓴 비용을 버리지 않기 위해서다. */
 writeFileSync(join(RUN_DIR, 'brief.json'),
   JSON.stringify({ ...brief, _refs: insight.refs, _dropped: dropped, _proposals: proposals }, null, 2), 'utf8');
 
-const problems = validateBrief(brief, { topicIds, glossaryIds: glossaryIdsAfter });
+const problems = validateBrief(brief, { topicIds, glossaryIds: glossaryIdsAfter, langs: LANGS });
 if (problems.length) {
   console.error('\n발행 직전 검사에서 ' + problems.length + '건이 걸렸습니다. 발행하지 않습니다.');
   for (const p of problems) console.error('  · ' + p);

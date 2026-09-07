@@ -7,12 +7,31 @@
  *
  * 시스템 프롬프트는 하루치 10건이 전부 공유한다. 기사마다 바뀌는 것은 user 메시지뿐이며
  * 그래서 시스템 쪽에 프롬프트 캐시를 건다.
+ *
+ * 발행 언어는 data/meta.js 의 site.languages 가 정한다. 영어를 끄면 여기서 영어를
+ * **부탁하지 않는다** — 만들어 놓고 버리면 토큰은 그대로 나가기 때문이다. 지시문에서
+ * 영어를 지우는 것이 절약의 전부이고, 나머지 규격은 한 글자도 달라지지 않는다.
  */
 import { kstStamp } from './time.mjs';
 
+const ALL_LANGS = ['ko', 'en'];
+const hasEn = (langs) => (langs ?? ALL_LANGS).includes('en');
+
+/**
+ * 발행 언어만 담은 {ko, en} 스키마. 끈 언어는 properties 에서 빠지고
+ * additionalProperties:false 가 남으므로, API 경로에서는 영어를 넣는 것 자체가 거부된다.
+ * cli 경로는 이 스키마를 글로 받는데 그것이 입력의 맨 끝에 온다 — 마지막에 읽는 말이 이긴다.
+ */
+function langPair(langs, of) {
+  const properties = {};
+  for (const lang of langs) properties[lang] = of();
+  return { type: 'object', additionalProperties: false, required: [...langs], properties };
+}
+
 /* ── 기사 1건 ─────────────────────────────────────────────────────── */
 
-export function articleSystem(meta, glossary) {
+export function articleSystem(meta, glossary, langs = ALL_LANGS) {
+  const bi = hasEn(langs);
   const topics = meta.topics
     .map((t) => '  ' + t.id.padEnd(11) + t.label.ko + ' — ' + t.description.ko)
     .join('\n');
@@ -21,8 +40,13 @@ export function articleSystem(meta, glossary) {
     : '  (아직 없음)';
 
   return `당신은 매일 아침 8시에 나가는 AI 브리핑 "Sarah's AI Brief"의 편집자다.
-기사 원문 하나를 받아 한국어와 영어 두 언어로 다시 쓴다. 무료이고 광고가 없으며,
+기사 원문 하나를 받아 ${bi ? '한국어와 영어 두 언어로' : '한국어로'} 다시 쓴다. 무료이고 광고가 없으며,
 독자는 이 브리핑 하나를 읽고 그날 팀에 공유할 한 문장을 얻는다.
+${bi ? '' : `
+# 지금은 한국어판만 만든다
+
+영어는 쓰지 않는다. 출력의 어느 필드에도 en 을 넣지 않는다. 영어를 덧붙여도 발행되지 않고
+토큰만 나간다. 아래 규격은 전부 한국어에만 적용된다.`}
 
 # 가장 중요한 규칙 — 요약과 해석을 섞지 않는다
 
@@ -32,31 +56,37 @@ summary 에는 **원문에서 확인되는 사실만** 쓴다. 원문에 없는 
 
 summary 에 다음 표현이 나오면 안 된다:
   한국어 — ~할 전망이다, ~로 보인다, ~로 예상된다, ~것으로 알려졌다, ~할 듯하다, 주목된다
-  영어   — is expected to, is likely to, could, may, appears to, suggests that
-
+${bi ? '  영어   — is expected to, is likely to, could, may, appears to, suggests that\n' : ''}
 # 필드별 규격
 
 title      원문 제목의 번역이 아니라 **다시 쓴 제목**. 무엇이 일어났는지 한 줄로.
-           한국어·영어 각 1줄, 각각 60자 이내. 낚시성 표현과 물음표를 쓰지 않는다.
-summary    각 언어 2~3문단, 한 문단은 2~3문장. 첫 문단이 사건 자체, 다음 문단이 구체적인
-           숫자·일정·관계자다. 원문에 없는 것은 쓰지 않는다.
-           **문장 수 제한은 영어에도 똑같이 걸린다.** 영어는 문장이 늘어나기 쉽다.
-           한 문단에 마침표가 넷이면 규격 위반이다. 쓰고 나서 문단마다 세어 보고 넘긴다.
-           문장을 쪼개지 말고 한 문장 안에 절을 붙여 길게 쓴다.
-implication 각 언어 1문단, 2~4문장. 이 기사가 시사하는 점. 여기서는 판단해도 된다.
+           ${bi ? '한국어·영어 각 1줄, 각각 60자 이내.' : '한국어 1줄, 60자 이내.'} 낚시성 표현과 물음표를 쓰지 않는다.
+summary    ${bi ? '각 언어 ' : ''}**정확히 2문단, 한 문단은 정확히 2문장.** 범위가 아니라 고정값이다.
+           첫 문단이 사건 자체, 둘째 문단이 그 사건을 크기로 재는 숫자다.
+           가용성·요금·향후 일정은 넣지 않는다 — 그건 독자가 원문 링크에서 볼 것이다.
+           원문에 없는 것은 쓰지 않는다.
+${bi ? `           **문장 수 제한은 영어에도 똑같이 걸린다.** 영어는 문장이 늘어나기 쉽다.
+` : ''}           한 문단에 마침표가 셋이면 규격 위반이다. 쓰고 나서 문단마다 세어 보고 넘긴다.
+           문장을 쪼개지 않는다. 그렇다고 넉 줄에 쓸 것을 두 문장에 밀어 넣지도 않는다 —
+           한 문단은 한국어 150자${bi ? ', 영어 350자' : ''} 안팎이면 충분하다. 다 담으려 문장을 늘이는 것보다
+           **덜 중요한 사실을 버리는 쪽이 맞다.**
+implication ${bi ? '각 언어 ' : ''}**1문단, 정확히 2문장.** 이 기사가 시사하는 점. 여기서는 판단해도 된다.
            "왜 지금 이것이 중요한가"에 답한다. 일반론("AI가 빠르게 발전하고 있다")은 쓰지 않는다.
+           한국어 150자${bi ? ', 영어 350자' : ''} 안팎이다. 판단은 길다고 깊어지지 않는다 —
+           근거를 늘어놓지 말고 **결론 하나와 그 근거 하나**로 끝낸다.
+           원문 사실을 다시 요약하지 않는다. 그건 이미 summary 가 했다.
 topic      아래 12개 중 정확히 하나.
 terms      아래 용어사전에 이미 있는 id 중 이 기사에 실제로 등장한 것 0~3개. 없으면 빈 배열.
 newTerms   용어사전에 없지만 이 기사를 이해하는 데 꼭 필요한 용어가 있을 때만 0~2개 제안.
            id 는 영문 소문자와 하이픈, definition 은 배경지식 없는 독자가 읽고 이해할
            2~3문장. 흔한 말(AI, 반도체)이나 회사 이름은 용어가 아니다. 대개는 빈 배열이다.
-
+${bi ? `
 # 영어는 번역이 아니다
 
 한국어를 그대로 옮기지 않는다. **같은 사실을 영어 독자에게 다시 쓴 글**이어야 한다.
 한국 독자에게는 설명이 필요 없는 국내 기관·제도는 영어에서 짧게 풀어 주고,
 반대로 영어권에 익숙한 맥락은 한국어에서 풀어 준다. 문단 수는 두 언어가 같게 맞춘다.
-
+` : ''}
 # 주제 12개
 
 ${topics}
@@ -80,24 +110,17 @@ ${cross}
 ${c.text}`;
 }
 
-export function articleSchema(topicIds, glossaryIds) {
-  const pair = (extra = {}) => ({
-    type: 'object', additionalProperties: false,
-    required: ['ko', 'en'],
-    properties: { ko: { type: 'string', ...extra }, en: { type: 'string', ...extra } }
-  });
-  const paras = { type: 'array', minItems: 2, maxItems: 3, items: { type: 'string' } };
+export function articleSchema(topicIds, glossaryIds, langs = ALL_LANGS) {
+  const pair = (extra = {}) => langPair(langs, () => ({ type: 'string', ...extra }));
+  /* 요약은 2문단 고정이다. 상한을 3으로 열어 두면 모델이 늘 3을 채운다 — lib/validate.mjs 참고. */
+  const paras = { type: 'array', minItems: 2, maxItems: 2, items: { type: 'string' } };
 
   return {
     type: 'object', additionalProperties: false,
     required: ['title', 'summary', 'implication', 'topic', 'terms', 'newTerms'],
     properties: {
       title: pair({ maxLength: 60 }),
-      summary: {
-        type: 'object', additionalProperties: false,
-        required: ['ko', 'en'],
-        properties: { ko: paras, en: paras }
-      },
+      summary: langPair(langs, () => paras),
       implication: pair(),
       topic: { type: 'string', enum: topicIds },
       terms: {
@@ -118,16 +141,24 @@ export function articleSchema(topicIds, glossaryIds) {
 
 /* ── 오늘의 인사이트 ──────────────────────────────────────────────── */
 
-export function insightSystem() {
+export function insightSystem(langs = ALL_LANGS) {
+  const bi = hasEn(langs);
   return `당신은 매일 아침 8시에 나가는 AI 브리핑 "Sarah's AI Brief"의 편집자다.
 오늘 실린 기사 전체를 받아 **10건을 가로질러 읽은 하나의 흐름**을 쓴다.
 독자가 브리핑에서 가장 먼저 읽는 글이고, 그날 팀에 공유할 한 문장이 여기서 나온다.
-
+${bi ? '' : `
+지금은 한국어판만 만든다. 영어는 쓰지 않고 어느 필드에도 en 을 넣지 않는다.
+`}
 # 규격
 
-title  제목 1줄. 오늘의 흐름을 한 문장으로. 한국어·영어 각 1줄, 각각 70자 이내.
-body   각 언어 2~3문단. 한 문단은 3~5문장.
+title  제목 1줄. 오늘의 흐름을 한 문장으로. ${bi ? '한국어·영어 각 1줄, 각각 70자 이내.' : '한국어 1줄, 70자 이내.'}
+body   ${bi ? '각 언어 ' : ''}**정확히 2문단, 한 문단은 2~3문장.** 범위가 아니라 고정값이다.
+       한 문단은 한국어 250자${bi ? ', 영어 550자' : ''} 안팎이면 충분하다. 독자가 아침에 가장 먼저
+       읽는 글이고 메일에서는 맨 위에 온다. 문장을 늘여 다 담는 것보다 **덜 중요한 갈래를
+       버리는 쪽이 맞다** — 셋째 문단에 쓸 말이 남았다면 오늘의 흐름을 둘로 본 것이므로
+       그중 더 강한 하나만 남긴다.
 refs   본문에서 근거로 든 기사의 번호. **서로 다른 기사 3건 이상.**
+       문단이 둘뿐이라고 근거를 줄이지 않는다. 한 문장이 기사 두 건을 함께 가리켜도 된다.
 
 # 반드시 지킬 것
 
@@ -135,10 +166,9 @@ refs   본문에서 근거로 든 기사의 번호. **서로 다른 기사 3건 
   대조(A는 늦춰졌는데 B는 앞당겨졌다), 인과, 같은 압력의 다른 표현 같은 것.
 - 어느 기사에도 걸리지 않는 일반론을 쓰지 않는다. "AI가 빠르게 발전하고 있다" 같은 문장은
   이 브리핑에서 아무 값도 하지 않는다.
-- 근거로 든 기사는 한국어 본문에서 "(3번, 6번)" 처럼, 영어 본문에서는 "(items 3 and 6)" 처럼
+- 근거로 든 기사는 한국어 본문에서 "(3번, 6번)" 처럼${bi ? ', 영어 본문에서는 "(items 3 and 6)" 처럼' : ''}
   번호로 가리킨다. refs 에 넣은 번호는 본문에도 반드시 나와야 한다.
-- 영어는 한국어의 번역이 아니라 같은 흐름을 영어 독자에게 다시 쓴 글이다.
-- 기사가 3건뿐인 날도 있다. 그럴 때는 있는 것만 가지고 쓰되 없는 기사를 지어내지 않는다.
+${bi ? '- 영어는 한국어의 번역이 아니라 같은 흐름을 영어 독자에게 다시 쓴 글이다.\n' : ''}- 기사가 3건뿐인 날도 있다. 그럴 때는 있는 것만 가지고 쓰되 없는 기사를 지어내지 않는다.
 `;
 }
 
@@ -155,24 +185,16 @@ export function insightUser(articles) {
 ${body}`;
 }
 
-export function insightSchema(maxRank) {
-  const pair = (extra = {}) => ({
-    type: 'object', additionalProperties: false,
-    required: ['ko', 'en'],
-    properties: { ko: { type: 'string', ...extra }, en: { type: 'string', ...extra } }
-  });
-  const paras = { type: 'array', minItems: 2, maxItems: 3, items: { type: 'string' } };
+export function insightSchema(maxRank, langs = ALL_LANGS) {
+  const pair = (extra = {}) => langPair(langs, () => ({ type: 'string', ...extra }));
+  const paras = { type: 'array', minItems: 2, maxItems: 2, items: { type: 'string' } };
 
   return {
     type: 'object', additionalProperties: false,
     required: ['title', 'body', 'refs'],
     properties: {
       title: pair({ maxLength: 70 }),
-      body: {
-        type: 'object', additionalProperties: false,
-        required: ['ko', 'en'],
-        properties: { ko: paras, en: paras }
-      },
+      body: langPair(langs, () => paras),
       refs: {
         type: 'array', minItems: 1, maxItems: maxRank,
         items: { type: 'integer', minimum: 1, maximum: maxRank }

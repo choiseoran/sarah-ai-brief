@@ -602,7 +602,10 @@
       list.appendChild(el('article', { class: 'glossary-item', id: term.id }, [
         el('div', { class: 'glossary-item__head' }, [
           el('h3', { text: L(term.term) }),
-          el('span', { class: 'glossary-item__en', text: lang === 'ko' ? term.term.en : term.term.ko })
+          /* 반대편 언어 표기. 한국어만 발행하는 동안 새로 들어온 용어는 en 이 없다 */
+          (lang === 'ko' ? term.term.en : term.term.ko)
+            ? el('span', { class: 'glossary-item__en', text: lang === 'ko' ? term.term.en : term.term.ko })
+            : null
         ]),
         el('p', { text: L(term.definition) }),
         el('p', { class: 'glossary-item__meta' }, [

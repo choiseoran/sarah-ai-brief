@@ -13,7 +13,7 @@
 import {
   sentenceCount, missingPairs, validateArticle, validateInsight, validateBrief
 } from '../lib/validate.mjs';
-import { mergeBrief, recountGlossary, addNewTerms, dropSamples, SAMPLE_DATES } from '../lib/publish.mjs';
+import { mergeBrief, recountGlossary, addNewTerms, dropSamples, keepLangs, SAMPLE_DATES } from '../lib/publish.mjs';
 
 export const name = 'Phase 3 생성물 검증 (5·7절)';
 
@@ -24,16 +24,16 @@ function goodArticle() {
     summary: {
       ko: [
         '과학기술정보통신부가 국가 AI 컴퓨팅 센터 운영사를 선정했다. 총 사업비는 2조원이다.',
-        '센터는 2027년 상반기 가동을 목표로 한다. GPU 1만장 규모로 구축된다. 운영은 민관 합작 법인이 맡는다.'
+        '센터는 GPU 1만장 규모로 2027년 상반기 가동을 목표로 한다. 운영은 민관 합작 법인이 맡는다.'
       ],
       en: [
         'Korea\'s science ministry named the operator of its national AI computing center. The project is budgeted at 2 trillion won.',
-        'The center targets a first-half 2027 launch. It will house 10,000 GPUs. A public-private joint venture will run it.'
+        'The center targets a first-half 2027 launch with 10,000 GPUs. A public-private joint venture will run it.'
       ]
     },
     implication: {
-      ko: '국가 단위 컴퓨팅 확보 경쟁이 조달 단계로 넘어갔다. 자금보다 전력과 부지가 병목이 된다. 다음 관문은 계약 조건이다.',
-      en: 'The race for national compute has moved to procurement. Power and land, not money, are the binding constraints. Contract terms are the next thing to watch.'
+      ko: '국가 단위 컴퓨팅 확보 경쟁이 조달 단계로 넘어갔다. 자금보다 전력과 부지가 병목이다.',
+      en: 'The race for national compute has moved to procurement. Power and land, not money, are the binding constraints.'
     },
     topic: 'compute',
     terms: ['sovereign-ai'],
@@ -42,6 +42,13 @@ function goodArticle() {
 }
 
 const CTX = { topicIds: ['compute', 'policy', 'models'], glossaryIds: ['sovereign-ai', 'agent'] };
+/* 한국어만 발행하는 날 — data/meta.js 의 site.languages 가 ['ko'] 일 때 */
+const KO_ONLY = { ...CTX, langs: ['ko'] };
+
+/** 켜 둔 언어만 남긴 값. keepLangs 가 발행 직전에 하는 일과 같다. */
+function koOnly(value) {
+  return keepLangs(value, ['ko']);
+}
 
 export function run(t) {
   /* ── 문장 세기 ──────────────────────────────────────────────── */
@@ -80,15 +87,39 @@ export function run(t) {
 
   const onePara = goodArticle();
   onePara.summary.ko = ['한 문단뿐이다. 두 문장이 들어 있다.'];
-  t('요약 1문단은 막는다 (2~3문단)', validateArticle(onePara, CTX).some((v) => v.includes('1문단')));
+  t('요약 1문단은 막는다 (2문단 고정)', validateArticle(onePara, CTX).some((v) => v.includes('1문단')));
 
-  const fourSent = goodArticle();
-  fourSent.summary.ko[0] = '하나다. 둘이다. 셋이다. 넷이다.';
-  t('요약 한 문단 4문장은 막는다 (2~3문장)', validateArticle(fourSent, CTX).some((v) => v.includes('4문장')));
+  /* 상한이 곧 실측 분량이 되므로 위쪽도 막아야 한다 — 3문단을 열어 두면 늘 3문단이 나온다 */
+  const threePara = goodArticle();
+  threePara.summary.ko = [
+    '첫 문단이다. 사건 자체를 적는다.',
+    '둘째 문단이다. 숫자를 적는다.',
+    '셋째 문단이다. 여기가 규격 위반이다.'
+  ];
+  t('요약 3문단은 막는다 (2문단 고정)', validateArticle(threePara, CTX).some((v) => v.includes('3문단')));
 
+  const threeSent = goodArticle();
+  threeSent.summary.ko[0] = '하나다. 둘이다. 셋이다.';
+  t('요약 한 문단 3문장은 막는다 (2문장 이내)', validateArticle(threeSent, CTX).some((v) => v.includes('3문장')));
+
+  /* 문장은 상한만 규격이다 — 넘치는 쪽만 막고 모자란 쪽은 통과시킨다.
+     하한을 조여도 분량이 줄지 않고 드랍 사유만 늘어난다. */
+  const oneSent = goodArticle();
+  oneSent.summary.ko[0] = '한 문장으로 끝나는 문단이다.';
+  t('요약 한 문단 1문장은 통과한다', validateArticle(oneSent, CTX).length === 0,
+    validateArticle(oneSent, CTX).join(' / '));
+
+  /* 시사점도 상한이 곧 실측 분량이었다 — 09-01~09-04 서른일곱 건 중 서른세 건이 4문장이었다 */
+  const threeSentImp = goodArticle();
+  threeSentImp.implication.ko = '조달 단계로 넘어갔다. 전력이 병목이다. 계약 조건이 다음 관문이다.';
+  t('시사점 3문장은 막는다 (2문장 이내)',
+    validateArticle(threeSentImp, CTX).some((v) => v.includes('implication.ko') && v.includes('3문장')));
+
+  /* 문장은 상한만 규격이다 — 하한을 조여도 분량은 안 줄고 드랍 사유만 늘어난다 */
   const oneSentImp = goodArticle();
   oneSentImp.implication.ko = '한 문장짜리 시사점이다.';
-  t('시사점 1문장은 막는다 (2~4문장)', validateArticle(oneSentImp, CTX).some((v) => v.includes('implication.ko')));
+  t('시사점 1문장은 통과한다', validateArticle(oneSentImp, CTX).length === 0,
+    validateArticle(oneSentImp, CTX).join(' / '));
 
   /* P1 — 요약에 추측이 섞이면 독자가 사실과 해석을 구분할 수 없다 */
   const hedgeKo = goodArticle();
@@ -102,7 +133,7 @@ export function run(t) {
 
   /* 시사점에서는 추측이 허용된다 — 그게 시사점의 몫이다 */
   const hedgeImp = goodArticle();
-  hedgeImp.implication.ko = '전력이 다음 병목이 될 전망이다. 부지 확보가 관건이다. 계약 조건을 봐야 한다.';
+  hedgeImp.implication.ko = '전력이 다음 병목이 될 전망이다. 부지 확보가 관건이다.';
   t('시사점의 추측 표현은 막지 않는다', validateArticle(hedgeImp, CTX).length === 0,
     validateArticle(hedgeImp, CTX).join(' / '));
 
@@ -140,6 +171,44 @@ export function run(t) {
   };
   t('근거 3건을 든 인사이트는 통과', validateInsight(goodInsight, { articleCount: 6 }).length === 0,
     validateInsight(goodInsight, { articleCount: 6 }).join(' / '));
+
+  /* 인사이트도 2문단 고정이다 — 상한을 열어 두면 상한이 곧 실측 분량이 된다.
+     09-01~09-04 네 번의 발행이 전부 3문단을 채워 976~1088자였다. */
+  const threeParaInsight = {
+    ...goodInsight,
+    body: {
+      ko: [...goodInsight.body.ko, '셋째 문단이다. 여기가 규격 위반이다.'],
+      en: [...goodInsight.body.en, 'Third paragraph. This is the violation.']
+    }
+  };
+  t('인사이트 3문단은 막는다 (2문단 고정)',
+    validateInsight(threeParaInsight, { articleCount: 6 }).some((v) => v.includes('3문단')));
+
+  const fourSentInsight = {
+    ...goodInsight,
+    body: {
+      ko: ['1번이다. 3번이다. 5번이다. 넷째 문장이라 규격 위반이다.', goodInsight.body.ko[1]],
+      en: goodInsight.body.en
+    }
+  };
+  t('인사이트 한 문단 4문장은 막는다 (3문장 이내)',
+    validateInsight(fourSentInsight, { articleCount: 6 }).some((v) => v.includes('4문장')));
+
+  /* 문장은 상한만 규격이다. 인사이트는 실패하면 그날을 통째로 못 내므로 더욱 그렇다. */
+  const oneSentInsight = {
+    ...goodInsight,
+    body: {
+      ko: ['1번과 3번과 5번이 한 문장으로 묶인다.', goodInsight.body.ko[1]],
+      en: goodInsight.body.en
+    }
+  };
+  t('인사이트 한 문단 1문장은 통과한다',
+    validateInsight(oneSentInsight, { articleCount: 6 }).length === 0,
+    validateInsight(oneSentInsight, { articleCount: 6 }).join(' / '));
+
+  /* 문단이 줄어도 근거 3건은 그대로다 — 가로질러 읽었다는 증거는 근거의 수다 */
+  t('2문단이어도 근거 3건을 요구한다',
+    validateInsight({ ...goodInsight, refs: [1, 3] }, { articleCount: 6 }).some((v) => v.includes('refs 가 2건')));
 
   const twoRefs = { ...goodInsight, refs: [1, 3] };
   t('근거 2건은 막는다 (3건 이상)', validateInsight(twoRefs, { articleCount: 6 }).some((v) => v.includes('refs 가 2건')));
@@ -190,6 +259,12 @@ export function run(t) {
   };
   t('규격을 지킨 브리핑은 위반 0건', validateBrief(brief, CTX).length === 0, validateBrief(brief, CTX).join(' / '));
 
+  const koBrief = koOnly(brief);
+  t('한국어만 담은 브리핑도 발행 직전 검사를 통과한다',
+    validateBrief(koBrief, KO_ONLY).length === 0, validateBrief(koBrief, KO_ONLY).join(' / '));
+  t('같은 브리핑을 한/영 기준으로 보면 막힌다',
+    validateBrief(koBrief, CTX).some((v) => v.includes('.en')));
+
   const badId = JSON.parse(JSON.stringify(brief));
   badId.articles[1].id = '2026-09-01-2';
   t('id 는 <date>-<rank 2자리> 여야 한다', validateBrief(badId, CTX).some((v) => v.includes('2026-09-01-02')));
@@ -208,6 +283,39 @@ export function run(t) {
   wrongFunnel.funnel.published = 10;
   t('funnel.published 와 실린 건수가 다르면 막는다',
     validateBrief(wrongFunnel, CTX).some((v) => v.includes('funnel.published')));
+
+  /* ── 발행 언어를 줄인 날 — SPEC 5절 언어 스위치 ─────────────── */
+
+  /* 영어를 끄는 것은 규격을 낮추는 것이 아니다. 켠 언어는 예전과 똑같이 검사한다. */
+  t('한국어만 발행하는 날 영어 없는 기사는 통과한다',
+    validateArticle(koOnly(goodArticle()), KO_ONLY).length === 0,
+    validateArticle(koOnly(goodArticle()), KO_ONLY).join(' / '));
+
+  /* 기본값이 느슨한 쪽이면 langs 를 넘기는 것을 잊은 자리마다 게이트가 조용히 열린다 */
+  t('langs 를 넘기지 않으면 영어를 그대로 요구한다',
+    validateArticle(koOnly(goodArticle()), CTX).some((v) => v.includes('title.en')),
+    validateArticle(koOnly(goodArticle()), CTX).join(' / '));
+
+  const koShort = koOnly(goodArticle());
+  koShort.summary.ko = ['한 문단뿐이다. 두 문장이 들어 있다.'];
+  t('한국어만 발행해도 한국어 규격은 그대로다',
+    validateArticle(koShort, KO_ONLY).some((v) => v.includes('1문단')));
+
+  t('missingPairs 는 끈 언어를 찾지 않는다',
+    missingPairs({ note: { ko: '있다' } }, '', ['ko']).length === 0);
+  t('끈 언어를 켠 것으로 착각하지 않는다 — ko 가 비면 여전히 잡는다',
+    missingPairs({ note: { en: 'only english' } }, '', ['ko']).some((m) => m.includes('note.ko')));
+
+  /* cli 경로는 스키마를 강제할 수 없어 "쓰지 말라"고 해도 영어가 딸려 오는 날이 있다.
+     검증기는 끈 언어를 보지 않으므로 잘라 내지 않으면 어떤 날만 영어가 있는 briefs.js 가 된다. */
+  const pruned = keepLangs(goodArticle(), ['ko']);
+  t('keepLangs 가 끈 언어를 잘라 낸다',
+    pruned.title.en === undefined && pruned.summary.en === undefined && pruned.implication.en === undefined);
+  t('keepLangs 는 켠 언어를 그대로 둔다',
+    pruned.title.ko === goodArticle().title.ko && pruned.summary.ko.length === 2);
+  t('keepLangs 는 언어 쌍이 아닌 객체를 건드리지 않는다',
+    JSON.stringify(keepLangs({ scoreParts: { weight: 0.75, cross: 0, fresh: 0.37 } }, ['ko'])) ===
+      JSON.stringify({ scoreParts: { weight: 0.75, cross: 0, fresh: 0.37 } }));
 
   /* ── 발행 — briefs.js / glossary.js 갱신 ────────────────────── */
   const older = { date: '2026-08-30', articles: [] };

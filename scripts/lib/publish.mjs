@@ -98,6 +98,27 @@ export function recountGlossary(glossary, briefs) {
  * added 에는 제안한 기사의 자리(at)를 함께 돌려준다. 그 기사의 terms 에 붙여야
  * 용어가 실제로 브리핑에 등장한 것이 되고, 등장 횟수 0으로 사전에 쌓이지 않는다.
  */
+/**
+ * 발행 언어가 아닌 쪽을 잘라 낸다 — 발행 데이터에는 켜 둔 언어만 남는다.
+ *
+ * cli 경로는 스키마를 강제할 수 없어 "쓰지 말라"고 해도 영어가 딸려 오는 날이 있다.
+ * 검증기는 끈 언어를 보지 않으므로 그대로 두면 어떤 날은 영어가 있고 어떤 날은 없는
+ * briefs.js 가 된다. 절반만 있는 영어판은 없는 것보다 나쁘다.
+ */
+export function keepLangs(node, langs) {
+  if (Array.isArray(node)) return node.map((v) => keepLangs(v, langs));
+  if (!node || typeof node !== 'object') return node;
+
+  const keys = Object.keys(node);
+  const isPair = keys.length > 0 && keys.every((k) => k === 'ko' || k === 'en');
+  const out = {};
+  for (const k of keys) {
+    if (isPair && !langs.includes(k)) continue;
+    out[k] = keepLangs(node[k], langs);
+  }
+  return out;
+}
+
 export function addNewTerms(glossary, proposals, date, max = 2) {
   const have = new Set(glossary.map((g) => g.id));
   const entries = [];
