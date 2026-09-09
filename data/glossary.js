@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 27
+    "count": 29
   },
   {
     "id": "tokens",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 9
+    "count": 10
   },
   {
     "id": "alignment",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 9
+    "count": 10
   },
   {
     "id": "expedited-discovery",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 9
+    "count": 11
   },
   {
     "id": "uptime",
@@ -279,6 +279,17 @@ SAB.glossary = [
       "ko": "유전체에서 단백질을 직접 만들어 내지 않는 부분으로, 인간 유전체의 약 98%를 차지한다. 단백질을 만들지는 않지만 어떤 유전자를 언제 얼마나 켤지 조절하며, 형질과 연관된 변이 대부분이 이 영역에 있다."
     },
     "firstSeen": "2026-09-09",
+    "count": 1
+  },
+  {
+    "id": "gwas",
+    "term": {
+      "ko": "전장 유전체 연관 분석 / GWAS"
+    },
+    "definition": {
+      "ko": "많은 사람의 유전체 전체를 훑어 특정 형질이나 질병을 가진 집단에서 더 자주 나타나는 유전 변이를 찾는 방법이다. 변이가 있는 '위치'만 알려주기 때문에, 그 근처에 어떤 유전자가 있고 어떤 경로에 영향을 주는지는 따로 해석해야 한다."
+    },
+    "firstSeen": "2026-09-10",
     "count": 1
   }
 ];
