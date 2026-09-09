@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 23
+    "count": 27
   },
   {
     "id": "tokens",
@@ -84,7 +84,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 4
+    "count": 5
   },
   {
     "id": "guardrails",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 6
+    "count": 9
   },
   {
     "id": "uptime",
@@ -180,7 +180,7 @@ SAB.glossary = [
       "ko": "대기의 물리 법칙을 방정식으로 풀어 미래 날씨를 계산하는 전통적 예보 방식이다. 슈퍼컴퓨터로 대규모 시뮬레이션을 돌려야 해서 결과가 나오기까지 몇 시간이 걸리며, 그 지연 때문에 비나 지표 기온처럼 빠르게 변하는 값에서 오차가 생긴다."
     },
     "firstSeen": "2026-09-04",
-    "count": 1
+    "count": 2
   },
   {
     "id": "rag",
@@ -213,7 +213,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 2
+    "count": 3
   },
   {
     "id": "zero-trust",
@@ -257,6 +257,28 @@ SAB.glossary = [
       "ko": "정해진 가격에 특정 회사의 주식을 나중에 살 수 있는 권리를 담은 증권이다. 권리를 행사하기 전까지는 실제 주주가 아니어서 지분 보유나 경영 참여로 공시할 의무가 없다는 해석이 나오고, 이 때문에 실질적 영향력이 장부에 드러나지 않는 문제가 생긴다."
     },
     "firstSeen": "2026-09-08",
+    "count": 1
+  },
+  {
+    "id": "single-nucleotide-variant",
+    "term": {
+      "ko": "단일 염기 변이"
+    },
+    "definition": {
+      "ko": "DNA를 이루는 네 종류의 염기 중 한 자리가 다른 것으로 바뀐 유전적 차이를 말한다. 인간 유전체에서 이런 변화가 가능한 경우의 수는 약 90억 가지이며, 대부분은 무해하지만 일부는 질병의 직접적 원인이 된다."
+    },
+    "firstSeen": "2026-09-09",
+    "count": 1
+  },
+  {
+    "id": "non-coding-region",
+    "term": {
+      "ko": "비암호화 영역"
+    },
+    "definition": {
+      "ko": "유전체에서 단백질을 직접 만들어 내지 않는 부분으로, 인간 유전체의 약 98%를 차지한다. 단백질을 만들지는 않지만 어떤 유전자를 언제 얼마나 켤지 조절하며, 형질과 연관된 변이 대부분이 이 영역에 있다."
+    },
+    "firstSeen": "2026-09-09",
     "count": 1
   }
 ];
