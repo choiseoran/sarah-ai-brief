@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 29
+    "count": 33
   },
   {
     "id": "tokens",
@@ -45,7 +45,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 5
+    "count": 7
   },
   {
     "id": "eval",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 10
+    "count": 12
   },
   {
     "id": "alignment",
@@ -84,7 +84,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 5
+    "count": 6
   },
   {
     "id": "guardrails",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 10
+    "count": 12
   },
   {
     "id": "expedited-discovery",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 11
+    "count": 13
   },
   {
     "id": "uptime",
@@ -290,6 +290,17 @@ SAB.glossary = [
       "ko": "많은 사람의 유전체 전체를 훑어 특정 형질이나 질병을 가진 집단에서 더 자주 나타나는 유전 변이를 찾는 방법이다. 변이가 있는 '위치'만 알려주기 때문에, 그 근처에 어떤 유전자가 있고 어떤 경로에 영향을 주는지는 따로 해석해야 한다."
     },
     "firstSeen": "2026-09-10",
+    "count": 1
+  },
+  {
+    "id": "ai-fluency",
+    "term": {
+      "ko": "AI 플루언시 / AI Fluency"
+    },
+    "definition": {
+      "ko": "AI 도구를 단순히 다루는 것을 넘어 언제, 어떻게, 왜 써야 하는지 판단하며 책임 있게 협업하는 능력을 말한다. 결과물을 비판적으로 검토하고 자신의 사고력을 유지하는 태도까지 포함한다."
+    },
+    "firstSeen": "2026-09-11",
     "count": 1
   }
 ];
