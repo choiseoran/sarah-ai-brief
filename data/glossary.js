@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 33
+    "count": 35
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 11
+    "count": 12
   },
   {
     "id": "open-weights",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 12
+    "count": 13
   },
   {
     "id": "alignment",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 7
+    "count": 8
   },
   {
     "id": "red-teaming",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 12
+    "count": 14
   },
   {
     "id": "expedited-discovery",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 13
+    "count": 15
   },
   {
     "id": "uptime",
@@ -202,7 +202,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 4
+    "count": 5
   },
   {
     "id": "proof-of-concept",
@@ -301,6 +301,28 @@ SAB.glossary = [
       "ko": "AI 도구를 단순히 다루는 것을 넘어 언제, 어떻게, 왜 써야 하는지 판단하며 책임 있게 협업하는 능력을 말한다. 결과물을 비판적으로 검토하고 자신의 사고력을 유지하는 태도까지 포함한다."
     },
     "firstSeen": "2026-09-11",
+    "count": 1
+  },
+  {
+    "id": "existential-risk",
+    "term": {
+      "ko": "실존 위험 / Existential risk"
+    },
+    "definition": {
+      "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
+    },
+    "firstSeen": "2026-09-12",
+    "count": 1
+  },
+  {
+    "id": "hallucination",
+    "term": {
+      "ko": "환각 / Hallucination"
+    },
+    "definition": {
+      "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
+    },
+    "firstSeen": "2026-09-12",
     "count": 1
   }
 ];
