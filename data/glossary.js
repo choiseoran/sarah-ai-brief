@@ -45,7 +45,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 7
+    "count": 8
   },
   {
     "id": "eval",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 16
+    "count": 17
   },
   {
     "id": "expedited-discovery",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 15
+    "count": 18
   },
   {
     "id": "uptime",
@@ -334,6 +334,28 @@ SAB.glossary = [
       "ko": "제조업의 설계·생산·품질 관리 등 공정 전반에 AI를 적용해 산업 구조를 바꾸는 것을 말한다. 산업통상부가 Manufacturing AI Transformation의 약자로 M.AX라 부르며, 산업단지 단위로 실증 사업을 지정해 추진하고 있다."
     },
     "firstSeen": "2026-09-13",
+    "count": 1
+  },
+  {
+    "id": "regulatory-capture",
+    "term": {
+      "ko": "규제 포획"
+    },
+    "definition": {
+      "ko": "규제 대상인 기업이 규제 기관이나 입법 과정에 영향을 미쳐 규제를 자신에게 유리한 방향으로 만드는 현상이다. 이미 시장을 선점한 기업이 강한 규제를 요구해 후발 주자의 진입을 막는 경우가 대표적 사례로 꼽힌다."
+    },
+    "firstSeen": "2026-09-14",
+    "count": 1
+  },
+  {
+    "id": "signals-intelligence",
+    "term": {
+      "ko": "신호정보 / SIGINT"
+    },
+    "definition": {
+      "ko": "통신, 전자 신호, 레이더 등 전자적 수단으로 오가는 정보를 가로채 분석하는 첩보 활동이다. 사람을 통해 얻는 인간정보(HUMINT)와 대비되는 개념으로, 미국 NSA 가 이 분야를 총괄하는 대표적 기관이다."
+    },
+    "firstSeen": "2026-09-14",
     "count": 1
   }
 ];
