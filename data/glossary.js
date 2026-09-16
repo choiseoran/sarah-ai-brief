@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 47
+    "count": 50
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 13
+    "count": 14
   },
   {
     "id": "open-weights",
@@ -45,7 +45,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 9
+    "count": 10
   },
   {
     "id": "eval",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 22
+    "count": 23
   },
   {
     "id": "uptime",
@@ -312,7 +312,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 4
+    "count": 5
   },
   {
     "id": "hallucination",
@@ -378,7 +378,7 @@ SAB.glossary = [
       "ko": "AI 가 대량으로 생성해 인터넷에 뿌리는 저품질 콘텐츠를 가리키는 속어다. 사람이 검토하지 않고 자동으로 만들어져 정보 가치가 낮고 양만 많다는 뜻에서 '찌꺼기'라는 이름이 붙었다. 검색 결과, 소셜미디어, 이메일을 채워 진짜 정보를 찾기 어렵게 만드는 문제로 지적된다."
     },
     "firstSeen": "2026-09-15",
-    "count": 1
+    "count": 2
   },
   {
     "id": "cognitive-surrender",
@@ -400,6 +400,28 @@ SAB.glossary = [
       "ko": "AI 개발 속도를 늦추지 말고 오히려 규제를 최소화해 최대한 빨리 밀어붙여야 한다는 입장이다. 이에 맞서 개발 속도를 늦추고 안전장치를 먼저 갖추자는 쪽을 감속론이라 부르며, 두 진영의 대립이 미국 AI 정책 논쟁의 핵심 축이다."
     },
     "firstSeen": "2026-09-16",
+    "count": 1
+  },
+  {
+    "id": "unified-memory",
+    "term": {
+      "ko": "통합 메모리 / Unified memory"
+    },
+    "definition": {
+      "ko": "CPU 와 GPU 가 하나의 메모리 풀을 함께 쓰는 구조다. 애플 M시리즈 칩이 채택해 그래픽카드 메모리 용량 제한 없이 큰 AI 모델을 한 기기에서 올릴 수 있어 AI 개발자들이 맥을 찾는 이유가 된다."
+    },
+    "firstSeen": "2026-09-17",
+    "count": 1
+  },
+  {
+    "id": "basel-convention",
+    "term": {
+      "ko": "바젤협약 / Basel Convention"
+    },
+    "definition": {
+      "ko": "유해 폐기물의 국가 간 이동과 처리를 규제하기 위해 1989년 채택된 국제 협약이다. 선진국이 유해 폐기물을 개발도상국에 떠넘기는 것을 막는 것이 목적이며, 미국은 서명은 했지만 아직 비준하지 않았다."
+    },
+    "firstSeen": "2026-09-17",
     "count": 1
   }
 ];
