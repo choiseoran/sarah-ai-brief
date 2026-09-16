@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 44
+    "count": 47
   },
   {
     "id": "tokens",
@@ -45,7 +45,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 8
+    "count": 9
   },
   {
     "id": "eval",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 14
+    "count": 16
   },
   {
     "id": "alignment",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 10
+    "count": 11
   },
   {
     "id": "red-teaming",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 19
+    "count": 22
   },
   {
     "id": "uptime",
@@ -246,7 +246,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 4
+    "count": 5
   },
   {
     "id": "warrant",
@@ -312,7 +312,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 2
+    "count": 4
   },
   {
     "id": "hallucination",
@@ -378,6 +378,28 @@ SAB.glossary = [
       "ko": "AI 가 대량으로 생성해 인터넷에 뿌리는 저품질 콘텐츠를 가리키는 속어다. 사람이 검토하지 않고 자동으로 만들어져 정보 가치가 낮고 양만 많다는 뜻에서 '찌꺼기'라는 이름이 붙었다. 검색 결과, 소셜미디어, 이메일을 채워 진짜 정보를 찾기 어렵게 만드는 문제로 지적된다."
     },
     "firstSeen": "2026-09-15",
+    "count": 1
+  },
+  {
+    "id": "cognitive-surrender",
+    "term": {
+      "ko": "인지적 항복"
+    },
+    "definition": {
+      "ko": "어려운 문제를 만났을 때 스스로 생각하는 과정을 건너뛰고 곧바로 AI에 답을 맡기는 태도를 가리키는 말이다. 답은 얻지만 문제를 풀며 생기는 깊은 이해와 기억이 남지 않아, 배웠다고 느끼면서도 실제 능력은 늘지 않는 상태로 이어질 수 있다."
+    },
+    "firstSeen": "2026-09-16",
+    "count": 1
+  },
+  {
+    "id": "ai-accelerationism",
+    "term": {
+      "ko": "AI 가속주의"
+    },
+    "definition": {
+      "ko": "AI 개발 속도를 늦추지 말고 오히려 규제를 최소화해 최대한 빨리 밀어붙여야 한다는 입장이다. 이에 맞서 개발 속도를 늦추고 안전장치를 먼저 갖추자는 쪽을 감속론이라 부르며, 두 진영의 대립이 미국 AI 정책 논쟁의 핵심 축이다."
+    },
+    "firstSeen": "2026-09-16",
     "count": 1
   }
 ];
