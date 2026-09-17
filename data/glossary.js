@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 50
+    "count": 53
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 14
+    "count": 15
   },
   {
     "id": "open-weights",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 17
+    "count": 18
   },
   {
     "id": "expedited-discovery",
@@ -123,7 +123,7 @@ SAB.glossary = [
       "en": "A mode of operation in which an AI provider processes a request and then discards the input and output instead of storing them. Regulated industries often require it by contract, because records held by an outside vendor can themselves create compliance exposure. The trade-off is that misuse spread across many sessions becomes hard to detect once nothing is kept to compare against."
     },
     "firstSeen": "2026-09-02",
-    "count": 1
+    "count": 2
   },
   {
     "id": "frontier-model",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 23
+    "count": 26
   },
   {
     "id": "uptime",
@@ -202,7 +202,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 7
+    "count": 8
   },
   {
     "id": "proof-of-concept",
@@ -213,7 +213,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 4
+    "count": 5
   },
   {
     "id": "zero-trust",
@@ -312,7 +312,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 5
+    "count": 8
   },
   {
     "id": "hallucination",
@@ -422,6 +422,17 @@ SAB.glossary = [
       "ko": "유해 폐기물의 국가 간 이동과 처리를 규제하기 위해 1989년 채택된 국제 협약이다. 선진국이 유해 폐기물을 개발도상국에 떠넘기는 것을 막는 것이 목적이며, 미국은 서명은 했지만 아직 비준하지 않았다."
     },
     "firstSeen": "2026-09-17",
+    "count": 1
+  },
+  {
+    "id": "federated-learning",
+    "term": {
+      "ko": "연합학습 / Federated learning"
+    },
+    "definition": {
+      "ko": "여러 기기가 각자 가진 데이터로 AI 모델을 학습한 뒤 원본 데이터 대신 학습 결과(모델 갱신분)만 중앙에 모아 합치는 방식이다. 민감한 원본 데이터를 밖으로 내보내지 않으면서도 여러 곳의 경험을 하나의 모델에 반영할 수 있어 의료·국방처럼 데이터 반출이 어려운 분야에서 쓰인다."
+    },
+    "firstSeen": "2026-09-18",
     "count": 1
   }
 ];
