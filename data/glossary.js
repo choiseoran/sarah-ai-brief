@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 53
+    "count": 55
   },
   {
     "id": "tokens",
@@ -32,7 +32,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 15
+    "count": 16
   },
   {
     "id": "open-weights",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 11
+    "count": 12
   },
   {
     "id": "red-teaming",
@@ -84,7 +84,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 6
+    "count": 7
   },
   {
     "id": "guardrails",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 18
+    "count": 22
   },
   {
     "id": "expedited-discovery",
@@ -110,7 +110,7 @@ SAB.glossary = [
       "en": "A request to a U.S. court for permission to gather evidence from the other side ahead of the normal schedule. It is typically used when the material at issue is transient, such as device logs or metadata that can be overwritten or lost while a case proceeds."
     },
     "firstSeen": "2026-09-02",
-    "count": 2
+    "count": 3
   },
   {
     "id": "zero-data-retention",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 26
+    "count": 27
   },
   {
     "id": "uptime",
@@ -158,7 +158,7 @@ SAB.glossary = [
       "ko": "이름표(키) 하나로 값을 넣고 꺼내는 가장 단순한 형태의 데이터베이스다. 표와 관계를 다루는 관계형 데이터베이스보다 기능은 적지만 그만큼 빠르고, 여러 대에 나눠 담기 쉬워 대규모 서비스의 설정값·카운터·메타데이터 보관에 널리 쓰인다."
     },
     "firstSeen": "2026-09-04",
-    "count": 2
+    "count": 3
   },
   {
     "id": "reverse-proxy",
@@ -312,7 +312,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 8
+    "count": 11
   },
   {
     "id": "hallucination",
@@ -323,7 +323,7 @@ SAB.glossary = [
       "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
     },
     "firstSeen": "2026-09-12",
-    "count": 1
+    "count": 2
   },
   {
     "id": "manufacturing-ax",
@@ -356,7 +356,7 @@ SAB.glossary = [
       "ko": "통신, 전자 신호, 레이더 등 전자적 수단으로 오가는 정보를 가로채 분석하는 첩보 활동이다. 사람을 통해 얻는 인간정보(HUMINT)와 대비되는 개념으로, 미국 NSA 가 이 분야를 총괄하는 대표적 기관이다."
     },
     "firstSeen": "2026-09-14",
-    "count": 1
+    "count": 2
   },
   {
     "id": "reward-hacking",
@@ -433,6 +433,17 @@ SAB.glossary = [
       "ko": "여러 기기가 각자 가진 데이터로 AI 모델을 학습한 뒤 원본 데이터 대신 학습 결과(모델 갱신분)만 중앙에 모아 합치는 방식이다. 민감한 원본 데이터를 밖으로 내보내지 않으면서도 여러 곳의 경험을 하나의 모델에 반영할 수 있어 의료·국방처럼 데이터 반출이 어려운 분야에서 쓰인다."
     },
     "firstSeen": "2026-09-18",
+    "count": 1
+  },
+  {
+    "id": "google-zero",
+    "term": {
+      "ko": "구글 제로 / Google Zero"
+    },
+    "definition": {
+      "ko": "검색 엔진이나 AI 챗봇이 답을 직접 보여 주면서 언론사 사이트로 넘어오는 검색 유입이 사실상 0에 가까워지는 상황을 가리키는 말이다. 이용자가 요약만 읽고 원문 링크를 누르지 않게 되어 콘텐츠 제작자의 광고·구독 수익 기반이 무너지는 현상을 뜻한다."
+    },
+    "firstSeen": "2026-09-19",
     "count": 1
   }
 ];
