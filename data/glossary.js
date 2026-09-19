@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 55
+    "count": 57
   },
   {
     "id": "tokens",
@@ -45,7 +45,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 10
+    "count": 11
   },
   {
     "id": "eval",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 16
+    "count": 17
   },
   {
     "id": "alignment",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 12
+    "count": 13
   },
   {
     "id": "red-teaming",
@@ -84,7 +84,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 7
+    "count": 8
   },
   {
     "id": "guardrails",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 22
+    "count": 23
   },
   {
     "id": "expedited-discovery",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 27
+    "count": 30
   },
   {
     "id": "uptime",
@@ -191,7 +191,7 @@ SAB.glossary = [
       "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
     },
     "firstSeen": "2026-09-05",
-    "count": 2
+    "count": 3
   },
   {
     "id": "embodied-intelligence",
@@ -246,7 +246,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 5
+    "count": 6
   },
   {
     "id": "warrant",
@@ -323,7 +323,7 @@ SAB.glossary = [
       "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
     },
     "firstSeen": "2026-09-12",
-    "count": 2
+    "count": 3
   },
   {
     "id": "manufacturing-ax",
@@ -345,7 +345,7 @@ SAB.glossary = [
       "ko": "규제 대상인 기업이 규제 기관이나 입법 과정에 영향을 미쳐 규제를 자신에게 유리한 방향으로 만드는 현상이다. 이미 시장을 선점한 기업이 강한 규제를 요구해 후발 주자의 진입을 막는 경우가 대표적 사례로 꼽힌다."
     },
     "firstSeen": "2026-09-14",
-    "count": 1
+    "count": 3
   },
   {
     "id": "signals-intelligence",
@@ -378,7 +378,7 @@ SAB.glossary = [
       "ko": "AI 가 대량으로 생성해 인터넷에 뿌리는 저품질 콘텐츠를 가리키는 속어다. 사람이 검토하지 않고 자동으로 만들어져 정보 가치가 낮고 양만 많다는 뜻에서 '찌꺼기'라는 이름이 붙었다. 검색 결과, 소셜미디어, 이메일을 채워 진짜 정보를 찾기 어렵게 만드는 문제로 지적된다."
     },
     "firstSeen": "2026-09-15",
-    "count": 2
+    "count": 4
   },
   {
     "id": "cognitive-surrender",
