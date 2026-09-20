@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 57
+    "count": 60
   },
   {
     "id": "tokens",
@@ -84,7 +84,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 8
+    "count": 9
   },
   {
     "id": "guardrails",
@@ -97,7 +97,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 23
+    "count": 24
   },
   {
     "id": "expedited-discovery",
@@ -312,7 +312,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 11
+    "count": 12
   },
   {
     "id": "hallucination",
@@ -345,7 +345,7 @@ SAB.glossary = [
       "ko": "규제 대상인 기업이 규제 기관이나 입법 과정에 영향을 미쳐 규제를 자신에게 유리한 방향으로 만드는 현상이다. 이미 시장을 선점한 기업이 강한 규제를 요구해 후발 주자의 진입을 막는 경우가 대표적 사례로 꼽힌다."
     },
     "firstSeen": "2026-09-14",
-    "count": 3
+    "count": 5
   },
   {
     "id": "signals-intelligence",
@@ -444,6 +444,17 @@ SAB.glossary = [
       "ko": "검색 엔진이나 AI 챗봇이 답을 직접 보여 주면서 언론사 사이트로 넘어오는 검색 유입이 사실상 0에 가까워지는 상황을 가리키는 말이다. 이용자가 요약만 읽고 원문 링크를 누르지 않게 되어 콘텐츠 제작자의 광고·구독 수익 기반이 무너지는 현상을 뜻한다."
     },
     "firstSeen": "2026-09-19",
+    "count": 1
+  },
+  {
+    "id": "campus-network",
+    "term": {
+      "ko": "캠퍼스 네트워크"
+    },
+    "definition": {
+      "ko": "기업 본사, 공장, 대학처럼 한 장소 안의 건물들을 묶는 내부 네트워크를 말한다. 유무선 접속, 보안, 장비 관리가 한 단위로 운영되며, 인터넷이나 데이터센터로 나가는 망과는 구분된다."
+    },
+    "firstSeen": "2026-09-21",
     "count": 1
   }
 ];
