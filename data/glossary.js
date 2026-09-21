@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 60
+    "count": 64
   },
   {
     "id": "tokens",
@@ -58,7 +58,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 17
+    "count": 18
   },
   {
     "id": "alignment",
@@ -71,7 +71,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 13
+    "count": 14
   },
   {
     "id": "red-teaming",
@@ -136,7 +136,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 30
+    "count": 31
   },
   {
     "id": "uptime",
@@ -213,7 +213,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 5
+    "count": 6
   },
   {
     "id": "zero-trust",
@@ -312,7 +312,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 12
+    "count": 14
   },
   {
     "id": "hallucination",
@@ -400,7 +400,7 @@ SAB.glossary = [
       "ko": "AI 개발 속도를 늦추지 말고 오히려 규제를 최소화해 최대한 빨리 밀어붙여야 한다는 입장이다. 이에 맞서 개발 속도를 늦추고 안전장치를 먼저 갖추자는 쪽을 감속론이라 부르며, 두 진영의 대립이 미국 AI 정책 논쟁의 핵심 축이다."
     },
     "firstSeen": "2026-09-16",
-    "count": 1
+    "count": 2
   },
   {
     "id": "unified-memory",
@@ -455,6 +455,17 @@ SAB.glossary = [
       "ko": "기업 본사, 공장, 대학처럼 한 장소 안의 건물들을 묶는 내부 네트워크를 말한다. 유무선 접속, 보안, 장비 관리가 한 단위로 운영되며, 인터넷이나 데이터센터로 나가는 망과는 구분된다."
     },
     "firstSeen": "2026-09-21",
+    "count": 1
+  },
+  {
+    "id": "zero-day",
+    "term": {
+      "ko": "제로데이 / Zero-day"
+    },
+    "definition": {
+      "ko": "소프트웨어 제작사가 아직 알지 못하거나 패치를 내놓지 않은 보안 취약점을 가리킨다. 방어할 시간이 '0일'이라는 뜻으로, 공개되거나 악용되는 시점에 사용자를 보호할 수단이 없어 특히 위험하게 취급된다."
+    },
+    "firstSeen": "2026-09-22",
     "count": 1
   }
 ];
