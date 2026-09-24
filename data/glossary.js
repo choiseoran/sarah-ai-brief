@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 70,
+    "count": 76,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 14,
+    "count": 15,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -457,7 +457,7 @@ SAB.glossary = [
       "ko": "AI 가 주어진 과제를 실제로 해결하는 대신, 평가 방식의 허점을 이용해 성공한 것처럼 점수를 얻는 행동을 말한다. 채점이 형식만 확인하면 문제 정의를 바꿔 제출하는 식으로 나타나며, 에이전트가 자율적으로 움직일수록 발견하기 어려워진다."
     },
     "firstSeen": "2026-09-15",
-    "count": 1,
+    "count": 2,
     "plain": {
       "ko": "AI가 일을 제대로 해결하는 대신 채점의 허점을 이용해 높은 점수를 얻는 행동입니다."
     }
@@ -499,7 +499,7 @@ SAB.glossary = [
       "ko": "AI 개발 속도를 늦추지 말고 오히려 규제를 최소화해 최대한 빨리 밀어붙여야 한다는 입장이다. 이에 맞서 개발 속도를 늦추고 안전장치를 먼저 갖추자는 쪽을 감속론이라 부르며, 두 진영의 대립이 미국 AI 정책 논쟁의 핵심 축이다."
     },
     "firstSeen": "2026-09-16",
-    "count": 2,
+    "count": 3,
     "plain": {
       "ko": "규제를 줄이고 AI 개발을 더 빠르게 추진해야 한다는 입장입니다."
     }
@@ -600,6 +600,34 @@ SAB.glossary = [
       "ko": "칩 안에 따로 떼어 놓은 잠긴 방으로, 그 안의 데이터는 바깥에서 아무도 볼 수 없다."
     },
     "firstSeen": "2026-09-24",
+    "count": 2
+  },
+  {
+    "id": "software-stack",
+    "term": {
+      "ko": "소프트웨어 스택"
+    },
+    "definition": {
+      "ko": "프로그램을 만들고 실행하는 데 필요한 여러 소프트웨어를 층층이 쌓아 한 묶음으로 쓰는 구성을 말한다. AI에서는 프로그래밍 언어, 모델을 만들고 돌리는 도구, 서버 운영 도구 등이 한 스택을 이룬다. 칩 회사마다 스택이 다르면 개발자는 칩을 바꿀 때마다 코드를 다시 짜야 한다."
+    },
+    "plain": {
+      "ko": "프로그램을 만들고 돌리는 데 필요한 여러 소프트웨어를 층층이 쌓은 묶음이다."
+    },
+    "firstSeen": "2026-09-25",
+    "count": 1
+  },
+  {
+    "id": "dividend-recap",
+    "term": {
+      "ko": "배당 리캡"
+    },
+    "definition": {
+      "ko": "회사가 새로 돈을 빌려 그 돈을 기존 주주에게 배당으로 나눠 주는 자금 조달 방식이다. 회사에 새 사업 자금을 넣기보다 주주가 보유 지분을 팔지 않고도 현금을 손에 쥘 수 있게 하는 데 목적이 있다. 대신 회사가 갚아야 할 빚은 늘어난다."
+    },
+    "plain": {
+      "ko": "회사가 돈을 빌려 그 돈을 주주에게 나눠 주는 방식이다."
+    },
+    "firstSeen": "2026-09-25",
     "count": 1
   }
 ];
