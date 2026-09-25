@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 76,
+    "count": 79,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -51,7 +51,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 11,
+    "count": 12,
     "plain": {
       "ko": "학습을 마친 AI의 핵심 설정값을 내려받아 직접 실행할 수 있도록 공개한 것입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 19,
+    "count": 20,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 34,
+    "count": 35,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -247,7 +247,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 8,
+    "count": 9,
     "plain": {
       "ko": "로봇처럼 몸을 가진 AI가 실제 세상을 보고 움직이며 배우는 능력입니다."
     }
@@ -261,7 +261,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 6,
+    "count": 7,
     "plain": {
       "ko": "새 기술을 본격적으로 도입하기 전에 작은 규모로 가능한지 시험하는 단계입니다."
     }
@@ -401,7 +401,7 @@ SAB.glossary = [
       "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
     },
     "firstSeen": "2026-09-12",
-    "count": 3,
+    "count": 4,
     "plain": {
       "ko": "AI가 사실이 아닌 내용이나 없는 출처를 그럴듯하게 만들어 답하는 현상입니다."
     }
@@ -628,6 +628,34 @@ SAB.glossary = [
       "ko": "회사가 돈을 빌려 그 돈을 주주에게 나눠 주는 방식이다."
     },
     "firstSeen": "2026-09-25",
+    "count": 1
+  },
+  {
+    "id": "npu",
+    "term": {
+      "ko": "신경망 처리 장치(NPU)"
+    },
+    "definition": {
+      "ko": "AI 모델의 계산을 전담하도록 설계된 반도체 칩으로, PC나 스마트폰 안에 들어간다. 일반 프로세서보다 전기를 적게 쓰면서 AI 작업을 빠르게 처리하며, 성능은 초당 몇조 번 연산하는지(TOPS)로 표시한다."
+    },
+    "plain": {
+      "ko": "AI 계산을 빠르고 전기를 적게 쓰며 처리하도록 PC나 휴대폰에 넣는 전용 칩이다."
+    },
+    "firstSeen": "2026-09-26",
+    "count": 1
+  },
+  {
+    "id": "supply-chain-risk",
+    "term": {
+      "ko": "공급망 위험"
+    },
+    "definition": {
+      "ko": "정부가 사들여 쓰는 제품이나 서비스가 공급 과정에서 방해받거나 조작되어 제대로 작동하지 않을 위험을 말한다. 미국 정부는 어떤 업체를 공급망 위험으로 지정하면 연방 기관과 방산 업체가 그 업체의 제품을 쓰지 못하게 막을 수 있다. 법 조항에 따라 적대 세력의 악의가 있어야 하는지가 달라진다."
+    },
+    "plain": {
+      "ko": "정부가 쓰는 제품이 제대로 작동하지 않게 될 위험으로, 지정되면 정부 거래에서 빠진다."
+    },
+    "firstSeen": "2026-09-26",
     "count": 1
   }
 ];
