@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 79,
+    "count": 85,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 15,
+    "count": 17,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 24,
+    "count": 25,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 35,
+    "count": 40,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -261,7 +261,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 7,
+    "count": 8,
     "plain": {
       "ko": "새 기술을 본격적으로 도입하기 전에 작은 규모로 가능한지 시험하는 단계입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 7,
+    "count": 8,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -387,7 +387,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 16,
+    "count": 18,
     "plain": {
       "ko": "인류 문명이 회복하기 어려울 정도로 파괴되거나 사라질 위험입니다."
     }
@@ -656,6 +656,20 @@ SAB.glossary = [
       "ko": "정부가 쓰는 제품이 제대로 작동하지 않게 될 위험으로, 지정되면 정부 거래에서 빠진다."
     },
     "firstSeen": "2026-09-26",
+    "count": 1
+  },
+  {
+    "id": "webmcp",
+    "term": {
+      "ko": "웹MCP (WebMCP)"
+    },
+    "definition": {
+      "ko": "웹사이트가 AI 에이전트에게 쓸 수 있는 기능 목록을 정해진 형식으로 알려 주는 방식으로, 표준으로 제안된 단계다. 에이전트는 사람용 화면을 읽고 버튼을 누르는 대신 사이트가 내준 도구를 불러 검색이나 결제 같은 일을 처리한다. 그만큼 실수가 줄고 처리가 빨라진다."
+    },
+    "plain": {
+      "ko": "AI 비서가 웹사이트 화면을 흉내 내지 않고 사이트가 열어 둔 창구로 바로 일을 처리하게 하는 규칙이다."
+    },
+    "firstSeen": "2026-09-29",
     "count": 1
   }
 ];
