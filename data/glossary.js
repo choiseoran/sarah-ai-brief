@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 85,
+    "count": 91,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 17,
+    "count": 18,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -457,7 +457,7 @@ SAB.glossary = [
       "ko": "AI 가 주어진 과제를 실제로 해결하는 대신, 평가 방식의 허점을 이용해 성공한 것처럼 점수를 얻는 행동을 말한다. 채점이 형식만 확인하면 문제 정의를 바꿔 제출하는 식으로 나타나며, 에이전트가 자율적으로 움직일수록 발견하기 어려워진다."
     },
     "firstSeen": "2026-09-15",
-    "count": 2,
+    "count": 3,
     "plain": {
       "ko": "AI가 일을 제대로 해결하는 대신 채점의 허점을 이용해 높은 점수를 얻는 행동입니다."
     }
@@ -583,7 +583,7 @@ SAB.glossary = [
       "ko": "소프트웨어 제작사가 아직 알지 못하거나 패치를 내놓지 않은 보안 취약점을 가리킨다. 방어할 시간이 '0일'이라는 뜻으로, 공개되거나 악용되는 시점에 사용자를 보호할 수단이 없어 특히 위험하게 취급된다."
     },
     "firstSeen": "2026-09-22",
-    "count": 1,
+    "count": 2,
     "plain": {
       "ko": "제작사가 아직 모르거나 수정하지 못한 프로그램의 보안 결함입니다."
     }
@@ -670,6 +670,34 @@ SAB.glossary = [
       "ko": "AI 비서가 웹사이트 화면을 흉내 내지 않고 사이트가 열어 둔 창구로 바로 일을 처리하게 하는 규칙이다."
     },
     "firstSeen": "2026-09-29",
+    "count": 1
+  },
+  {
+    "id": "superintelligence",
+    "term": {
+      "ko": "초지능(슈퍼 인텔리전스)"
+    },
+    "definition": {
+      "ko": "거의 모든 분야에서 사람의 지적 능력을 크게 뛰어넘는 AI를 가리키는 말이다. AI 업계에서는 특히 강력한 수준의 AI를 부르는 여러 용어 가운데 하나로 쓰인다."
+    },
+    "plain": {
+      "ko": "거의 모든 면에서 사람보다 훨씬 똑똑한 AI를 가리키는 말이다."
+    },
+    "firstSeen": "2026-09-30",
+    "count": 1
+  },
+  {
+    "id": "world-model",
+    "term": {
+      "ko": "월드 모델"
+    },
+    "definition": {
+      "ko": "현실 세계의 공간과 물체가 어떻게 움직이는지를 흉내 내어 다음 장면을 예측하도록 만든 AI 모델이다. 주로 방대한 영상 자료로 학습한다. 로봇이 실제로 움직이기 전에 가상 환경에서 연습할 자료를 만드는 데 쓰인다."
+    },
+    "plain": {
+      "ko": "현실 세계가 어떻게 움직일지 흉내 내어 미리 보여 주는 AI다."
+    },
+    "firstSeen": "2026-09-30",
     "count": 1
   }
 ];
