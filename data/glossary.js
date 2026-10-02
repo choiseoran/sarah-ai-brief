@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 96,
+    "count": 102,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -373,7 +373,7 @@ SAB.glossary = [
       "ko": "AI 도구를 단순히 다루는 것을 넘어 언제, 어떻게, 왜 써야 하는지 판단하며 책임 있게 협업하는 능력을 말한다. 결과물을 비판적으로 검토하고 자신의 사고력을 유지하는 태도까지 포함한다."
     },
     "firstSeen": "2026-09-11",
-    "count": 1,
+    "count": 2,
     "plain": {
       "ko": "AI를 언제 어떻게 써야 하는지 판단하고 결과를 검토하며 활용하는 능력입니다."
     }
@@ -740,6 +740,34 @@ SAB.glossary = [
       "ko": "정신은 멀쩡하지만 온몸이 마비되어 말도 움직임도 거의 못 하는 상태."
     },
     "firstSeen": "2026-10-02",
+    "count": 1
+  },
+  {
+    "id": "full-disk-access",
+    "term": {
+      "ko": "전체 디스크 접근(Full Disk Access)"
+    },
+    "definition": {
+      "ko": "맥 운영체제에서 앱이 사용자의 컴퓨터 전체를 읽을 수 있게 해 주는 권한이다. 원래는 백업 앱이 제대로 작동하도록 만든 것이라 일반적인 개인정보 보호 장치를 대부분 건너뛴다. 이 권한을 받은 앱은 파일, 메일, 메시지, 방문 기록까지 볼 수 있다."
+    },
+    "plain": {
+      "ko": "앱이 컴퓨터 안의 모든 파일과 기록을 읽을 수 있게 해 주는 권한이다."
+    },
+    "firstSeen": "2026-10-03",
+    "count": 1
+  },
+  {
+    "id": "aipt",
+    "term": {
+      "ko": "AI 기반 지속 위협(AiPT)"
+    },
+    "definition": {
+      "ko": "AiPT는 AI-Powered Persistent Threats의 줄임말로, AI 에이전트와 도구를 이용해 정찰, 취약점 악용, 내부 침투, 잠복 단계를 스스로 자동화하는 사이버 공격 유형이다. 특정 대상을 오래 노리며 몰래 정보를 빼내는 기존 지능형 지속 위협(APT)에 AI 자동화를 더한 것이다."
+    },
+    "plain": {
+      "ko": "AI가 사람 대신 목표를 살피고 몰래 침투해 오래 숨어 있는 해킹 공격이다."
+    },
+    "firstSeen": "2026-10-03",
     "count": 1
   }
 ];
