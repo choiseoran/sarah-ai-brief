@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 102,
+    "count": 105,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 26,
+    "count": 27,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 44,
+    "count": 45,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -754,7 +754,7 @@ SAB.glossary = [
       "ko": "앱이 컴퓨터 안의 모든 파일과 기록을 읽을 수 있게 해 주는 권한이다."
     },
     "firstSeen": "2026-10-03",
-    "count": 1
+    "count": 2
   },
   {
     "id": "aipt",
@@ -768,6 +768,20 @@ SAB.glossary = [
       "ko": "AI가 사람 대신 목표를 살피고 몰래 침투해 오래 숨어 있는 해킹 공격이다."
     },
     "firstSeen": "2026-10-03",
+    "count": 1
+  },
+  {
+    "id": "penetration-testing",
+    "term": {
+      "ko": "침투테스트"
+    },
+    "definition": {
+      "ko": "보안 담당자가 허락을 받고 실제 해커처럼 시스템에 들어가 보며 약점을 찾는 점검 방식이다. 찾아낸 약점은 공격자가 쓰기 전에 고치는 데 쓴다. 같은 방법과 도구가 허락 없이 쓰이면 그대로 해킹이 된다."
+    },
+    "plain": {
+      "ko": "허락받고 해커처럼 시스템을 공격해 보며 보안 약점을 미리 찾는 점검이다."
+    },
+    "firstSeen": "2026-10-04",
     "count": 1
   }
 ];
