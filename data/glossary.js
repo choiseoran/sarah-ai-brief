@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 107,
+    "count": 112,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 20,
+    "count": 21,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 27,
+    "count": 28,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 45,
+    "count": 46,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -233,7 +233,7 @@ SAB.glossary = [
       "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
     },
     "firstSeen": "2026-09-05",
-    "count": 3,
+    "count": 4,
     "plain": {
       "ko": "AI가 답하기 전에 관련 문서를 찾아보고 그 내용을 바탕으로 답하는 방식입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 8,
+    "count": 9,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -513,7 +513,7 @@ SAB.glossary = [
       "ko": "CPU 와 GPU 가 하나의 메모리 풀을 함께 쓰는 구조다. 애플 M시리즈 칩이 채택해 그래픽카드 메모리 용량 제한 없이 큰 AI 모델을 한 기기에서 올릴 수 있어 AI 개발자들이 맥을 찾는 이유가 된다."
     },
     "firstSeen": "2026-09-17",
-    "count": 1,
+    "count": 2,
     "plain": {
       "ko": "컴퓨터의 중앙 처리장치와 그래픽 처리장치가 같은 메모리를 함께 쓰는 구조입니다."
     }
@@ -642,7 +642,7 @@ SAB.glossary = [
       "ko": "AI 계산을 빠르고 전기를 적게 쓰며 처리하도록 PC나 휴대폰에 넣는 전용 칩이다."
     },
     "firstSeen": "2026-09-26",
-    "count": 1
+    "count": 2
   },
   {
     "id": "supply-chain-risk",
@@ -810,6 +810,34 @@ SAB.glossary = [
       "ko": "기기가 통신망으로 데이터를 올려보내는 방향의 통신이다."
     },
     "firstSeen": "2026-10-05",
+    "count": 1
+  },
+  {
+    "id": "chevron-deference",
+    "term": {
+      "ko": "셰브론 존중 원칙"
+    },
+    "definition": {
+      "ko": "법률 문구가 모호할 때 법원이 해당 분야를 맡은 정부기관의 해석을 존중하던 미국 판례 원칙이다. 2024년 연방대법원이 로퍼 브라이트 판결로 이 원칙을 폐기했다. 이제는 법원이 직접 법을 해석하므로 정부기관의 규제가 소송에 더 쉽게 묶일 수 있다."
+    },
+    "plain": {
+      "ko": "법이 모호할 때 법원이 정부 전문기관의 해석을 따르던 미국의 옛 판례 원칙이다."
+    },
+    "firstSeen": "2026-10-06",
+    "count": 1
+  },
+  {
+    "id": "silicon-photonics",
+    "term": {
+      "ko": "실리콘 포토닉스"
+    },
+    "definition": {
+      "ko": "반도체 칩 사이나 칩 안에서 데이터를 전기 신호 대신 빛 신호로 주고받게 하는 기술이다. 기존 실리콘 반도체 공정을 그대로 활용해 빛을 다루는 부품을 만든다는 점에서 이런 이름이 붙었다. 전기보다 더 빠르게, 더 멀리, 더 적은 전력으로 데이터를 보낼 수 있어 AI 데이터센터에서 주목받는다."
+    },
+    "plain": {
+      "ko": "반도체 칩이 전기 대신 빛으로 데이터를 주고받게 하는 기술이다."
+    },
+    "firstSeen": "2026-10-06",
     "count": 1
   }
 ];
