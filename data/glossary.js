@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 112,
+    "count": 115,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -51,7 +51,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 13,
+    "count": 14,
     "plain": {
       "ko": "학습을 마친 AI의 핵심 설정값을 내려받아 직접 실행할 수 있도록 공개한 것입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 9,
+    "count": 10,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 28,
+    "count": 29,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 46,
+    "count": 47,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -233,7 +233,7 @@ SAB.glossary = [
       "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
     },
     "firstSeen": "2026-09-05",
-    "count": 4,
+    "count": 5,
     "plain": {
       "ko": "AI가 답하기 전에 관련 문서를 찾아보고 그 내용을 바탕으로 답하는 방식입니다."
     }
@@ -782,7 +782,7 @@ SAB.glossary = [
       "ko": "허락받고 해커처럼 시스템을 공격해 보며 보안 약점을 미리 찾는 점검이다."
     },
     "firstSeen": "2026-10-04",
-    "count": 1
+    "count": 2
   },
   {
     "id": "core-network",
@@ -838,6 +838,20 @@ SAB.glossary = [
       "ko": "반도체 칩이 전기 대신 빛으로 데이터를 주고받게 하는 기술이다."
     },
     "firstSeen": "2026-10-06",
+    "count": 1
+  },
+  {
+    "id": "embedding",
+    "term": {
+      "ko": "임베딩"
+    },
+    "definition": {
+      "ko": "글·이미지·소리 같은 데이터를 의미가 담긴 숫자 목록(벡터)으로 바꾸는 기술이다. 뜻이 비슷한 데이터는 숫자도 가깝게 나오므로, 단어가 정확히 일치하지 않아도 관련 있는 자료를 찾을 수 있다. 검색 기능과 검색증강생성의 바탕이 된다."
+    },
+    "plain": {
+      "ko": "글이나 사진의 뜻을 숫자로 바꿔 비슷한 것끼리 찾을 수 있게 하는 방법이다."
+    },
+    "firstSeen": "2026-10-07",
     "count": 1
   }
 ];
