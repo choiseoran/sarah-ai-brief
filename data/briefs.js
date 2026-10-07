@@ -14,6 +14,242 @@ window.SAB = window.SAB || {};
 
 SAB.briefs = [
   {
+    "date": "2026-10-08",
+    "weekday": {
+      "ko": "목요일"
+    },
+    "type": "daily",
+    "edition": "links",
+    "note": {
+      "ko": "오늘은 10건입니다. 요약을 생성하지 못해 원제목·출처·링크만 제공합니다. 제목은 원문 언어입니다. 오늘은 종합 인사이트를 생략했습니다. 자리를 채우려고 RSS 요약만 보고 쓰지는 않습니다."
+    },
+    "funnel": {
+      "collected": 1766,
+      "window24h": 102,
+      "excluded": 40,
+      "deduped": 46,
+      "fetchFailed": 5,
+      "scored": 41,
+      "published": 10
+    },
+    "insight": {
+      "omitted": true,
+      "title": {
+        "ko": "오늘은 종합 인사이트를 생략했습니다."
+      },
+      "body": {
+        "ko": []
+      }
+    },
+    "articles": [
+      {
+        "mode": "links",
+        "title": {
+          "ko": "“Software is over”: Bold AI developer takes aim at Adobe with open source clones"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/ai/2026/10/software-is-over-bold-ai-developer-takes-aim-at-adobe-with-open-source-clones",
+        "publishedAt": "2026-10-07T21:56:42.000Z",
+        "score": 58,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.96
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 1,
+        "id": "2026-10-08-01"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "[카드뉴스] AI지원금, 성과가 없어도 계속 투자해야 할까"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261007101842",
+        "publishedAt": "2026-10-07T21:54:14.000Z",
+        "score": 54,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.95
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 2,
+        "id": "2026-10-08-02"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Fraudster jailed for using 10K bots and AI songs to outstream Taylor Swift"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/tech-policy/2026/10/outstreaming-taylor-swift-is-easy-with-10k-bots-and-ai-songs-fraudster-admits",
+        "publishedAt": "2026-10-07T17:57:39.000Z",
+        "score": 54,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.79
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 3,
+        "id": "2026-10-08-03"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "뉴엔AI, AI 기술 선도 기업 사업화 플랫폼 코오롱베니트 AI 얼라이언스 합류"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20261007000493",
+        "publishedAt": "2026-10-07T21:09:00.000Z",
+        "score": 53,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.92
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 4,
+        "id": "2026-10-08-04"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Microsoft is giving Copilot more control over Windows and your files"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence",
+        "publishedAt": "2026-10-07T18:01:20.000Z",
+        "score": 52,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.79
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 5,
+        "id": "2026-10-08-05"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Mistral says \"Le Chonk\" can challenge the best AI models"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/ai/2026/10/mistral-says-le-chonk-can-challenge-the-best-ai-models",
+        "publishedAt": "2026-10-07T14:12:37.000Z",
+        "score": 50,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.63
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 6,
+        "id": "2026-10-08-06"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Tony Fadell on why the first wave of AI gadgets failed — and what comes next"
+        },
+        "source": "TechCrunch",
+        "sourceType": "industry",
+        "url": "https://techcrunch.com/2026/10/07/tony-fadell-on-why-the-first-wave-of-ai-gadgets-failed-and-what-comes-next",
+        "publishedAt": "2026-10-07T14:41:38.000Z",
+        "score": 48,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.65
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 7,
+        "id": "2026-10-08-07"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Another personal AI assistant has launched — Meet Tab, which emerged from stealth with a $300M valuation"
+        },
+        "source": "TechCrunch",
+        "sourceType": "industry",
+        "url": "https://techcrunch.com/2026/10/07/another-personal-ai-assistant-has-launched-meet-tab-which-emerged-from-stealth-with-a-300m-valuation",
+        "publishedAt": "2026-10-07T13:45:00.000Z",
+        "score": 47,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.61
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 8,
+        "id": "2026-10-08-08"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "AI could upend food delivery"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1005726/doordash-ai-agentic-food-delivery-bites",
+        "publishedAt": "2026-10-07T12:00:00.000Z",
+        "score": 46,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.54
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 9,
+        "id": "2026-10-08-09"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "[포토] AI반도체 기업 라운드테이블"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20261007000328",
+        "publishedAt": "2026-10-07T05:40:31.000Z",
+        "score": 46,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0.25,
+          "fresh": 0.28
+        },
+        "crossRefs": [
+          {
+            "source": "ZDNet Korea",
+            "url": "https://zdnet.co.kr/view?no=20261007173141"
+          }
+        ],
+        "terms": [],
+        "rank": 10,
+        "id": "2026-10-08-10"
+      }
+    ]
+  },
+  {
     "date": "2026-10-07",
     "weekday": {
       "ko": "수요일"
