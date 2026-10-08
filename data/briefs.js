@@ -14,6 +14,237 @@ window.SAB = window.SAB || {};
 
 SAB.briefs = [
   {
+    "date": "2026-10-09",
+    "weekday": {
+      "ko": "금요일"
+    },
+    "type": "daily",
+    "edition": "links",
+    "note": {
+      "ko": "오늘은 10건입니다. 요약을 생성하지 못해 원제목·출처·링크만 제공합니다. 제목은 원문 언어입니다. 오늘은 종합 인사이트를 생략했습니다. 자리를 채우려고 RSS 요약만 보고 쓰지는 않습니다."
+    },
+    "funnel": {
+      "collected": 1772,
+      "window24h": 88,
+      "excluded": 34,
+      "deduped": 44,
+      "fetchFailed": 4,
+      "scored": 40,
+      "published": 10
+    },
+    "insight": {
+      "omitted": true,
+      "title": {
+        "ko": "오늘은 종합 인사이트를 생략했습니다."
+      },
+      "body": {
+        "ko": []
+      }
+    },
+    "articles": [
+      {
+        "mode": "links",
+        "title": {
+          "ko": "anthropic cyber mission"
+        },
+        "source": "Anthropic News",
+        "sourceType": "primary",
+        "url": "https://anthropic.com/news/anthropic-cyber-mission",
+        "publishedAt": "2026-10-08T19:00:45.000Z",
+        "score": 61,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.83
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 1,
+        "id": "2026-10-09-01"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "2026 usage policy update"
+        },
+        "source": "Anthropic News",
+        "sourceType": "primary",
+        "url": "https://anthropic.com/news/2026-usage-policy-update",
+        "publishedAt": "2026-10-08T17:00:30.000Z",
+        "score": 59,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.75
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 2,
+        "id": "2026-10-09-02"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "genesis mission commitment"
+        },
+        "source": "Anthropic News",
+        "sourceType": "primary",
+        "url": "https://anthropic.com/news/genesis-mission-commitment",
+        "publishedAt": "2026-10-08T15:49:10.000Z",
+        "score": 58,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.7
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 3,
+        "id": "2026-10-09-03"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Anthropic launches free AI security scans for open-source projects"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
+        "publishedAt": "2026-10-08T21:53:51.000Z",
+        "score": 56,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.95
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 4,
+        "id": "2026-10-09-04"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "USA Today becomes the latest publisher to sue OpenAI"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1008198/usa-today-openai-copyright-lawsuit",
+        "publishedAt": "2026-10-08T17:58:33.000Z",
+        "score": 52,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.79
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 5,
+        "id": "2026-10-09-05"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Google’s AI note-taking app transcribes your meetings completely offline"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/tech/1007985/google-ai-notetaking-app-transcribe-offline",
+        "publishedAt": "2026-10-08T15:27:30.000Z",
+        "score": 49,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.69
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 6,
+        "id": "2026-10-09-06"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "The Download: AI roadblocks for humanoids and portable rubber dams"
+        },
+        "source": "MIT Technology Review",
+        "sourceType": "tech",
+        "url": "https://technologyreview.com/2026/10/08/1146045/the-download-ai-roadblocks-humanoids-portable-rubber-dams",
+        "publishedAt": "2026-10-08T12:10:00.000Z",
+        "score": 48,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.55
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 7,
+        "id": "2026-10-09-07"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Nvidia's big bet on physical AI aims for safer robotaxis, humanoid robots"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots",
+        "publishedAt": "2026-10-08T11:15:33.000Z",
+        "score": 47,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.51
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 8,
+        "id": "2026-10-09-08"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "AI breakthroughs in robotics won’t change your life any time soon"
+        },
+        "source": "MIT Technology Review",
+        "sourceType": "tech",
+        "url": "https://technologyreview.com/2026/10/08/1145923/ai-breakthroughs-in-robotics-wont-change-your-life-any-time-soon",
+        "publishedAt": "2026-10-08T09:00:00.000Z",
+        "score": 45,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.42
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 9,
+        "id": "2026-10-09-09"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Building a safer path to autonomous industrial AI"
+        },
+        "source": "MIT Technology Review",
+        "sourceType": "tech",
+        "url": "https://technologyreview.com/2026/10/08/1144020/building-a-safer-path-to-autonomous-industrial-ai",
+        "publishedAt": "2026-10-08T08:17:32.000Z",
+        "score": 44,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.39
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 10,
+        "id": "2026-10-09-10"
+      }
+    ]
+  },
+  {
     "date": "2026-10-08",
     "weekday": {
       "ko": "목요일"
