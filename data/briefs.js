@@ -14,6 +14,237 @@ window.SAB = window.SAB || {};
 
 SAB.briefs = [
   {
+    "date": "2026-10-10",
+    "weekday": {
+      "ko": "토요일"
+    },
+    "type": "daily",
+    "edition": "links",
+    "note": {
+      "ko": "오늘은 10건입니다. 요약을 생성하지 못해 원제목·출처·링크만 제공합니다. 제목은 원문 언어입니다. 오늘은 종합 인사이트를 생략했습니다. 자리를 채우려고 RSS 요약만 보고 쓰지는 않습니다."
+    },
+    "funnel": {
+      "collected": 1802,
+      "window24h": 48,
+      "excluded": 25,
+      "deduped": 22,
+      "fetchFailed": 2,
+      "scored": 20,
+      "published": 10
+    },
+    "insight": {
+      "omitted": true,
+      "title": {
+        "ko": "오늘은 종합 인사이트를 생략했습니다."
+      },
+      "body": {
+        "ko": []
+      }
+    },
+    "articles": [
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Ukraine’s drones knock out AI data center belonging to \"Russia’s Google\""
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/gadgets/2026/10/ukraines-drones-knock-out-ai-data-center-belonging-to-russias-google",
+        "publishedAt": "2026-10-09T22:04:07.000Z",
+        "score": 58,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.96
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 1,
+        "id": "2026-10-10-01"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "AI coding agents generate more code, but not more software"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software",
+        "publishedAt": "2026-10-09T19:43:50.000Z",
+        "score": 56,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.86
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 2,
+        "id": "2026-10-10-02"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
+        "publishedAt": "2026-10-09T21:15:38.000Z",
+        "score": 55,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.93
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 3,
+        "id": "2026-10-10-03"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "AI disqualification yields new Nikon Small World in Motion winner"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/science/2026/10/winning-nikon-small-world-in-motion-video-disqualified-for-ai-use",
+        "publishedAt": "2026-10-09T18:44:06.000Z",
+        "score": 55,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.82
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 4,
+        "id": "2026-10-10-04"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "‘Pure insanity’: Mathematicians will need years to make sense of OpenAI’s latest drop"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1008726/openai-mathematics-solutions-chaos",
+        "publishedAt": "2026-10-09T19:09:44.000Z",
+        "score": 53,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.84
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 5,
+        "id": "2026-10-10-05"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "하이센스, 소셜 키친 통해 AI Companion Suite 현실화"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261010051003",
+        "publishedAt": "2026-10-09T20:10:03.000Z",
+        "score": 52,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.88
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 6,
+        "id": "2026-10-10-06"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Nikon microscopic video competition winner disqualified for using generative AI"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1008930/nikon-small-world-in-motion-winner-ai",
+        "publishedAt": "2026-10-09T18:06:57.000Z",
+        "score": 52,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.8
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 7,
+        "id": "2026-10-10-07"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "The Download: AI’s refusal problem and weight-loss drug side effects"
+        },
+        "source": "MIT Technology Review",
+        "sourceType": "tech",
+        "url": "https://technologyreview.com/2026/10/09/1146250/the-download-ai-refusal-problem-weight-loss-drug-side-effects",
+        "publishedAt": "2026-10-09T12:10:00.000Z",
+        "score": 48,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.55
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 8,
+        "id": "2026-10-10-08"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "오픈AI \"연구원 3명 해고, 안전문제 제기 때문 아냐\""
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261009225448",
+        "publishedAt": "2026-10-09T13:54:48.000Z",
+        "score": 46,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.62
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 9,
+        "id": "2026-10-10-09"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "We’re putting too much faith in AI’s ability to say no"
+        },
+        "source": "MIT Technology Review",
+        "sourceType": "tech",
+        "url": "https://technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no",
+        "publishedAt": "2026-10-09T09:00:00.000Z",
+        "score": 45,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.42
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 10,
+        "id": "2026-10-10-10"
+      }
+    ]
+  },
+  {
     "date": "2026-10-09",
     "weekday": {
       "ko": "금요일"
