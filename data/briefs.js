@@ -14,6 +14,162 @@ window.SAB = window.SAB || {};
 
 SAB.briefs = [
   {
+    "date": "2026-10-11",
+    "weekday": {
+      "ko": "일요일"
+    },
+    "type": "daily",
+    "edition": "links",
+    "note": {
+      "ko": "오늘은 6건입니다. 요약을 생성하지 못해 원제목·출처·링크만 제공합니다. 제목은 원문 언어입니다. 오늘은 종합 인사이트를 생략했습니다. 24시간 창 안에서 확보한 후보가 10건에 못 미쳤습니다. 자리를 채우려고 RSS 요약만 보고 쓰지는 않습니다."
+    },
+    "funnel": {
+      "collected": 1802,
+      "window24h": 35,
+      "excluded": 23,
+      "deduped": 9,
+      "fetchFailed": 0,
+      "scored": 9,
+      "published": 6
+    },
+    "insight": {
+      "omitted": true,
+      "title": {
+        "ko": "오늘은 종합 인사이트를 생략했습니다."
+      },
+      "body": {
+        "ko": []
+      }
+    },
+    "articles": [
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Satya Nadella says we should assume all AI models are ‘compromised’"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised",
+        "publishedAt": "2026-10-10T22:10:17.000Z",
+        "score": 56,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.97
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 1,
+        "id": "2026-10-11-01"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "AI agent makers are promising privacy — will they deliver?"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
+        "publishedAt": "2026-10-10T13:00:00.000Z",
+        "score": 55,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0.25,
+          "fresh": 0.58
+        },
+        "crossRefs": [
+          {
+            "source": "ZDNet Korea",
+            "url": "https://zdnet.co.kr/view?no=20261010105326"
+          }
+        ],
+        "terms": [],
+        "rank": 2,
+        "id": "2026-10-11-02"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Anthropic is cutting off its internal evaluations from the internet"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
+        "publishedAt": "2026-10-10T14:41:16.000Z",
+        "score": 48,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.65
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 3,
+        "id": "2026-10-11-03"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "\"금융권 AI 해킹 대응\"…파이오링크, CTEM·웹방화벽 등 공급"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261010201449",
+        "publishedAt": "2026-10-10T11:14:49.000Z",
+        "score": 43,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.51
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 4,
+        "id": "2026-10-11-04"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "앤트로픽 AI 모델, 미제 살인사건 허위제보 '논란'"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261010193638",
+        "publishedAt": "2026-10-10T10:41:16.000Z",
+        "score": 42,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.49
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 5,
+        "id": "2026-10-11-05"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "ONLYOFFICE 10.0, 오픈소스 오피스 제품군에 AI 툴과 모듈형 앱, 강화된 보안 제공"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261010111002",
+        "publishedAt": "2026-10-10T02:10:02.000Z",
+        "score": 33,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.13
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 6,
+        "id": "2026-10-11-06"
+      }
+    ]
+  },
+  {
     "date": "2026-10-10",
     "weekday": {
       "ko": "토요일"
