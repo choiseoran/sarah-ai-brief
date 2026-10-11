@@ -14,6 +14,202 @@ window.SAB = window.SAB || {};
 
 SAB.briefs = [
   {
+    "date": "2026-10-12",
+    "weekday": {
+      "ko": "월요일"
+    },
+    "type": "daily",
+    "edition": "links",
+    "note": {
+      "ko": "오늘은 8건입니다. 요약을 생성하지 못해 원제목·출처·링크만 제공합니다. 제목은 원문 언어입니다. 오늘은 종합 인사이트를 생략했습니다. 후보는 충분했지만 한 출처에서 최대 3건까지만 싣기 때문에 여기까지입니다. 창 안에 AI 기사를 낸 매체가 3곳이었습니다. 자리를 채우려고 RSS 요약만 보고 쓰지는 않습니다."
+    },
+    "funnel": {
+      "collected": 1802,
+      "window24h": 56,
+      "excluded": 26,
+      "deduped": 25,
+      "fetchFailed": 1,
+      "scored": 24,
+      "published": 8
+    },
+    "insight": {
+      "omitted": true,
+      "title": {
+        "ko": "오늘은 종합 인사이트를 생략했습니다."
+      },
+      "body": {
+        "ko": []
+      }
+    },
+    "articles": [
+      {
+        "mode": "links",
+        "title": {
+          "ko": "MS CEO “AI 비상장치 마련 필요...언제든 종료할 수 있어야”"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20261012000001",
+        "publishedAt": "2026-10-11T21:54:48.000Z",
+        "score": 54,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.95
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 1,
+        "id": "2026-10-12-01"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Silicon Valley is falling in line with Trump’s attempt to rename AI"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+        "publishedAt": "2026-10-11T18:33:56.000Z",
+        "score": 53,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.82
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 2,
+        "id": "2026-10-12-02"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Learning to use local AI is exciting, overwhelming, and frustrating"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
+        "publishedAt": "2026-10-11T11:00:00.000Z",
+        "score": 45,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.5
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 3,
+        "id": "2026-10-12-03"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "가드스퀘어 \"AI 해킹 시대, 금융·플랫폼 보안 마지막 관문은 신뢰할 수 있는 앱\""
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261011194807",
+        "publishedAt": "2026-10-11T10:48:07.000Z",
+        "score": 42,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.49
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 4,
+        "id": "2026-10-12-04"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "[ZD브리핑] 칼날 선 국감 공세 속… AI·전동화 미래 향해 달리는 산업계"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261011111122",
+        "publishedAt": "2026-10-11T02:24:50.000Z",
+        "score": 42,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0.25,
+          "fresh": 0.14
+        },
+        "crossRefs": [
+          {
+            "source": "전자신문",
+            "url": "https://etnews.com/20261011000004"
+          }
+        ],
+        "terms": [],
+        "rank": 5,
+        "id": "2026-10-12-05"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "유신테크, AI·ICT로 건물과 도시를 제어한다…'현장에서 검증된 핵심 특허'가 경쟁력"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20261008000155",
+        "publishedAt": "2026-10-11T08:00:00.000Z",
+        "score": 40,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.38
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 6,
+        "id": "2026-10-12-06"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "제너시스랩 등 '2차 모두의 창업' AI솔루션 103개 선정"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261011163230",
+        "publishedAt": "2026-10-11T07:32:30.000Z",
+        "score": 39,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.36
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 7,
+        "id": "2026-10-12-07"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "[전상욱의 AX시대의 고객경험] 〈12〉 AI에 해석받는 인간, 그 해석이 이끄는 마케팅"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20261011000034",
+        "publishedAt": "2026-10-11T07:00:00.000Z",
+        "score": 38,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.33
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 8,
+        "id": "2026-10-12-08"
+      }
+    ]
+  },
+  {
     "date": "2026-10-11",
     "weekday": {
       "ko": "일요일"
