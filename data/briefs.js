@@ -14,6 +14,237 @@ window.SAB = window.SAB || {};
 
 SAB.briefs = [
   {
+    "date": "2026-10-13",
+    "weekday": {
+      "ko": "화요일"
+    },
+    "type": "daily",
+    "edition": "links",
+    "note": {
+      "ko": "오늘은 10건입니다. 요약을 생성하지 못해 원제목·출처·링크만 제공합니다. 제목은 원문 언어입니다. 오늘은 종합 인사이트를 생략했습니다. 자리를 채우려고 RSS 요약만 보고 쓰지는 않습니다."
+    },
+    "funnel": {
+      "collected": 1802,
+      "window24h": 89,
+      "excluded": 48,
+      "deduped": 39,
+      "fetchFailed": 4,
+      "scored": 35,
+      "published": 10
+    },
+    "insight": {
+      "omitted": true,
+      "title": {
+        "ko": "오늘은 종합 인사이트를 생략했습니다."
+      },
+      "body": {
+        "ko": []
+      }
+    },
+    "articles": [
+      {
+        "mode": "links",
+        "title": {
+          "ko": "OCP Summit 2026: Powering AI with Open Innovations in Scale-Up, Scale-Out, and Scale-Across Networks"
+        },
+        "source": "Meta Engineering",
+        "sourceType": "primary",
+        "url": "https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks",
+        "publishedAt": "2026-10-12T21:19:18.000Z",
+        "score": 63,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.93
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 1,
+        "id": "2026-10-13-01"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Shipping Media Over QUIC at Meta Scale for Instagram Live Ingest"
+        },
+        "source": "Meta Engineering",
+        "sourceType": "primary",
+        "url": "https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest",
+        "publishedAt": "2026-10-12T16:01:32.000Z",
+        "score": 58,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.71
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 2,
+        "id": "2026-10-13-02"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Turning Opportunistic AI Inference Capacity Into Better Ads Recommendations"
+        },
+        "source": "Meta Engineering",
+        "sourceType": "primary",
+        "url": "https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations",
+        "publishedAt": "2026-10-12T16:00:50.000Z",
+        "score": 58,
+        "scoreParts": {
+          "weight": 1,
+          "cross": 0,
+          "fresh": 0.71
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 3,
+        "id": "2026-10-13-03"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Epic Games reportedly pivoting to \"AI first\" game development model"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/gaming/2026/10/report-epic-games-goes-all-in-on-ai-for-disney-collaboration",
+        "publishedAt": "2026-10-12T20:59:50.000Z",
+        "score": 57,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.92
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 4,
+        "id": "2026-10-13-04"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Anthropic's Claude AI submitted false murder tip to Philadelphia police"
+        },
+        "source": "Ars Technica",
+        "sourceType": "tech",
+        "url": "https://arstechnica.com/tech-policy/2026/10/anthropics-claude-ai-submitted-false-murder-tip-to-philadelphia-police",
+        "publishedAt": "2026-10-12T18:21:36.000Z",
+        "score": 54,
+        "scoreParts": {
+          "weight": 0.85,
+          "cross": 0,
+          "fresh": 0.81
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 5,
+        "id": "2026-10-13-05"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "[르포] 공무원 30명, AI로 행정서비스 직접 만들었다...더존비즈온·NIA, '메이커톤' 현장"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20261012000278",
+        "publishedAt": "2026-10-12T21:00:00.000Z",
+        "score": 53,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.92
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 6,
+        "id": "2026-10-13-06"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Meta has some Wonder Full new AI models"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
+        "publishedAt": "2026-10-12T17:00:00.000Z",
+        "score": 51,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.75
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 7,
+        "id": "2026-10-13-07"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs"
+        },
+        "source": "The Verge",
+        "sourceType": "industry",
+        "url": "https://theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
+        "publishedAt": "2026-10-12T13:00:00.000Z",
+        "score": 47,
+        "scoreParts": {
+          "weight": 0.8,
+          "cross": 0,
+          "fresh": 0.58
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 8,
+        "id": "2026-10-13-08"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "융기원, 제조·모빌리티 피지컬 AI 국제심포지엄 개최…공동연구 모색"
+        },
+        "source": "전자신문",
+        "sourceType": "domestic",
+        "url": "https://etnews.com/20261012000369",
+        "publishedAt": "2026-10-12T14:32:36.000Z",
+        "score": 46,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.65
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 9,
+        "id": "2026-10-13-09"
+      },
+      {
+        "mode": "links",
+        "title": {
+          "ko": "MiTAC 컴퓨팅, OCP 글로벌 서밋 2026에서 개방형 AI 인프라 확장 위한 풀스택 혁신 선보여"
+        },
+        "source": "ZDNet Korea",
+        "sourceType": "domestic",
+        "url": "https://zdnet.co.kr/view?no=20261012231013",
+        "publishedAt": "2026-10-12T14:10:13.000Z",
+        "score": 46,
+        "scoreParts": {
+          "weight": 0.75,
+          "cross": 0,
+          "fresh": 0.63
+        },
+        "crossRefs": [],
+        "terms": [],
+        "rank": 10,
+        "id": "2026-10-13-10"
+      }
+    ]
+  },
+  {
     "date": "2026-10-12",
     "weekday": {
       "ko": "월요일"
