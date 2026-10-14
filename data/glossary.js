@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 118,
+    "count": 121,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 21,
+    "count": 23,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 11,
+    "count": 14,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 29,
+    "count": 31,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 50,
+    "count": 52,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -853,5 +853,33 @@ SAB.glossary = [
     },
     "firstSeen": "2026-10-07",
     "count": 2
+  },
+  {
+    "id": "sandbox",
+    "term": {
+      "ko": "샌드박스"
+    },
+    "definition": {
+      "ko": "프로그램을 외부 시스템이나 인터넷과 분리된 격리 공간에서 실행해 보는 시험 환경이다. 문제가 생겨도 바깥에 피해가 번지지 않기 때문에 새 소프트웨어나 AI 모델의 위험한 행동을 미리 확인하는 데 쓰인다."
+    },
+    "plain": {
+      "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
+    },
+    "firstSeen": "2026-10-15",
+    "count": 1
+  },
+  {
+    "id": "de-extinction",
+    "term": {
+      "ko": "멸종 복원"
+    },
+    "definition": {
+      "ko": "이미 사라진 동물을 유전자 편집 같은 생명공학 기술로 다시 만들어 내려는 시도다. 보통 멸종한 동물의 남은 DNA를 분석하고, 가장 가까운 현존 친척 동물의 유전자를 그와 비슷하게 고치는 방식으로 진행한다."
+    },
+    "plain": {
+      "ko": "사라진 동물을 유전자 기술로 다시 되살리려는 시도다."
+    },
+    "firstSeen": "2026-10-15",
+    "count": 1
   }
 ];
