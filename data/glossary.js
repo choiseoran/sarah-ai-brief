@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 121,
+    "count": 126,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 22,
+    "count": 23,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 14,
+    "count": 15,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 52,
+    "count": 55,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 1
+    "count": 2
   },
   {
     "id": "de-extinction",
@@ -880,6 +880,34 @@ SAB.glossary = [
       "ko": "사라진 동물을 유전자 기술로 다시 되살리려는 시도다."
     },
     "firstSeen": "2026-10-15",
+    "count": 1
+  },
+  {
+    "id": "fedramp",
+    "term": {
+      "ko": "페드램프(FedRAMP)"
+    },
+    "definition": {
+      "ko": "미국 연방정부가 기관에서 쓰는 클라우드 서비스의 보안 수준을 표준 절차로 심사하고 사용을 승인하는 제도다. 등급이 여러 단계로 나뉘며 High 등급은 공개되면 큰 피해가 생길 수 있는 비기밀 정부 데이터를 다룰 수 있는 가장 엄격한 단계다."
+    },
+    "plain": {
+      "ko": "미국 정부가 클라우드 서비스의 보안을 심사해 사용을 허가하는 제도다."
+    },
+    "firstSeen": "2026-10-16",
+    "count": 1
+  },
+  {
+    "id": "human-on-the-loop",
+    "term": {
+      "ko": "휴먼 온 더 루프"
+    },
+    "definition": {
+      "ko": "AI가 계획, 실행, 점검, 수정을 스스로 되풀이하고 사람은 그 과정을 지켜보며 감독하는 작업 방식이다. 사람은 목표를 정하고, 일이 엇나가면 끼어들고, 마지막 결과를 승인한다. 사람이 모든 단계를 직접 이끌고 AI는 거들기만 하는 방식과 구별된다."
+    },
+    "plain": {
+      "ko": "AI가 일을 스스로 반복하고 사람은 지켜보다가 필요할 때만 끼어드는 방식이다."
+    },
+    "firstSeen": "2026-10-16",
     "count": 1
   }
 ];
