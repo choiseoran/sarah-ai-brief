@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 126,
+    "count": 128,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 19,
+    "count": 20,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 15,
+    "count": 16,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 31,
+    "count": 32,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -583,7 +583,7 @@ SAB.glossary = [
       "ko": "소프트웨어 제작사가 아직 알지 못하거나 패치를 내놓지 않은 보안 취약점을 가리킨다. 방어할 시간이 '0일'이라는 뜻으로, 공개되거나 악용되는 시점에 사용자를 보호할 수단이 없어 특히 위험하게 취급된다."
     },
     "firstSeen": "2026-09-22",
-    "count": 2,
+    "count": 3,
     "plain": {
       "ko": "제작사가 아직 모르거나 수정하지 못한 프로그램의 보안 결함입니다."
     }
@@ -782,7 +782,7 @@ SAB.glossary = [
       "ko": "허락받고 해커처럼 시스템을 공격해 보며 보안 약점을 미리 찾는 점검이다."
     },
     "firstSeen": "2026-10-04",
-    "count": 2
+    "count": 3
   },
   {
     "id": "core-network",
@@ -908,6 +908,34 @@ SAB.glossary = [
       "ko": "AI가 일을 스스로 반복하고 사람은 지켜보다가 필요할 때만 끼어드는 방식이다."
     },
     "firstSeen": "2026-10-16",
+    "count": 1
+  },
+  {
+    "id": "fair-use",
+    "term": {
+      "ko": "공정이용"
+    },
+    "definition": {
+      "ko": "저작권자의 허락 없이도 비평, 교육, 연구 같은 목적이라면 저작물을 일정 범위에서 쓸 수 있게 한 법 원칙이다. AI 회사들은 기사나 책으로 AI를 학습시키는 것이 여기에 해당한다고 주장하고, 언론사와 작가들은 돈을 내고 허락받아야 한다며 소송을 벌이고 있다."
+    },
+    "plain": {
+      "ko": "일정한 목적이면 저작권자 허락 없이도 남의 글이나 그림을 쓸 수 있게 한 법 원칙."
+    },
+    "firstSeen": "2026-10-17",
+    "count": 1
+  },
+  {
+    "id": "robots-txt",
+    "term": {
+      "ko": "로봇 배제 표준(robots.txt)"
+    },
+    "definition": {
+      "ko": "웹사이트 운영자가 사이트에 올려 두는 작은 안내 파일로, 검색엔진이나 AI 회사의 자동 수집 프로그램에 어떤 페이지를 가져가도 되고 어떤 페이지는 안 되는지 알린다. 법적 강제력은 없고 수집하는 쪽이 지키기로 한 관례에 기댄다. 그래서 언론사들은 AI 학습용 수집을 막는 수단으로 이 파일을 써 왔다."
+    },
+    "plain": {
+      "ko": "사이트 주인이 자동 수집 프로그램에 '여기는 가져가지 마세요'라고 적어 두는 안내문이다."
+    },
+    "firstSeen": "2026-10-17",
     "count": 1
   }
 ];
