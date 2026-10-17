@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 128,
+    "count": 131,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 32,
+    "count": 33,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 55,
+    "count": 56,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -247,7 +247,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 12,
+    "count": 13,
     "plain": {
       "ko": "로봇처럼 몸을 가진 AI가 실제 세상을 보고 움직이며 배우는 능력입니다."
     }
@@ -936,6 +936,34 @@ SAB.glossary = [
       "ko": "사이트 주인이 자동 수집 프로그램에 '여기는 가져가지 마세요'라고 적어 두는 안내문이다."
     },
     "firstSeen": "2026-10-17",
+    "count": 1
+  },
+  {
+    "id": "digital-signature",
+    "term": {
+      "ko": "디지털 서명"
+    },
+    "definition": {
+      "ko": "전자 파일에 암호 기술로 만든 고유한 표식을 붙여, 누가 만들었는지와 이후 내용이 바뀌었는지를 확인할 수 있게 하는 방법이다. 파일이 한 글자라도 바뀌면 서명 확인이 실패하므로 조작 여부를 가려낼 수 있다. 종이 문서의 도장이나 봉인과 비슷한 역할을 한다."
+    },
+    "plain": {
+      "ko": "파일을 누가 만들었고 나중에 바뀌지 않았는지 확인해 주는 전자 도장이다."
+    },
+    "firstSeen": "2026-10-18",
+    "count": 1
+  },
+  {
+    "id": "operational-technology",
+    "term": {
+      "ko": "운영기술(OT)"
+    },
+    "definition": {
+      "ko": "공장 기계, 발전 설비, 수처리 시설처럼 물리적 장비를 직접 움직이고 감시하는 제어 시스템과 그 통신망을 말한다. 문서와 데이터를 다루는 일반 사무용 IT와 달리, 여기서 보안이 뚫리면 설비 파손이나 생산 중단, 인명 피해로 바로 이어질 수 있다."
+    },
+    "plain": {
+      "ko": "공장 기계나 발전소 설비를 실제로 움직이고 조종하는 시스템이다."
+    },
+    "firstSeen": "2026-10-18",
     "count": 1
   }
 ];
