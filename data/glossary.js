@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 131,
+    "count": 132,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -51,7 +51,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 14,
+    "count": 15,
     "plain": {
       "ko": "학습을 마친 AI의 핵심 설정값을 내려받아 직접 실행할 수 있도록 공개한 것입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 33,
+    "count": 34,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 56,
+    "count": 58,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -247,7 +247,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 13,
+    "count": 14,
     "plain": {
       "ko": "로봇처럼 몸을 가진 AI가 실제 세상을 보고 움직이며 배우는 능력입니다."
     }
@@ -415,7 +415,7 @@ SAB.glossary = [
       "ko": "제조업의 설계·생산·품질 관리 등 공정 전반에 AI를 적용해 산업 구조를 바꾸는 것을 말한다. 산업통상부가 Manufacturing AI Transformation의 약자로 M.AX라 부르며, 산업단지 단위로 실증 사업을 지정해 추진하고 있다."
     },
     "firstSeen": "2026-09-13",
-    "count": 1,
+    "count": 3,
     "plain": {
       "ko": "설계부터 생산과 품질 관리까지 제조 과정 전반에 AI를 적용하는 변화입니다."
     }
@@ -964,6 +964,34 @@ SAB.glossary = [
       "ko": "공장 기계나 발전소 설비를 실제로 움직이고 조종하는 시스템이다."
     },
     "firstSeen": "2026-10-18",
+    "count": 1
+  },
+  {
+    "id": "public-benefit-corporation",
+    "term": {
+      "ko": "공익 기업(PBC)"
+    },
+    "definition": {
+      "ko": "이윤을 추구하면서도 정관에 정한 공익 목적을 함께 따르도록 법으로 정해 둔 미국의 회사 형태다. 경영진은 주주 이익만이 아니라 그 공익 목적도 고려해 결정해야 한다. 비영리단체와 달리 주식을 발행하고 투자를 받을 수 있다."
+    },
+    "plain": {
+      "ko": "돈을 벌면서도 사회에 이로운 목표를 함께 지키겠다고 법적으로 약속한 회사다."
+    },
+    "firstSeen": "2026-10-19",
+    "count": 1
+  },
+  {
+    "id": "ontology",
+    "term": {
+      "ko": "온톨로지"
+    },
+    "definition": {
+      "ko": "어떤 분야에 나오는 개념들과 그 개념끼리의 관계를 미리 정리해 둔 지도다. 예를 들어 뷰티 분야라면 성분, 효능, 피부타입이 서로 어떻게 이어지는지를 정해 둔다. 컴퓨터는 이 지도를 바탕으로 흩어진 글과 리뷰 속 정보를 서로 연결해 해석한다."
+    },
+    "plain": {
+      "ko": "한 분야의 개념과 그 관계를 정리해 둔 지도로, 컴퓨터가 흩어진 정보를 연결해 읽게 해 준다."
+    },
+    "firstSeen": "2026-10-19",
     "count": 1
   }
 ];
