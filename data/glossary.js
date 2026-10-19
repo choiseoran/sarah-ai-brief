@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 132,
+    "count": 136,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 20,
+    "count": 21,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 58,
+    "count": 61,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -401,7 +401,7 @@ SAB.glossary = [
       "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
     },
     "firstSeen": "2026-09-12",
-    "count": 4,
+    "count": 5,
     "plain": {
       "ko": "AI가 사실이 아닌 내용이나 없는 출처를 그럴듯하게 만들어 답하는 현상입니다."
     }
@@ -471,7 +471,7 @@ SAB.glossary = [
       "ko": "AI 가 대량으로 생성해 인터넷에 뿌리는 저품질 콘텐츠를 가리키는 속어다. 사람이 검토하지 않고 자동으로 만들어져 정보 가치가 낮고 양만 많다는 뜻에서 '찌꺼기'라는 이름이 붙었다. 검색 결과, 소셜미디어, 이메일을 채워 진짜 정보를 찾기 어렵게 만드는 문제로 지적된다."
     },
     "firstSeen": "2026-09-15",
-    "count": 4,
+    "count": 5,
     "plain": {
       "ko": "AI로 대량 생산한, 정보 가치가 낮은 글이나 이미지 같은 콘텐츠를 뜻합니다."
     }
@@ -852,7 +852,7 @@ SAB.glossary = [
       "ko": "글이나 사진의 뜻을 숫자로 바꿔 비슷한 것끼리 찾을 수 있게 하는 방법이다."
     },
     "firstSeen": "2026-10-07",
-    "count": 2
+    "count": 3
   },
   {
     "id": "sandbox",
@@ -992,6 +992,34 @@ SAB.glossary = [
       "ko": "한 분야의 개념과 그 관계를 정리해 둔 지도로, 컴퓨터가 흩어진 정보를 연결해 읽게 해 준다."
     },
     "firstSeen": "2026-10-19",
+    "count": 1
+  },
+  {
+    "id": "orchestrator",
+    "term": {
+      "ko": "오케스트레이터"
+    },
+    "definition": {
+      "ko": "여러 AI 에이전트가 함께 일할 때 어떤 작업을 어느 에이전트에게 어떤 순서로 맡길지 정하는 중앙 조정 프로그램이다. 오케스트라 지휘자처럼 직접 연주하지 않고 전체 흐름만 관리한다. 메타는 이 역할을 최소한으로 줄일 때 시스템이 더 안정적이었다고 설명했다."
+    },
+    "plain": {
+      "ko": "여러 AI에게 일을 나눠 주고 순서를 정하는 지휘 역할의 프로그램."
+    },
+    "firstSeen": "2026-10-20",
+    "count": 1
+  },
+  {
+    "id": "neocloud",
+    "term": {
+      "ko": "네오클라우드"
+    },
+    "definition": {
+      "ko": "엔비디아 GPU 같은 AI 연산 장비를 대량으로 들여와 다른 기업에 빌려주는 일에 특화된 신생 클라우드 업체를 말한다. 아마존이나 마이크로소프트처럼 여러 서비스를 함께 파는 대형 클라우드와 달리 연산 자원 임대가 사업의 대부분이다. 코어위브가 대표적인 예다."
+    },
+    "plain": {
+      "ko": "AI 계산용 컴퓨터를 빌려주는 일을 전문으로 하는 신생 클라우드 회사다."
+    },
+    "firstSeen": "2026-10-20",
     "count": 1
   }
 ];
