@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 136,
+    "count": 138,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -51,7 +51,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 15,
+    "count": 16,
     "plain": {
       "ko": "학습을 마친 AI의 핵심 설정값을 내려받아 직접 실행할 수 있도록 공개한 것입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 16,
+    "count": 17,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 34,
+    "count": 36,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -247,7 +247,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 14,
+    "count": 15,
     "plain": {
       "ko": "로봇처럼 몸을 가진 AI가 실제 세상을 보고 움직이며 배우는 능력입니다."
     }
@@ -401,7 +401,7 @@ SAB.glossary = [
       "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
     },
     "firstSeen": "2026-09-12",
-    "count": 5,
+    "count": 6,
     "plain": {
       "ko": "AI가 사실이 아닌 내용이나 없는 출처를 그럴듯하게 만들어 답하는 현상입니다."
     }
@@ -471,7 +471,7 @@ SAB.glossary = [
       "ko": "AI 가 대량으로 생성해 인터넷에 뿌리는 저품질 콘텐츠를 가리키는 속어다. 사람이 검토하지 않고 자동으로 만들어져 정보 가치가 낮고 양만 많다는 뜻에서 '찌꺼기'라는 이름이 붙었다. 검색 결과, 소셜미디어, 이메일을 채워 진짜 정보를 찾기 어렵게 만드는 문제로 지적된다."
     },
     "firstSeen": "2026-09-15",
-    "count": 5,
+    "count": 6,
     "plain": {
       "ko": "AI로 대량 생산한, 정보 가치가 낮은 글이나 이미지 같은 콘텐츠를 뜻합니다."
     }
@@ -936,7 +936,7 @@ SAB.glossary = [
       "ko": "사이트 주인이 자동 수집 프로그램에 '여기는 가져가지 마세요'라고 적어 두는 안내문이다."
     },
     "firstSeen": "2026-10-17",
-    "count": 1
+    "count": 2
   },
   {
     "id": "digital-signature",
@@ -1020,6 +1020,34 @@ SAB.glossary = [
       "ko": "AI 계산용 컴퓨터를 빌려주는 일을 전문으로 하는 신생 클라우드 회사다."
     },
     "firstSeen": "2026-10-20",
+    "count": 2
+  },
+  {
+    "id": "dns",
+    "term": {
+      "ko": "DNS(도메인 이름 시스템)"
+    },
+    "definition": {
+      "ko": "사람이 읽는 웹 주소를 컴퓨터가 쓰는 숫자 주소로 바꿔 주는 인터넷의 주소록이다. 이 기록 중 일부는 누구나 조회할 수 있어서, 주소에 담긴 정보가 의도치 않게 드러날 수 있다."
+    },
+    "plain": {
+      "ko": "웹사이트 이름을 컴퓨터가 찾아갈 숫자 주소로 바꿔 주는 인터넷 주소록이다."
+    },
+    "firstSeen": "2026-10-21",
+    "count": 1
+  },
+  {
+    "id": "model-distillation",
+    "term": {
+      "ko": "모델 증류"
+    },
+    "definition": {
+      "ko": "이미 학습된 AI 모델이 내놓은 답을 모아 다른 AI 모델을 학습시키는 기법이다. 큰 모델의 능력을 작은 모델이나 새 모델에 옮겨 담을 때 쓴다. 남의 모델 답을 허락 없이 대량으로 모아 쓰면 기술 탈취 논란이 된다."
+    },
+    "plain": {
+      "ko": "다른 AI가 한 답을 모아 새 AI를 가르치는 방법이다."
+    },
+    "firstSeen": "2026-10-21",
     "count": 1
   }
 ];
