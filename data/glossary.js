@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 138,
+    "count": 143,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 23,
+    "count": 24,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 36,
+    "count": 37,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -471,7 +471,7 @@ SAB.glossary = [
       "ko": "AI 가 대량으로 생성해 인터넷에 뿌리는 저품질 콘텐츠를 가리키는 속어다. 사람이 검토하지 않고 자동으로 만들어져 정보 가치가 낮고 양만 많다는 뜻에서 '찌꺼기'라는 이름이 붙었다. 검색 결과, 소셜미디어, 이메일을 채워 진짜 정보를 찾기 어렵게 만드는 문제로 지적된다."
     },
     "firstSeen": "2026-09-15",
-    "count": 6,
+    "count": 7,
     "plain": {
       "ko": "AI로 대량 생산한, 정보 가치가 낮은 글이나 이미지 같은 콘텐츠를 뜻합니다."
     }
@@ -978,7 +978,7 @@ SAB.glossary = [
       "ko": "돈을 벌면서도 사회에 이로운 목표를 함께 지키겠다고 법적으로 약속한 회사다."
     },
     "firstSeen": "2026-10-19",
-    "count": 1
+    "count": 2
   },
   {
     "id": "ontology",
@@ -1048,6 +1048,34 @@ SAB.glossary = [
       "ko": "다른 AI가 한 답을 모아 새 AI를 가르치는 방법이다."
     },
     "firstSeen": "2026-10-21",
+    "count": 1
+  },
+  {
+    "id": "long-term-benefit-trust",
+    "term": {
+      "ko": "장기이익신탁(LTBT)"
+    },
+    "definition": {
+      "ko": "앤트로픽이 상업적 성장과 공익 목적 사이의 균형을 오래 지키기 위해 둔 독립 기구다. 회사 경영진이나 투자자와 독립된 수탁자들로 구성되며, 이사회 과반을 임명할 권한을 갖는다. 수탁자들은 AI의 위험과 사회적 영향이 걸린 중요한 결정에 대해 이사회와 경영진에 조언한다."
+    },
+    "plain": {
+      "ko": "회사가 이익만 좇지 않도록 이사 다수를 뽑을 권한을 가진 독립 감시 기구다."
+    },
+    "firstSeen": "2026-10-22",
+    "count": 1
+  },
+  {
+    "id": "non-voting-stock",
+    "term": {
+      "ko": "무의결권 주식"
+    },
+    "definition": {
+      "ko": "회사의 경영 결정에 투표할 권리가 붙지 않은 주식이다. 회사는 이 주식을 팔거나 직원 보상으로 주어 돈을 모으면서도 기존 주주의 지배력을 그대로 유지할 수 있다."
+    },
+    "plain": {
+      "ko": "회사 일을 정하는 투표권은 없고 지분만 갖는 주식이다."
+    },
+    "firstSeen": "2026-10-22",
     "count": 1
   }
 ];
