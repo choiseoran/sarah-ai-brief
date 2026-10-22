@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 143,
+    "count": 148,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 24,
+    "count": 26,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 37,
+    "count": 38,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -261,7 +261,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 10,
+    "count": 11,
     "plain": {
       "ko": "새 기술을 본격적으로 도입하기 전에 작은 규모로 가능한지 시험하는 단계입니다."
     }
@@ -642,7 +642,7 @@ SAB.glossary = [
       "ko": "AI 계산을 빠르고 전기를 적게 쓰며 처리하도록 PC나 휴대폰에 넣는 전용 칩이다."
     },
     "firstSeen": "2026-09-26",
-    "count": 2
+    "count": 3
   },
   {
     "id": "supply-chain-risk",
@@ -852,7 +852,7 @@ SAB.glossary = [
       "ko": "글이나 사진의 뜻을 숫자로 바꿔 비슷한 것끼리 찾을 수 있게 하는 방법이다."
     },
     "firstSeen": "2026-10-07",
-    "count": 3
+    "count": 4
   },
   {
     "id": "sandbox",
@@ -936,7 +936,7 @@ SAB.glossary = [
       "ko": "사이트 주인이 자동 수집 프로그램에 '여기는 가져가지 마세요'라고 적어 두는 안내문이다."
     },
     "firstSeen": "2026-10-17",
-    "count": 2
+    "count": 3
   },
   {
     "id": "digital-signature",
@@ -992,7 +992,7 @@ SAB.glossary = [
       "ko": "한 분야의 개념과 그 관계를 정리해 둔 지도로, 컴퓨터가 흩어진 정보를 연결해 읽게 해 준다."
     },
     "firstSeen": "2026-10-19",
-    "count": 1
+    "count": 2
   },
   {
     "id": "orchestrator",
@@ -1006,7 +1006,7 @@ SAB.glossary = [
       "ko": "여러 AI에게 일을 나눠 주고 순서를 정하는 지휘 역할의 프로그램."
     },
     "firstSeen": "2026-10-20",
-    "count": 1
+    "count": 2
   },
   {
     "id": "neocloud",
@@ -1076,6 +1076,34 @@ SAB.glossary = [
       "ko": "회사 일을 정하는 투표권은 없고 지분만 갖는 주식이다."
     },
     "firstSeen": "2026-10-22",
+    "count": 1
+  },
+  {
+    "id": "serving-harness",
+    "term": {
+      "ko": "서빙 하네스"
+    },
+    "definition": {
+      "ko": "AI 모델을 실제 서비스로 돌리기 위해 모델 주변에 짓는 엔지니어링 체계다. 요청을 어떤 순서로 처리할지, 메모리를 어떻게 나눠 쓸지, 어떤 최적화 기법을 쓸지 같은 결정이 여기에 들어간다. 같은 모델이라도 이 체계에 따라 속도와 비용이 크게 달라진다."
+    },
+    "plain": {
+      "ko": "AI 모델을 실제 서비스에서 빠르고 싸게 돌리도록 모델 둘레에 만드는 운영 장치다."
+    },
+    "firstSeen": "2026-10-23",
+    "count": 1
+  },
+  {
+    "id": "kv-cache",
+    "term": {
+      "ko": "KV 캐시"
+    },
+    "definition": {
+      "ko": "AI 모델이 답을 만들 때 앞서 읽은 내용을 다시 계산하지 않으려고 중간 결과를 저장해 두는 메모리 공간이다. 동시에 처리하는 요청이 많고 입력이 길수록 이 공간이 커진다. 그래서 계산 장치에 여유가 있어도 이 공간이 먼저 차서 처리량이 막힐 수 있다."
+    },
+    "plain": {
+      "ko": "AI가 앞서 읽은 내용을 다시 계산하지 않으려고 따로 적어 두는 임시 메모장이다."
+    },
+    "firstSeen": "2026-10-23",
     "count": 1
   }
 ];
