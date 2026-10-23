@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 148,
+    "count": 149,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 21,
+    "count": 23,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -51,7 +51,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 16,
+    "count": 17,
     "plain": {
       "ko": "학습을 마친 AI의 핵심 설정값을 내려받아 직접 실행할 수 있도록 공개한 것입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 61,
+    "count": 62,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -656,7 +656,7 @@ SAB.glossary = [
       "ko": "정부가 쓰는 제품이 제대로 작동하지 않게 될 위험으로, 지정되면 정부 거래에서 빠진다."
     },
     "firstSeen": "2026-09-26",
-    "count": 1
+    "count": 2
   },
   {
     "id": "webmcp",
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 2
+    "count": 3
   },
   {
     "id": "de-extinction",
@@ -894,7 +894,7 @@ SAB.glossary = [
       "ko": "미국 정부가 클라우드 서비스의 보안을 심사해 사용을 허가하는 제도다."
     },
     "firstSeen": "2026-10-16",
-    "count": 1
+    "count": 2
   },
   {
     "id": "human-on-the-loop",
@@ -936,7 +936,7 @@ SAB.glossary = [
       "ko": "사이트 주인이 자동 수집 프로그램에 '여기는 가져가지 마세요'라고 적어 두는 안내문이다."
     },
     "firstSeen": "2026-10-17",
-    "count": 3
+    "count": 4
   },
   {
     "id": "digital-signature",
@@ -1104,6 +1104,34 @@ SAB.glossary = [
       "ko": "AI가 앞서 읽은 내용을 다시 계산하지 않으려고 따로 적어 두는 임시 메모장이다."
     },
     "firstSeen": "2026-10-23",
+    "count": 1
+  },
+  {
+    "id": "speech-to-speech-model",
+    "term": {
+      "ko": "음성-음성 모델"
+    },
+    "definition": {
+      "ko": "사람의 말을 글자로 바꾸지 않고 소리 그대로 받아 소리로 답하는 AI 모델이다. 기존 음성 AI는 대개 말을 글자로 옮긴 뒤 답을 만들고 다시 소리로 읽어 주는데, 이 과정에서 말투나 감정 같은 정보가 사라진다. 음성-음성 모델은 이런 정보를 그대로 다룰 수 있다는 점이 다르다."
+    },
+    "plain": {
+      "ko": "말을 글자로 바꾸지 않고 소리 그대로 듣고 소리로 답하는 AI다."
+    },
+    "firstSeen": "2026-10-24",
+    "count": 1
+  },
+  {
+    "id": "cmmc",
+    "term": {
+      "ko": "CMMC(사이버보안 성숙도 모델 인증)"
+    },
+    "definition": {
+      "ko": "미국 국방부가 방산 계약업체에 요구하는 사이버보안 인증 제도다. 업체가 국방 관련 정보를 얼마나 안전하게 다루는지를 등급으로 나눠 확인한다. 원청 업체뿐 아니라 관련 정보를 다루는 하도급업체에도 적용될 수 있다."
+    },
+    "plain": {
+      "ko": "미국 국방부와 일하려는 회사가 정보를 잘 지키는지 확인하는 보안 자격증이다."
+    },
+    "firstSeen": "2026-10-24",
     "count": 1
   }
 ];
