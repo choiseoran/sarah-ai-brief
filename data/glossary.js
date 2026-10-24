@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 149,
+    "count": 150,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 23,
+    "count": 24,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -642,7 +642,7 @@ SAB.glossary = [
       "ko": "AI 계산을 빠르고 전기를 적게 쓰며 처리하도록 PC나 휴대폰에 넣는 전용 칩이다."
     },
     "firstSeen": "2026-09-26",
-    "count": 3
+    "count": 4
   },
   {
     "id": "supply-chain-risk",
@@ -1132,6 +1132,20 @@ SAB.glossary = [
       "ko": "미국 국방부와 일하려는 회사가 정보를 잘 지키는지 확인하는 보안 자격증이다."
     },
     "firstSeen": "2026-10-24",
+    "count": 1
+  },
+  {
+    "id": "fabless",
+    "term": {
+      "ko": "팹리스"
+    },
+    "definition": {
+      "ko": "반도체를 설계만 하고 실제 생산은 다른 회사의 공장에 맡기는 기업을 가리킨다. 엔비디아와 캠브리콘이 대표적인 예다. 생산 설비가 없어 투자 부담이 작지만 위탁 생산 업체의 공급 사정에 영향을 받는다."
+    },
+    "plain": {
+      "ko": "직접 공장을 두지 않고 칩 설계만 맡는 회사를 말한다."
+    },
+    "firstSeen": "2026-10-25",
     "count": 1
   }
 ];
