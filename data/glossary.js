@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 150,
+    "count": 152,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -51,7 +51,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 17,
+    "count": 18,
     "plain": {
       "ko": "학습을 마친 AI의 핵심 설정값을 내려받아 직접 실행할 수 있도록 공개한 것입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 26,
+    "count": 27,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -275,7 +275,7 @@ SAB.glossary = [
       "ko": "네트워크 내부에 있다는 이유만으로 사용자나 기기를 신뢰하지 않고, 접근 요청마다 신원과 권한을 다시 확인하는 보안 모델이다. 경계 방어가 뚫리면 내부가 무방비가 되는 기존 방식의 약점을 보완하기 위해 나왔다."
     },
     "firstSeen": "2026-09-07",
-    "count": 1,
+    "count": 2,
     "plain": {
       "ko": "회사 내부의 사용자나 기기라도 접근할 때마다 신원과 권한을 확인하는 보안 방식입니다."
     }
@@ -401,7 +401,7 @@ SAB.glossary = [
       "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
     },
     "firstSeen": "2026-09-12",
-    "count": 6,
+    "count": 7,
     "plain": {
       "ko": "AI가 사실이 아닌 내용이나 없는 출처를 그럴듯하게 만들어 답하는 현상입니다."
     }
@@ -555,7 +555,7 @@ SAB.glossary = [
       "ko": "검색 엔진이나 AI 챗봇이 답을 직접 보여 주면서 언론사 사이트로 넘어오는 검색 유입이 사실상 0에 가까워지는 상황을 가리키는 말이다. 이용자가 요약만 읽고 원문 링크를 누르지 않게 되어 콘텐츠 제작자의 광고·구독 수익 기반이 무너지는 현상을 뜻한다."
     },
     "firstSeen": "2026-09-19",
-    "count": 1,
+    "count": 2,
     "plain": {
       "ko": "검색이나 AI가 답을 직접 보여줘 원래 사이트로 들어오는 방문자가 거의 사라지는 상황입니다."
     }
@@ -992,7 +992,7 @@ SAB.glossary = [
       "ko": "한 분야의 개념과 그 관계를 정리해 둔 지도로, 컴퓨터가 흩어진 정보를 연결해 읽게 해 준다."
     },
     "firstSeen": "2026-10-19",
-    "count": 2
+    "count": 3
   },
   {
     "id": "orchestrator",
