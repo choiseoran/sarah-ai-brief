@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 152,
+    "count": 155,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 24,
+    "count": 25,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 62,
+    "count": 63,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -614,7 +614,7 @@ SAB.glossary = [
       "ko": "프로그램을 만들고 돌리는 데 필요한 여러 소프트웨어를 층층이 쌓은 묶음이다."
     },
     "firstSeen": "2026-09-25",
-    "count": 2
+    "count": 3
   },
   {
     "id": "dividend-recap",
@@ -978,7 +978,7 @@ SAB.glossary = [
       "ko": "돈을 벌면서도 사회에 이로운 목표를 함께 지키겠다고 법적으로 약속한 회사다."
     },
     "firstSeen": "2026-10-19",
-    "count": 2
+    "count": 4
   },
   {
     "id": "ontology",
@@ -1146,6 +1146,34 @@ SAB.glossary = [
       "ko": "직접 공장을 두지 않고 칩 설계만 맡는 회사를 말한다."
     },
     "firstSeen": "2026-10-25",
+    "count": 1
+  },
+  {
+    "id": "scale-across",
+    "term": {
+      "ko": "스케일어크로스"
+    },
+    "definition": {
+      "ko": "서로 다른 데이터센터와 지역에 흩어진 AI 연산 자원을 네트워크로 묶어 하나의 큰 학습 시스템처럼 쓰는 방식이다. 한 건물 안에서 장비를 늘리는 데 한계가 오자 건물과 지역을 넘어 연결하는 쪽으로 확장 범위를 넓힌 것이다."
+    },
+    "plain": {
+      "ko": "멀리 떨어진 여러 데이터센터를 한 대의 거대한 컴퓨터처럼 이어 쓰는 방법이다."
+    },
+    "firstSeen": "2026-10-27",
+    "count": 1
+  },
+  {
+    "id": "form-s-1",
+    "term": {
+      "ko": "증권신고서(Form S-1)"
+    },
+    "definition": {
+      "ko": "미국에서 회사가 주식을 처음 공개 시장에 팔기 전에 증권거래위원회에 내야 하는 등록 서류다. 사업 내용, 재무 상태, 경영진, 위험 요인 등을 투자자가 볼 수 있게 담는다. 위원회가 효력을 인정하기 전까지는 주식을 실제로 팔 수 없다."
+    },
+    "plain": {
+      "ko": "회사가 주식시장에 처음 주식을 팔기 전에 내는, 회사 사정을 낱낱이 밝힌 신청서."
+    },
+    "firstSeen": "2026-10-27",
     "count": 1
   }
 ];
