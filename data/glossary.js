@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 155,
+    "count": 160,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 38,
+    "count": 39,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 9,
+    "count": 10,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -387,7 +387,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 18,
+    "count": 19,
     "plain": {
       "ko": "인류 문명이 회복하기 어려울 정도로 파괴되거나 사라질 위험입니다."
     }
@@ -429,7 +429,7 @@ SAB.glossary = [
       "ko": "규제 대상인 기업이 규제 기관이나 입법 과정에 영향을 미쳐 규제를 자신에게 유리한 방향으로 만드는 현상이다. 이미 시장을 선점한 기업이 강한 규제를 요구해 후발 주자의 진입을 막는 경우가 대표적 사례로 꼽힌다."
     },
     "firstSeen": "2026-09-14",
-    "count": 5,
+    "count": 6,
     "plain": {
       "ko": "규제받는 기업이 규칙을 만드는 기관에 영향을 줘 자신에게 유리하게 바꾸는 현상입니다."
     }
@@ -698,7 +698,7 @@ SAB.glossary = [
       "ko": "현실 세계가 어떻게 움직일지 흉내 내어 미리 보여 주는 AI다."
     },
     "firstSeen": "2026-09-30",
-    "count": 2
+    "count": 5
   },
   {
     "id": "dna-synthesis-screening",
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 3
+    "count": 4
   },
   {
     "id": "de-extinction",
@@ -894,7 +894,7 @@ SAB.glossary = [
       "ko": "미국 정부가 클라우드 서비스의 보안을 심사해 사용을 허가하는 제도다."
     },
     "firstSeen": "2026-10-16",
-    "count": 2
+    "count": 3
   },
   {
     "id": "human-on-the-loop",
@@ -950,7 +950,7 @@ SAB.glossary = [
       "ko": "파일을 누가 만들었고 나중에 바뀌지 않았는지 확인해 주는 전자 도장이다."
     },
     "firstSeen": "2026-10-18",
-    "count": 1
+    "count": 2
   },
   {
     "id": "operational-technology",
@@ -1174,6 +1174,20 @@ SAB.glossary = [
       "ko": "회사가 주식시장에 처음 주식을 팔기 전에 내는, 회사 사정을 낱낱이 밝힌 신청서."
     },
     "firstSeen": "2026-10-27",
+    "count": 2
+  },
+  {
+    "id": "purpose-limitation",
+    "term": {
+      "ko": "목적 제한"
+    },
+    "definition": {
+      "ko": "개인정보를 처음 수집할 때 밝힌 목적 안에서만 쓰도록 묶어 두는 개인정보 보호 원칙이다. 예를 들어 배송을 위해 받은 주소를 광고에 쓰지 못하게 하는 식이다. 메타는 이 원칙을 데이터가 흘러가는 길목에서 자동으로 검사한다."
+    },
+    "plain": {
+      "ko": "개인정보를 처음 받을 때 밝힌 용도로만 쓰게 하는 원칙이다."
+    },
+    "firstSeen": "2026-10-28",
     "count": 1
   }
 ];
