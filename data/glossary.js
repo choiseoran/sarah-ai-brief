@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 160,
+    "count": 164,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 39,
+    "count": 42,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 63,
+    "count": 65,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -782,7 +782,7 @@ SAB.glossary = [
       "ko": "허락받고 해커처럼 시스템을 공격해 보며 보안 약점을 미리 찾는 점검이다."
     },
     "firstSeen": "2026-10-04",
-    "count": 3
+    "count": 4
   },
   {
     "id": "core-network",
@@ -852,7 +852,7 @@ SAB.glossary = [
       "ko": "글이나 사진의 뜻을 숫자로 바꿔 비슷한 것끼리 찾을 수 있게 하는 방법이다."
     },
     "firstSeen": "2026-10-07",
-    "count": 4
+    "count": 5
   },
   {
     "id": "sandbox",
@@ -1188,6 +1188,34 @@ SAB.glossary = [
       "ko": "개인정보를 처음 받을 때 밝힌 용도로만 쓰게 하는 원칙이다."
     },
     "firstSeen": "2026-10-28",
+    "count": 1
+  },
+  {
+    "id": "prompt-injection",
+    "term": {
+      "ko": "프롬프트 주입"
+    },
+    "definition": {
+      "ko": "AI 모델이 읽는 글이나 웹페이지 안에 몰래 명령을 숨겨, 모델이 원래 사용자의 지시 대신 그 명령을 따르게 만드는 공격이다. 외부 정보를 읽고 스스로 행동하는 AI에서 특히 위험하다."
+    },
+    "plain": {
+      "ko": "AI가 읽는 글 속에 몰래 숨긴 명령으로 AI를 속여 엉뚱하게 움직이게 하는 공격이다."
+    },
+    "firstSeen": "2026-10-29",
+    "count": 1
+  },
+  {
+    "id": "mixture-of-experts",
+    "term": {
+      "ko": "전문가 혼합(MoE)"
+    },
+    "definition": {
+      "ko": "하나의 큰 모델 안에 '전문가'라 불리는 작은 하위 모델 여러 개를 두고, 입력마다 그중 알맞은 일부만 골라 계산하게 하는 설계 방식이다. 매번 모든 부분을 다 돌리지 않으므로 모델 전체 규모에 비해 계산량을 줄일 수 있다. 대형 언어 모델에서 널리 쓰이며, 메타는 이 방식을 광고 후보 검색에 적용했다."
+    },
+    "plain": {
+      "ko": "여러 작은 전문 모델 중 상황에 맞는 것만 골라 계산해 일을 줄이는 AI 설계 방식이다."
+    },
+    "firstSeen": "2026-10-29",
     "count": 1
   }
 ];
