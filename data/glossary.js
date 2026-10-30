@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 164,
+    "count": 167,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 27,
+    "count": 28,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -656,7 +656,7 @@ SAB.glossary = [
       "ko": "정부가 쓰는 제품이 제대로 작동하지 않게 될 위험으로, 지정되면 정부 거래에서 빠진다."
     },
     "firstSeen": "2026-09-26",
-    "count": 2
+    "count": 3
   },
   {
     "id": "webmcp",
@@ -936,7 +936,7 @@ SAB.glossary = [
       "ko": "사이트 주인이 자동 수집 프로그램에 '여기는 가져가지 마세요'라고 적어 두는 안내문이다."
     },
     "firstSeen": "2026-10-17",
-    "count": 4
+    "count": 5
   },
   {
     "id": "digital-signature",
@@ -1216,6 +1216,34 @@ SAB.glossary = [
       "ko": "여러 작은 전문 모델 중 상황에 맞는 것만 골라 계산해 일을 줄이는 AI 설계 방식이다."
     },
     "firstSeen": "2026-10-29",
+    "count": 1
+  },
+  {
+    "id": "backdoor",
+    "term": {
+      "ko": "백도어"
+    },
+    "definition": {
+      "ko": "정상적인 인증 절차를 거치지 않고 컴퓨터나 시스템에 몰래 접근할 수 있도록 숨겨 둔 통로를 말한다. 공격자는 한번 백도어를 심어 두면 사용자가 모르는 사이에 언제든 다시 들어와 파일을 보거나 명령을 실행할 수 있다."
+    },
+    "plain": {
+      "ko": "허락 없이 남의 컴퓨터에 몰래 드나들려고 숨겨 둔 출입구다."
+    },
+    "firstSeen": "2026-10-31",
+    "count": 1
+  },
+  {
+    "id": "tpu",
+    "term": {
+      "ko": "텐서 처리 장치(TPU)"
+    },
+    "definition": {
+      "ko": "구글이 AI 모델의 학습과 실행에 필요한 대규모 계산을 빠르게 처리하도록 직접 설계한 전용 반도체다. 여러 용도에 두루 쓰이는 칩과 달리 AI 연산에 맞춰 만들어져 같은 전력으로 더 많은 계산을 하도록 설계됐다."
+    },
+    "plain": {
+      "ko": "구글이 AI 계산을 빠르게 하려고 직접 만든 전용 칩이다."
+    },
+    "firstSeen": "2026-10-31",
     "count": 1
   }
 ];
