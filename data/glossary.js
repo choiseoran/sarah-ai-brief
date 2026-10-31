@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 167,
+    "count": 168,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -219,7 +219,7 @@ SAB.glossary = [
       "ko": "대기의 물리 법칙을 방정식으로 풀어 미래 날씨를 계산하는 전통적 예보 방식이다. 슈퍼컴퓨터로 대규모 시뮬레이션을 돌려야 해서 결과가 나오기까지 몇 시간이 걸리며, 그 지연 때문에 비나 지표 기온처럼 빠르게 변하는 값에서 오차가 생긴다."
     },
     "firstSeen": "2026-09-04",
-    "count": 2,
+    "count": 3,
     "plain": {
       "ko": "대기의 움직임을 컴퓨터로 계산해 앞으로의 날씨를 예측하는 방식입니다."
     }
@@ -1244,6 +1244,34 @@ SAB.glossary = [
       "ko": "구글이 AI 계산을 빠르게 하려고 직접 만든 전용 칩이다."
     },
     "firstSeen": "2026-10-31",
+    "count": 1
+  },
+  {
+    "id": "vibe-coding",
+    "term": {
+      "ko": "바이브 코딩"
+    },
+    "definition": {
+      "ko": "코드를 직접 짜지 않고 AI에게 원하는 기능을 말로 설명해 프로그램을 만들게 하는 방식이다. 사용자는 결과를 보고 고칠 점을 다시 말로 요청하며 완성해 간다. 코딩을 몰라도 쓸 수 있지만, 만들어진 코드가 안전하고 제대로 짜였는지는 사용자가 판단하기 어렵다."
+    },
+    "plain": {
+      "ko": "AI에게 원하는 기능을 말로 설명해 프로그램을 대신 만들게 하는 방식."
+    },
+    "firstSeen": "2026-11-01",
+    "count": 1
+  },
+  {
+    "id": "ai-transformation",
+    "term": {
+      "ko": "AI 전환(AX)"
+    },
+    "definition": {
+      "ko": "기업이 연구개발, 생산, 마케팅, 지원 업무 등 전 분야에 AI를 들여와 일하는 방식과 사업 구조를 바꾸는 활동을 말한다. 디지털 전환(DX)에 빗대어 AX라고 부른다. 도구 도입뿐 아니라 교육, 전담조직 구성, 데이터 운영 체계 정비까지 함께 포함하는 경우가 많다."
+    },
+    "plain": {
+      "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
+    },
+    "firstSeen": "2026-11-01",
     "count": 1
   }
 ];
