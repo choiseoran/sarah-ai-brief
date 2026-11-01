@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 168,
+    "count": 172,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 25,
+    "count": 26,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 42,
+    "count": 43,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -247,7 +247,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 15,
+    "count": 16,
     "plain": {
       "ko": "로봇처럼 몸을 가진 AI가 실제 세상을 보고 움직이며 배우는 능력입니다."
     }
@@ -782,7 +782,7 @@ SAB.glossary = [
       "ko": "허락받고 해커처럼 시스템을 공격해 보며 보안 약점을 미리 찾는 점검이다."
     },
     "firstSeen": "2026-10-04",
-    "count": 4
+    "count": 5
   },
   {
     "id": "core-network",
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 4
+    "count": 5
   },
   {
     "id": "de-extinction",
@@ -1258,7 +1258,7 @@ SAB.glossary = [
       "ko": "AI에게 원하는 기능을 말로 설명해 프로그램을 대신 만들게 하는 방식."
     },
     "firstSeen": "2026-11-01",
-    "count": 1
+    "count": 2
   },
   {
     "id": "ai-transformation",
@@ -1272,6 +1272,34 @@ SAB.glossary = [
       "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
     },
     "firstSeen": "2026-11-01",
+    "count": 1
+  },
+  {
+    "id": "credit-default-swap",
+    "term": {
+      "ko": "신용부도스와프(CDS)"
+    },
+    "definition": {
+      "ko": "기업이나 국가가 빚을 갚지 못하는 상황에 대비해 사고파는 파생상품이다. 산 쪽은 정기적으로 수수료(프리미엄)를 내고, 실제로 부도가 나면 손실을 보상받는다. 프리미엄이 오르면 시장이 그 기업의 부도 가능성을 더 높게 본다는 뜻이다."
+    },
+    "plain": {
+      "ko": "기업이 빚을 못 갚을 때를 대비해 드는 보험 같은 금융상품이다."
+    },
+    "firstSeen": "2026-11-02",
+    "count": 1
+  },
+  {
+    "id": "legitimate-interest",
+    "term": {
+      "ko": "정당한 이익"
+    },
+    "definition": {
+      "ko": "개인정보처리자가 정보주체의 동의 없이도 개인정보를 처리할 수 있게 하는 법적 근거다. 처리자의 이익을 달성하는 데 필요하고, 정보주체의 권리보다 명백히 우선하며, 합리적 범위를 넘지 않을 때 인정된다."
+    },
+    "plain": {
+      "ko": "회사가 꼭 필요하고 이용자 권리를 해치지 않는 범위에서 동의 없이 개인정보를 쓸 수 있는 근거다."
+    },
+    "firstSeen": "2026-11-02",
     "count": 1
   }
 ];
