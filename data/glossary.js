@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 172,
+    "count": 175,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -51,7 +51,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 18,
+    "count": 19,
     "plain": {
       "ko": "학습을 마친 AI의 핵심 설정값을 내려받아 직접 실행할 수 있도록 공개한 것입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 43,
+    "count": 46,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 5
+    "count": 6
   },
   {
     "id": "de-extinction",
@@ -1258,7 +1258,7 @@ SAB.glossary = [
       "ko": "AI에게 원하는 기능을 말로 설명해 프로그램을 대신 만들게 하는 방식."
     },
     "firstSeen": "2026-11-01",
-    "count": 2
+    "count": 4
   },
   {
     "id": "ai-transformation",
@@ -1272,7 +1272,7 @@ SAB.glossary = [
       "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
     },
     "firstSeen": "2026-11-01",
-    "count": 1
+    "count": 2
   },
   {
     "id": "credit-default-swap",
@@ -1300,6 +1300,20 @@ SAB.glossary = [
       "ko": "회사가 꼭 필요하고 이용자 권리를 해치지 않는 범위에서 동의 없이 개인정보를 쓸 수 있는 근거다."
     },
     "firstSeen": "2026-11-02",
+    "count": 1
+  },
+  {
+    "id": "system-prompt",
+    "term": {
+      "ko": "시스템 프롬프트"
+    },
+    "definition": {
+      "ko": "AI 모델이 사용자와 대화를 시작하기 전에 개발사가 미리 넣어 두는 기본 지시문이다. 모델이 어떤 역할을 맡고 무엇을 하거나 하지 말아야 하는지를 정한다. 사용자에게는 보통 보이지 않지만 모델의 답변 방식 전체에 영향을 준다."
+    },
+    "plain": {
+      "ko": "AI가 대화를 시작하기 전에 개발사에게서 미리 받아 두는 기본 행동 지침이다."
+    },
+    "firstSeen": "2026-11-03",
     "count": 1
   }
 ];
