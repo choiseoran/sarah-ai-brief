@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 175,
+    "count": 179,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 23,
+    "count": 25,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 65,
+    "count": 66,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -684,7 +684,7 @@ SAB.glossary = [
       "ko": "거의 모든 면에서 사람보다 훨씬 똑똑한 AI를 가리키는 말이다."
     },
     "firstSeen": "2026-09-30",
-    "count": 1
+    "count": 2
   },
   {
     "id": "world-model",
@@ -992,7 +992,7 @@ SAB.glossary = [
       "ko": "한 분야의 개념과 그 관계를 정리해 둔 지도로, 컴퓨터가 흩어진 정보를 연결해 읽게 해 준다."
     },
     "firstSeen": "2026-10-19",
-    "count": 3
+    "count": 4
   },
   {
     "id": "orchestrator",
@@ -1272,7 +1272,7 @@ SAB.glossary = [
       "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
     },
     "firstSeen": "2026-11-01",
-    "count": 2
+    "count": 3
   },
   {
     "id": "credit-default-swap",
@@ -1314,6 +1314,34 @@ SAB.glossary = [
       "ko": "AI가 대화를 시작하기 전에 개발사에게서 미리 받아 두는 기본 행동 지침이다."
     },
     "firstSeen": "2026-11-03",
+    "count": 1
+  },
+  {
+    "id": "matched-molecular-pair-analysis",
+    "term": {
+      "ko": "짝지은 분자쌍 분석(MMPA)"
+    },
+    "definition": {
+      "ko": "구조가 딱 한 군데만 다른 분자 두 개를 짝지어 비교하는 신약 연구 기법이다. 나머지가 모두 같으므로 성질 차이를 그 한 군데 변화의 효과로 볼 수 있다. 어떤 구조 변경이 약효를 높이는지 데이터로 확인할 때 쓴다."
+    },
+    "plain": {
+      "ko": "한 곳만 다른 분자 두 개를 비교해 그 변화가 약효에 주는 영향을 알아보는 방법이다."
+    },
+    "firstSeen": "2026-11-04",
+    "count": 1
+  },
+  {
+    "id": "directed-acyclic-graph",
+    "term": {
+      "ko": "방향성 비순환 그래프(DAG)"
+    },
+    "definition": {
+      "ko": "여러 작업을 점으로, 작업 사이의 선후 관계를 화살표로 나타낸 구조다. 화살표를 따라가도 출발한 점으로 다시 돌아오는 고리가 없어서 작업을 앞에서 뒤로 한 방향으로 처리할 수 있다. 데이터 처리 파이프라인처럼 앞 단계의 결과를 다음 단계가 이어받는 일을 설계할 때 널리 쓴다."
+    },
+    "plain": {
+      "ko": "작업을 화살표로 이어 순서를 나타내되 처음으로 되돌아가는 길이 없는 흐름도다."
+    },
+    "firstSeen": "2026-11-04",
     "count": 1
   }
 ];
