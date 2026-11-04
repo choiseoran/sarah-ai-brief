@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 179,
+    "count": 181,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 26,
+    "count": 27,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -233,7 +233,7 @@ SAB.glossary = [
       "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
     },
     "firstSeen": "2026-09-05",
-    "count": 5,
+    "count": 6,
     "plain": {
       "ko": "AI가 답하기 전에 관련 문서를 찾아보고 그 내용을 바탕으로 답하는 방식입니다."
     }
@@ -261,7 +261,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 11,
+    "count": 13,
     "plain": {
       "ko": "새 기술을 본격적으로 도입하기 전에 작은 규모로 가능한지 시험하는 단계입니다."
     }
@@ -614,7 +614,7 @@ SAB.glossary = [
       "ko": "프로그램을 만들고 돌리는 데 필요한 여러 소프트웨어를 층층이 쌓은 묶음이다."
     },
     "firstSeen": "2026-09-25",
-    "count": 3
+    "count": 4
   },
   {
     "id": "dividend-recap",
@@ -1342,6 +1342,34 @@ SAB.glossary = [
       "ko": "작업을 화살표로 이어 순서를 나타내되 처음으로 되돌아가는 길이 없는 흐름도다."
     },
     "firstSeen": "2026-11-04",
+    "count": 1
+  },
+  {
+    "id": "token-factory",
+    "term": {
+      "ko": "토큰 팩토리"
+    },
+    "definition": {
+      "ko": "AI 모델이 내놓는 결과물의 단위인 토큰을 공장처럼 대량으로 생산하는 시설로 데이터센터를 바라보는 개념이다. 이 관점에서는 GPU를 얼마나 많이 갖췄는지보다 토큰 하나를 얼마나 싸게 만들어 내는지가 경쟁력이 된다."
+    },
+    "plain": {
+      "ko": "AI가 내놓는 글자 조각을 공장처럼 싸고 많이 만들어 내는 데이터센터를 이르는 말이다."
+    },
+    "firstSeen": "2026-11-05",
+    "count": 1
+  },
+  {
+    "id": "data-lineage",
+    "term": {
+      "ko": "데이터 계보"
+    },
+    "definition": {
+      "ko": "데이터가 처음 어디서 만들어졌고 어떤 과정을 거쳐 바뀌었으며 어느 시스템과 파일로 옮겨 갔는지를 시간 순서대로 남긴 기록이다. 문제가 생긴 데이터가 발견되면 이 기록을 거꾸로 따라가 처음 들어온 지점과 퍼진 범위를 찾을 수 있다."
+    },
+    "plain": {
+      "ko": "데이터가 어디서 나와 어떻게 바뀌며 어디로 옮겨 갔는지를 적어 둔 기록이다."
+    },
+    "firstSeen": "2026-11-05",
     "count": 1
   }
 ];
