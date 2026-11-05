@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 181,
+    "count": 183,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 17,
+    "count": 18,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 46,
+    "count": 47,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -233,7 +233,7 @@ SAB.glossary = [
       "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
     },
     "firstSeen": "2026-09-05",
-    "count": 6,
+    "count": 7,
     "plain": {
       "ko": "AI가 답하기 전에 관련 문서를 찾아보고 그 내용을 바탕으로 답하는 방식입니다."
     }
@@ -642,7 +642,7 @@ SAB.glossary = [
       "ko": "AI 계산을 빠르고 전기를 적게 쓰며 처리하도록 PC나 휴대폰에 넣는 전용 칩이다."
     },
     "firstSeen": "2026-09-26",
-    "count": 4
+    "count": 5
   },
   {
     "id": "supply-chain-risk",
@@ -978,7 +978,7 @@ SAB.glossary = [
       "ko": "돈을 벌면서도 사회에 이로운 목표를 함께 지키겠다고 법적으로 약속한 회사다."
     },
     "firstSeen": "2026-10-19",
-    "count": 4
+    "count": 5
   },
   {
     "id": "ontology",
@@ -1062,7 +1062,7 @@ SAB.glossary = [
       "ko": "회사가 이익만 좇지 않도록 이사 다수를 뽑을 권한을 가진 독립 감시 기구다."
     },
     "firstSeen": "2026-10-22",
-    "count": 1
+    "count": 2
   },
   {
     "id": "non-voting-stock",
@@ -1272,7 +1272,7 @@ SAB.glossary = [
       "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
     },
     "firstSeen": "2026-11-01",
-    "count": 3
+    "count": 4
   },
   {
     "id": "credit-default-swap",
@@ -1370,6 +1370,20 @@ SAB.glossary = [
       "ko": "데이터가 어디서 나와 어떻게 바뀌며 어디로 옮겨 갔는지를 적어 둔 기록이다."
     },
     "firstSeen": "2026-11-05",
+    "count": 1
+  },
+  {
+    "id": "sovereign-ai",
+    "term": {
+      "ko": "소버린 AI"
+    },
+    "definition": {
+      "ko": "한 나라가 AI 모델과 그 기반 설비를 외국 기업에 기대지 않고 스스로 개발하고 운영하는 것을 말한다. 수출 통제나 외국 서비스 중단 같은 상황에서도 국방·공공처럼 중요한 분야의 AI를 계속 쓸 수 있게 하려는 목적이다."
+    },
+    "plain": {
+      "ko": "나라가 외국 기술에 기대지 않고 직접 만들어 운영하는 AI를 말한다."
+    },
+    "firstSeen": "2026-11-06",
     "count": 1
   }
 ];
