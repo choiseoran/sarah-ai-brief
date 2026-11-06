@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 183,
+    "count": 185,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 27,
+    "count": 28,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 25,
+    "count": 26,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -387,7 +387,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 19,
+    "count": 20,
     "plain": {
       "ko": "인류 문명이 회복하기 어려울 정도로 파괴되거나 사라질 위험입니다."
     }
@@ -656,7 +656,7 @@ SAB.glossary = [
       "ko": "정부가 쓰는 제품이 제대로 작동하지 않게 될 위험으로, 지정되면 정부 거래에서 빠진다."
     },
     "firstSeen": "2026-09-26",
-    "count": 3
+    "count": 4
   },
   {
     "id": "webmcp",
@@ -1384,6 +1384,34 @@ SAB.glossary = [
       "ko": "나라가 외국 기술에 기대지 않고 직접 만들어 운영하는 AI를 말한다."
     },
     "firstSeen": "2026-11-06",
+    "count": 1
+  },
+  {
+    "id": "decompilation",
+    "term": {
+      "ko": "디컴파일(역컴파일)"
+    },
+    "definition": {
+      "ko": "컴퓨터가 실행하는 완성된 프로그램 파일을 거꾸로 풀어 사람이 읽고 고칠 수 있는 원래 코드에 가까운 형태로 되돌리는 작업이다. 원래 코드가 없어도 프로그램을 분석하거나 다른 기기에서 돌아가도록 옮길 때 쓰인다. 예전에는 사람이 오랜 시간 들여야 했지만 AI 도구가 이 작업을 크게 빠르게 만들고 있다."
+    },
+    "plain": {
+      "ko": "완성된 프로그램 파일을 거꾸로 풀어 사람이 고칠 수 있는 설계도 형태로 되돌리는 작업이다."
+    },
+    "firstSeen": "2026-11-07",
+    "count": 1
+  },
+  {
+    "id": "ai-factory",
+    "term": {
+      "ko": "AI 팩토리"
+    },
+    "definition": {
+      "ko": "AI 모델을 학습시키고 서비스하는 데 필요한 연산 장비, 전력, 냉각 설비를 대규모로 모아 둔 시설을 공장에 빗댄 말이다. 원료 대신 데이터와 전기를 넣어 AI 결과물을 계속 만들어 낸다는 뜻에서 이렇게 부른다. 규모는 보통 사용하는 전력량(MW, GW)으로 나타낸다."
+    },
+    "plain": {
+      "ko": "AI를 만들고 돌리는 컴퓨터와 전력 설비를 공장처럼 대규모로 모아 둔 시설."
+    },
+    "firstSeen": "2026-11-07",
     "count": 1
   }
 ];
