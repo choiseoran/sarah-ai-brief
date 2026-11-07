@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 185,
+    "count": 186,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -51,7 +51,7 @@ SAB.glossary = [
       "en": "Publishing a trained model’s parameter files so anyone can download and run it on their own hardware — distinct from full open source, which also releases the data and training code."
     },
     "firstSeen": "2026-09-01",
-    "count": 19,
+    "count": 20,
     "plain": {
       "ko": "학습을 마친 AI의 핵심 설정값을 내려받아 직접 실행할 수 있도록 공개한 것입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 18,
+    "count": 19,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 66,
+    "count": 67,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -247,7 +247,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 16,
+    "count": 17,
     "plain": {
       "ko": "로봇처럼 몸을 가진 AI가 실제 세상을 보고 움직이며 배우는 능력입니다."
     }
@@ -1146,7 +1146,7 @@ SAB.glossary = [
       "ko": "직접 공장을 두지 않고 칩 설계만 맡는 회사를 말한다."
     },
     "firstSeen": "2026-10-25",
-    "count": 1
+    "count": 2
   },
   {
     "id": "scale-across",
@@ -1412,6 +1412,20 @@ SAB.glossary = [
       "ko": "AI를 만들고 돌리는 컴퓨터와 전력 설비를 공장처럼 대규모로 모아 둔 시설."
     },
     "firstSeen": "2026-11-07",
+    "count": 1
+  },
+  {
+    "id": "export-control",
+    "term": {
+      "ko": "수출 통제"
+    },
+    "definition": {
+      "ko": "정부가 안보상 민감한 물품이나 기술을 특정 국가나 기업에 팔지 못하게 막거나, 허가를 받아야만 팔 수 있게 하는 제도다. 미국은 고성능 AI 칩을 이 제도로 관리하며, 허가를 받은 구매자만 칩을 들여올 수 있다."
+    },
+    "plain": {
+      "ko": "나라가 안보 때문에 특정 물건을 아무에게나 팔지 못하게 막는 제도."
+    },
+    "firstSeen": "2026-11-08",
     "count": 1
   }
 ];
