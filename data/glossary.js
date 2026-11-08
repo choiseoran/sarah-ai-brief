@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 186,
+    "count": 188,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 28,
+    "count": 29,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -247,7 +247,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 17,
+    "count": 18,
     "plain": {
       "ko": "로봇처럼 몸을 가진 AI가 실제 세상을 보고 움직이며 배우는 능력입니다."
     }
@@ -1272,7 +1272,7 @@ SAB.glossary = [
       "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
     },
     "firstSeen": "2026-11-01",
-    "count": 4
+    "count": 5
   },
   {
     "id": "credit-default-swap",
@@ -1426,6 +1426,34 @@ SAB.glossary = [
       "ko": "나라가 안보 때문에 특정 물건을 아무에게나 팔지 못하게 막는 제도."
     },
     "firstSeen": "2026-11-08",
+    "count": 1
+  },
+  {
+    "id": "motion-retargeting",
+    "term": {
+      "ko": "리타겟팅"
+    },
+    "definition": {
+      "ko": "사람의 몸에서 기록한 동작 데이터를 관절 수와 팔다리 길이가 다른 로봇의 몸에 맞게 고쳐 옮기는 과정이다. 사람과 로봇은 몸의 생김새와 관절이 꺾이는 방향이 달라 기록을 그대로 쓰면 동작이 어긋난다. 그래서 학습에 쓰기 전에 각 관절의 각도와 움직임을 로봇 기준으로 다시 계산한다."
+    },
+    "plain": {
+      "ko": "사람의 움직임 기록을 로봇의 몸 구조에 맞게 바꿔 주는 작업이다."
+    },
+    "firstSeen": "2026-11-09",
+    "count": 1
+  },
+  {
+    "id": "model-routing",
+    "term": {
+      "ko": "모델 라우팅"
+    },
+    "definition": {
+      "ko": "작업마다 성격과 난이도, 비용을 따져 가장 알맞은 AI 모델로 요청을 보내는 기술이다. 복잡한 일은 성능이 높은 모델에, 단순 반복 작업은 값싼 가벼운 모델에 맡겨 품질과 비용을 함께 맞춘다."
+    },
+    "plain": {
+      "ko": "일의 난이도와 비용에 맞춰 여러 AI 가운데 알맞은 것을 골라 쓰는 방식이다."
+    },
+    "firstSeen": "2026-11-09",
     "count": 1
   }
 ];
