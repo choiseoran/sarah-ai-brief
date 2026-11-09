@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 188,
+    "count": 190,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 26,
+    "count": 27,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 67,
+    "count": 69,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 10,
+    "count": 11,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -387,7 +387,7 @@ SAB.glossary = [
       "ko": "인류 문명을 영구히 파괴하거나 회복 불가능하게 축소시킬 수 있는 위험을 가리키는 말이다. AI 분야에서는 인간의 통제를 벗어난 고도화된 AI가 인류 전체에 돌이킬 수 없는 피해를 줄 가능성을 논할 때 쓰인다."
     },
     "firstSeen": "2026-09-12",
-    "count": 20,
+    "count": 21,
     "plain": {
       "ko": "인류 문명이 회복하기 어려울 정도로 파괴되거나 사라질 위험입니다."
     }
@@ -614,7 +614,7 @@ SAB.glossary = [
       "ko": "프로그램을 만들고 돌리는 데 필요한 여러 소프트웨어를 층층이 쌓은 묶음이다."
     },
     "firstSeen": "2026-09-25",
-    "count": 4
+    "count": 5
   },
   {
     "id": "dividend-recap",
@@ -1454,6 +1454,34 @@ SAB.glossary = [
       "ko": "일의 난이도와 비용에 맞춰 여러 AI 가운데 알맞은 것을 골라 쓰는 방식이다."
     },
     "firstSeen": "2026-11-09",
+    "count": 1
+  },
+  {
+    "id": "ai-harness",
+    "term": {
+      "ko": "AI 하네스"
+    },
+    "definition": {
+      "ko": "AI 모델을 실제 업무에 쓰기 위해 모델 바깥에 두는 운영·관리용 소프트웨어 체계다. 모델에 기억과 회사 업무 자료의 맥락을 넣어 주고, 여러 모델을 바꿔 끼우거나 함께 쓰며, 사용 비용을 관리한다. 같은 모델이라도 이 체계를 어떻게 갖추느냐에 따라 업무 성과가 달라진다."
+    },
+    "plain": {
+      "ko": "AI가 회사 자료를 알고 일하도록 연결하고, 비용과 모델 교체를 관리하는 운영 도구 묶음."
+    },
+    "firstSeen": "2026-11-10",
+    "count": 1
+  },
+  {
+    "id": "label-noise",
+    "term": {
+      "ko": "레이블 오류"
+    },
+    "definition": {
+      "ko": "AI 학습 데이터에 붙은 정답 표시가 잘못된 경우를 말한다. 예를 들어 고양이 사진에 '개'라는 정답이 붙어 있으면 모델이 잘못된 것을 배운다. 사람이 직접 정답을 다는 과정에서 흔히 생기며 모델 성능을 떨어뜨린다."
+    },
+    "plain": {
+      "ko": "학습용 데이터에 붙은 정답 표시가 틀린 것으로, AI가 잘못 배우게 만든다."
+    },
+    "firstSeen": "2026-11-10",
     "count": 1
   }
 ];
