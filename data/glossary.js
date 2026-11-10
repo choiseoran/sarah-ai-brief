@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 190,
+    "count": 192,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 29,
+    "count": 30,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 69,
+    "count": 71,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -614,7 +614,7 @@ SAB.glossary = [
       "ko": "프로그램을 만들고 돌리는 데 필요한 여러 소프트웨어를 층층이 쌓은 묶음이다."
     },
     "firstSeen": "2026-09-25",
-    "count": 5
+    "count": 6
   },
   {
     "id": "dividend-recap",
@@ -852,7 +852,7 @@ SAB.glossary = [
       "ko": "글이나 사진의 뜻을 숫자로 바꿔 비슷한 것끼리 찾을 수 있게 하는 방법이다."
     },
     "firstSeen": "2026-10-07",
-    "count": 5
+    "count": 6
   },
   {
     "id": "sandbox",
@@ -978,7 +978,7 @@ SAB.glossary = [
       "ko": "돈을 벌면서도 사회에 이로운 목표를 함께 지키겠다고 법적으로 약속한 회사다."
     },
     "firstSeen": "2026-10-19",
-    "count": 5
+    "count": 6
   },
   {
     "id": "ontology",
@@ -1216,7 +1216,7 @@ SAB.glossary = [
       "ko": "여러 작은 전문 모델 중 상황에 맞는 것만 골라 계산해 일을 줄이는 AI 설계 방식이다."
     },
     "firstSeen": "2026-10-29",
-    "count": 1
+    "count": 2
   },
   {
     "id": "backdoor",
@@ -1426,7 +1426,7 @@ SAB.glossary = [
       "ko": "나라가 안보 때문에 특정 물건을 아무에게나 팔지 못하게 막는 제도."
     },
     "firstSeen": "2026-11-08",
-    "count": 1
+    "count": 2
   },
   {
     "id": "motion-retargeting",
@@ -1482,6 +1482,34 @@ SAB.glossary = [
       "ko": "학습용 데이터에 붙은 정답 표시가 틀린 것으로, AI가 잘못 배우게 만든다."
     },
     "firstSeen": "2026-11-10",
+    "count": 1
+  },
+  {
+    "id": "end-to-end-encryption",
+    "term": {
+      "ko": "종단간 암호화"
+    },
+    "definition": {
+      "ko": "데이터를 보내는 사람의 기기에서 잠그고 받는 사람의 기기에서만 열 수 있게 하는 암호화 방식이다. 중간에서 데이터를 옮기거나 저장하는 회사도 내용을 볼 수 없다. 서버에서 풀 수 있는 일반 암호화보다 사생활 보호 수준이 높다."
+    },
+    "plain": {
+      "ko": "보낸 사람과 받는 사람만 내용을 볼 수 있고 서비스 회사도 못 보게 잠그는 방식."
+    },
+    "firstSeen": "2026-11-11",
+    "count": 1
+  },
+  {
+    "id": "gpu-kernel",
+    "term": {
+      "ko": "GPU 커널"
+    },
+    "definition": {
+      "ko": "GPU 위에서 실제로 실행되는 작은 계산 프로그램이다. AI 모델의 행렬 곱셈이나 어텐션 같은 연산은 결국 이런 커널로 바뀌어 수많은 GPU 코어에서 동시에 돌아간다. 커널을 얼마나 잘 짜느냐에 따라 같은 GPU에서도 처리 속도가 크게 달라진다."
+    },
+    "plain": {
+      "ko": "GPU가 실제로 돌리는 작은 계산 프로그램으로, 잘 짜면 같은 칩도 더 빨라진다."
+    },
+    "firstSeen": "2026-11-11",
     "count": 1
   }
 ];
