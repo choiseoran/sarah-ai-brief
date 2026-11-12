@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 192,
+    "count": 197,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 28,
+    "count": 29,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 71,
+    "count": 72,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -457,7 +457,7 @@ SAB.glossary = [
       "ko": "AI 가 주어진 과제를 실제로 해결하는 대신, 평가 방식의 허점을 이용해 성공한 것처럼 점수를 얻는 행동을 말한다. 채점이 형식만 확인하면 문제 정의를 바꿔 제출하는 식으로 나타나며, 에이전트가 자율적으로 움직일수록 발견하기 어려워진다."
     },
     "firstSeen": "2026-09-15",
-    "count": 4,
+    "count": 5,
     "plain": {
       "ko": "AI가 일을 제대로 해결하는 대신 채점의 허점을 이용해 높은 점수를 얻는 행동입니다."
     }
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 6
+    "count": 7
   },
   {
     "id": "de-extinction",
@@ -964,7 +964,7 @@ SAB.glossary = [
       "ko": "공장 기계나 발전소 설비를 실제로 움직이고 조종하는 시스템이다."
     },
     "firstSeen": "2026-10-18",
-    "count": 1
+    "count": 2
   },
   {
     "id": "public-benefit-corporation",
@@ -1454,7 +1454,7 @@ SAB.glossary = [
       "ko": "일의 난이도와 비용에 맞춰 여러 AI 가운데 알맞은 것을 골라 쓰는 방식이다."
     },
     "firstSeen": "2026-11-09",
-    "count": 1
+    "count": 2
   },
   {
     "id": "ai-harness",
@@ -1510,6 +1510,34 @@ SAB.glossary = [
       "ko": "GPU가 실제로 돌리는 작은 계산 프로그램으로, 잘 짜면 같은 칩도 더 빨라진다."
     },
     "firstSeen": "2026-11-11",
+    "count": 1
+  },
+  {
+    "id": "lidar",
+    "term": {
+      "ko": "라이다(LiDAR)"
+    },
+    "definition": {
+      "ko": "레이저를 쏘아 되돌아오는 시간을 재서 땅의 높낮이와 모양을 입체로 그려 내는 측량 기술이다. 숲이 우거진 곳에서도 나무 아래 지면의 형태를 드러낼 수 있어, 고고학에서 땅에 묻힌 옛 건축물의 흔적을 찾는 데 쓰인다."
+    },
+    "plain": {
+      "ko": "레이저로 땅 모양을 입체로 재는 기술로, 숲 아래 숨은 지형까지 볼 수 있다."
+    },
+    "firstSeen": "2026-11-13",
+    "count": 1
+  },
+  {
+    "id": "model-context-protocol",
+    "term": {
+      "ko": "모델 컨텍스트 프로토콜(MCP)"
+    },
+    "definition": {
+      "ko": "AI 도구와 에이전트가 외부의 데이터베이스나 서비스에 접속해 정보를 가져오고 작업을 수행할 수 있도록 정한 개방형 연결 표준이다. 데이터를 가진 회사가 이 표준에 맞춘 연결 창구를 하나 만들어 두면, 이 표준을 지원하는 여러 AI 도구가 같은 데이터를 쓸 수 있다."
+    },
+    "plain": {
+      "ko": "AI 도구가 바깥 데이터나 서비스에 붙을 때 쓰는 공통 연결 규칙이다."
+    },
+    "firstSeen": "2026-11-13",
     "count": 1
   }
 ];
