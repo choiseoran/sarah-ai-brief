@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 197,
+    "count": 202,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 30,
+    "count": 31,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 29,
+    "count": 30,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 19,
+    "count": 20,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -115,7 +115,7 @@ SAB.glossary = [
       "en": "A separate layer that inspects inputs and outputs and blocks what falls outside policy — usually operated independently of the model’s own training."
     },
     "firstSeen": "2026-09-01",
-    "count": 47,
+    "count": 48,
     "plain": {
       "ko": "AI가 위험한 요청에 응하거나 부적절한 답을 내놓지 못하도록 두는 안전장치입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 72,
+    "count": 74,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 11,
+    "count": 12,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -457,7 +457,7 @@ SAB.glossary = [
       "ko": "AI 가 주어진 과제를 실제로 해결하는 대신, 평가 방식의 허점을 이용해 성공한 것처럼 점수를 얻는 행동을 말한다. 채점이 형식만 확인하면 문제 정의를 바꿔 제출하는 식으로 나타나며, 에이전트가 자율적으로 움직일수록 발견하기 어려워진다."
     },
     "firstSeen": "2026-09-15",
-    "count": 5,
+    "count": 6,
     "plain": {
       "ko": "AI가 일을 제대로 해결하는 대신 채점의 허점을 이용해 높은 점수를 얻는 행동입니다."
     }
@@ -614,7 +614,7 @@ SAB.glossary = [
       "ko": "프로그램을 만들고 돌리는 데 필요한 여러 소프트웨어를 층층이 쌓은 묶음이다."
     },
     "firstSeen": "2026-09-25",
-    "count": 6
+    "count": 7
   },
   {
     "id": "dividend-recap",
@@ -1006,7 +1006,7 @@ SAB.glossary = [
       "ko": "여러 AI에게 일을 나눠 주고 순서를 정하는 지휘 역할의 프로그램."
     },
     "firstSeen": "2026-10-20",
-    "count": 2
+    "count": 3
   },
   {
     "id": "neocloud",
@@ -1384,7 +1384,7 @@ SAB.glossary = [
       "ko": "나라가 외국 기술에 기대지 않고 직접 만들어 운영하는 AI를 말한다."
     },
     "firstSeen": "2026-11-06",
-    "count": 1
+    "count": 2
   },
   {
     "id": "decompilation",
@@ -1538,6 +1538,20 @@ SAB.glossary = [
       "ko": "AI 도구가 바깥 데이터나 서비스에 붙을 때 쓰는 공통 연결 규칙이다."
     },
     "firstSeen": "2026-11-13",
+    "count": 1
+  },
+  {
+    "id": "responsible-scaling-policy",
+    "term": {
+      "ko": "책임 있는 확장 정책(RSP)"
+    },
+    "definition": {
+      "ko": "앤트로픽이 더 강력한 AI 모델을 개발하고 공개할 때 지키기로 한 내부 안전 규칙이다. 모델의 능력이 일정 수준을 넘으면 그에 맞는 더 엄격한 안전 조치를 갖춰야 다음 단계로 넘어갈 수 있다. 주로 생물무기처럼 대규모 피해로 이어질 수 있는 위험을 다룬다."
+    },
+    "plain": {
+      "ko": "AI가 강해질수록 더 엄격한 안전 조치를 먼저 갖추도록 정한 회사 규칙."
+    },
+    "firstSeen": "2026-11-14",
     "count": 1
   }
 ];
