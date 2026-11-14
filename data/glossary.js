@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 202,
+    "count": 204,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 31,
+    "count": 32,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 27,
+    "count": 28,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -247,7 +247,7 @@ SAB.glossary = [
       "ko": "AI가 화면 속 대화나 텍스트에 머물지 않고 로봇처럼 물리적 몸을 갖고 현실 세계에서 물건을 다루며 배우는 것을 뜻한다. 카메라와 센서로 주변을 인식하고 팔·바퀴 같은 실제 동작으로 반응해야 하므로, 예측이 빗나갔을 때 곧바로 물리적 결과가 뒤따른다는 점이 순수 소프트웨어 AI와 다르다."
     },
     "firstSeen": "2026-09-06",
-    "count": 18,
+    "count": 19,
     "plain": {
       "ko": "로봇처럼 몸을 가진 AI가 실제 세상을 보고 움직이며 배우는 능력입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 12,
+    "count": 13,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -684,7 +684,7 @@ SAB.glossary = [
       "ko": "거의 모든 면에서 사람보다 훨씬 똑똑한 AI를 가리키는 말이다."
     },
     "firstSeen": "2026-09-30",
-    "count": 2
+    "count": 3
   },
   {
     "id": "world-model",
@@ -1146,7 +1146,7 @@ SAB.glossary = [
       "ko": "직접 공장을 두지 않고 칩 설계만 맡는 회사를 말한다."
     },
     "firstSeen": "2026-10-25",
-    "count": 2
+    "count": 3
   },
   {
     "id": "scale-across",
@@ -1552,6 +1552,34 @@ SAB.glossary = [
       "ko": "AI가 강해질수록 더 엄격한 안전 조치를 먼저 갖추도록 정한 회사 규칙."
     },
     "firstSeen": "2026-11-14",
+    "count": 1
+  },
+  {
+    "id": "ocean-thermal-energy-conversion",
+    "term": {
+      "ko": "해양온도차발전(OTEC)"
+    },
+    "definition": {
+      "ko": "바다 표면의 따뜻한 물과 깊은 곳의 차가운 물 사이 온도 차이를 이용해 전기를 만드는 발전 방식이다. 따뜻한 물로 쉽게 끓는 액체를 증발시켜 터빈을 돌리고, 차가운 물로 그 증기를 다시 액체로 식히는 과정을 반복한다."
+    },
+    "plain": {
+      "ko": "따뜻한 바닷물과 차가운 깊은 바닷물의 온도 차이로 전기를 만드는 방법이다."
+    },
+    "firstSeen": "2026-11-15",
+    "count": 1
+  },
+  {
+    "id": "network-separation",
+    "term": {
+      "ko": "망분리"
+    },
+    "definition": {
+      "ko": "회사 내부 업무용 네트워크를 외부 인터넷과 물리적 또는 논리적으로 떼어 놓는 보안 방식이다. 한국 금융권은 규제로 이를 엄격히 지켜 왔기 때문에 외부 클라우드 서비스나 AI를 쓰기 어려웠다. 최근 금융당국이 이 규제를 단계적으로 완화하고 있다."
+    },
+    "plain": {
+      "ko": "회사 내부 전산망을 바깥 인터넷과 따로 떼어 해킹을 막는 방식이다."
+    },
+    "firstSeen": "2026-11-15",
     "count": 1
   }
 ];
