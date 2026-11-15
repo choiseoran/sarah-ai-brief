@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 204,
+    "count": 205,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -1272,7 +1272,7 @@ SAB.glossary = [
       "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
     },
     "firstSeen": "2026-11-01",
-    "count": 5
+    "count": 7
   },
   {
     "id": "credit-default-swap",
@@ -1426,7 +1426,7 @@ SAB.glossary = [
       "ko": "나라가 안보 때문에 특정 물건을 아무에게나 팔지 못하게 막는 제도."
     },
     "firstSeen": "2026-11-08",
-    "count": 2
+    "count": 3
   },
   {
     "id": "motion-retargeting",
@@ -1580,6 +1580,34 @@ SAB.glossary = [
       "ko": "회사 내부 전산망을 바깥 인터넷과 따로 떼어 해킹을 막는 방식이다."
     },
     "firstSeen": "2026-11-15",
+    "count": 1
+  },
+  {
+    "id": "test-socket",
+    "term": {
+      "ko": "테스트 소켓"
+    },
+    "definition": {
+      "ko": "완성된 반도체 칩을 검사 장비에 연결해 주는 부품이다. 칩을 꽂으면 장비가 전기 신호를 보내 칩이 제대로 동작하는지 확인할 수 있다. 불량 칩이 출하되지 않도록 거르는 마지막 단계에 쓰인다."
+    },
+    "plain": {
+      "ko": "반도체 칩을 검사 장비에 꽂아 제대로 작동하는지 확인하게 해 주는 연결 부품."
+    },
+    "firstSeen": "2026-11-16",
+    "count": 1
+  },
+  {
+    "id": "hbm",
+    "term": {
+      "ko": "고대역폭메모리(HBM)"
+    },
+    "definition": {
+      "ko": "D램 칩 여러 장을 수직으로 쌓고 촘촘히 연결해 한 번에 많은 데이터를 주고받도록 만든 메모리다. AI 연산 칩 바로 옆에 붙어 계산에 필요한 데이터를 빠르게 공급하는 역할을 한다. HBM4는 현재 양산·공급 중인 최신 세대다."
+    },
+    "plain": {
+      "ko": "메모리 칩을 여러 층으로 쌓아 AI 칩에 많은 데이터를 한꺼번에 빠르게 보내 주는 부품이다."
+    },
+    "firstSeen": "2026-11-16",
     "count": 1
   }
 ];
