@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 205,
+    "count": 209,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 30,
+    "count": 31,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -83,7 +83,7 @@ SAB.glossary = [
       "en": "The field — and the property — of getting a model to act in line with human intent and values. Treated as a separate problem from raw capability."
     },
     "firstSeen": "2026-09-01",
-    "count": 28,
+    "count": 29,
     "plain": {
       "ko": "AI가 사람의 의도와 가치에 맞게 행동하도록 만드는 일입니다."
     }
@@ -261,7 +261,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 13,
+    "count": 15,
     "plain": {
       "ko": "새 기술을 본격적으로 도입하기 전에 작은 규모로 가능한지 시험하는 단계입니다."
     }
@@ -698,7 +698,7 @@ SAB.glossary = [
       "ko": "현실 세계가 어떻게 움직일지 흉내 내어 미리 보여 주는 AI다."
     },
     "firstSeen": "2026-09-30",
-    "count": 5
+    "count": 6
   },
   {
     "id": "dna-synthesis-screening",
@@ -754,7 +754,7 @@ SAB.glossary = [
       "ko": "앱이 컴퓨터 안의 모든 파일과 기록을 읽을 수 있게 해 주는 권한이다."
     },
     "firstSeen": "2026-10-03",
-    "count": 2
+    "count": 3
   },
   {
     "id": "aipt",
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 7
+    "count": 8
   },
   {
     "id": "de-extinction",
@@ -992,7 +992,7 @@ SAB.glossary = [
       "ko": "한 분야의 개념과 그 관계를 정리해 둔 지도로, 컴퓨터가 흩어진 정보를 연결해 읽게 해 준다."
     },
     "firstSeen": "2026-10-19",
-    "count": 4
+    "count": 5
   },
   {
     "id": "orchestrator",
@@ -1426,7 +1426,7 @@ SAB.glossary = [
       "ko": "나라가 안보 때문에 특정 물건을 아무에게나 팔지 못하게 막는 제도."
     },
     "firstSeen": "2026-11-08",
-    "count": 3
+    "count": 4
   },
   {
     "id": "motion-retargeting",
@@ -1608,6 +1608,20 @@ SAB.glossary = [
       "ko": "메모리 칩을 여러 층으로 쌓아 AI 칩에 많은 데이터를 한꺼번에 빠르게 보내 주는 부품이다."
     },
     "firstSeen": "2026-11-16",
+    "count": 1
+  },
+  {
+    "id": "csam",
+    "term": {
+      "ko": "아동 성착취물(CSAM)"
+    },
+    "definition": {
+      "ko": "아동을 성적으로 학대하거나 착취하는 장면을 담은 이미지와 영상을 가리키는 말이다. 미국 정부는 실제 촬영물뿐 아니라 AI로 만든 것도 불법으로 본다. 플랫폼과 기업은 이를 발견하면 수사 기관이나 전담 신고센터에 알려야 한다."
+    },
+    "plain": {
+      "ko": "아이를 성적으로 학대하거나 착취하는 모습을 담은 불법 이미지나 영상이다."
+    },
+    "firstSeen": "2026-11-17",
     "count": 1
   }
 ];
