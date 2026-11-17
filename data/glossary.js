@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 209,
+    "count": 213,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 31,
+    "count": 32,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -415,7 +415,7 @@ SAB.glossary = [
       "ko": "제조업의 설계·생산·품질 관리 등 공정 전반에 AI를 적용해 산업 구조를 바꾸는 것을 말한다. 산업통상부가 Manufacturing AI Transformation의 약자로 M.AX라 부르며, 산업단지 단위로 실증 사업을 지정해 추진하고 있다."
     },
     "firstSeen": "2026-09-13",
-    "count": 3,
+    "count": 4,
     "plain": {
       "ko": "설계부터 생산과 품질 관리까지 제조 과정 전반에 AI를 적용하는 변화입니다."
     }
@@ -1216,7 +1216,7 @@ SAB.glossary = [
       "ko": "여러 작은 전문 모델 중 상황에 맞는 것만 골라 계산해 일을 줄이는 AI 설계 방식이다."
     },
     "firstSeen": "2026-10-29",
-    "count": 2
+    "count": 3
   },
   {
     "id": "backdoor",
@@ -1454,7 +1454,7 @@ SAB.glossary = [
       "ko": "일의 난이도와 비용에 맞춰 여러 AI 가운데 알맞은 것을 골라 쓰는 방식이다."
     },
     "firstSeen": "2026-11-09",
-    "count": 2
+    "count": 3
   },
   {
     "id": "ai-harness",
@@ -1538,7 +1538,7 @@ SAB.glossary = [
       "ko": "AI 도구가 바깥 데이터나 서비스에 붙을 때 쓰는 공통 연결 규칙이다."
     },
     "firstSeen": "2026-11-13",
-    "count": 1
+    "count": 3
   },
   {
     "id": "responsible-scaling-policy",
@@ -1622,6 +1622,20 @@ SAB.glossary = [
       "ko": "아이를 성적으로 학대하거나 착취하는 모습을 담은 불법 이미지나 영상이다."
     },
     "firstSeen": "2026-11-17",
+    "count": 1
+  },
+  {
+    "id": "deepfake",
+    "term": {
+      "ko": "딥페이크"
+    },
+    "definition": {
+      "ko": "인공지능으로 실제 사람의 얼굴이나 목소리를 합성해 그 사람이 하지 않은 말이나 행동을 진짜처럼 보이게 만든 영상·이미지·음성을 말한다. 장난이나 홍보에 쓰이기도 하지만 명예 훼손, 성적 이미지 유포, 선거 허위정보에 악용되는 일이 많아 표시 의무와 규제가 논의되고 있다."
+    },
+    "plain": {
+      "ko": "AI로 실제 사람이 하지 않은 말이나 행동을 진짜처럼 꾸며 만든 영상이나 사진이다."
+    },
+    "firstSeen": "2026-11-18",
     "count": 1
   }
 ];
