@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 213,
+    "count": 220,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 32,
+    "count": 33,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 32,
+    "count": 33,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 74,
+    "count": 78,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 13,
+    "count": 14,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -698,7 +698,7 @@ SAB.glossary = [
       "ko": "현실 세계가 어떻게 움직일지 흉내 내어 미리 보여 주는 AI다."
     },
     "firstSeen": "2026-09-30",
-    "count": 6
+    "count": 7
   },
   {
     "id": "dna-synthesis-screening",
@@ -1062,7 +1062,7 @@ SAB.glossary = [
       "ko": "회사가 이익만 좇지 않도록 이사 다수를 뽑을 권한을 가진 독립 감시 기구다."
     },
     "firstSeen": "2026-10-22",
-    "count": 2
+    "count": 3
   },
   {
     "id": "non-voting-stock",
@@ -1636,6 +1636,20 @@ SAB.glossary = [
       "ko": "AI로 실제 사람이 하지 않은 말이나 행동을 진짜처럼 꾸며 만든 영상이나 사진이다."
     },
     "firstSeen": "2026-11-18",
+    "count": 1
+  },
+  {
+    "id": "hyperparameter",
+    "term": {
+      "ko": "하이퍼파라미터"
+    },
+    "definition": {
+      "ko": "AI 모델을 학습시키기 전에 사람이 미리 정해 두는 설정값으로, 학습 속도나 모델 크기 같은 것이 여기에 속한다. 모델이 데이터에서 스스로 배우는 값과 달리 바깥에서 정해 줘야 하며, 어떤 값을 고르느냐에 따라 같은 모델도 성능이 크게 달라진다. 그래서 여러 값을 시험해 가장 좋은 조합을 찾는 탐색 작업에 많은 계산 자원이 든다."
+    },
+    "plain": {
+      "ko": "AI를 학습시키기 전에 사람이 정해 주는 설정값으로, 결과 성능을 크게 좌우한다."
+    },
+    "firstSeen": "2026-11-19",
     "count": 1
   }
 ];
