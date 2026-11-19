@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 220,
+    "count": 224,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -754,7 +754,7 @@ SAB.glossary = [
       "ko": "앱이 컴퓨터 안의 모든 파일과 기록을 읽을 수 있게 해 주는 권한이다."
     },
     "firstSeen": "2026-10-03",
-    "count": 3
+    "count": 4
   },
   {
     "id": "aipt",
@@ -978,7 +978,7 @@ SAB.glossary = [
       "ko": "돈을 벌면서도 사회에 이로운 목표를 함께 지키겠다고 법적으로 약속한 회사다."
     },
     "firstSeen": "2026-10-19",
-    "count": 6
+    "count": 7
   },
   {
     "id": "ontology",
@@ -1174,7 +1174,7 @@ SAB.glossary = [
       "ko": "회사가 주식시장에 처음 주식을 팔기 전에 내는, 회사 사정을 낱낱이 밝힌 신청서."
     },
     "firstSeen": "2026-10-27",
-    "count": 2
+    "count": 3
   },
   {
     "id": "purpose-limitation",
@@ -1272,7 +1272,7 @@ SAB.glossary = [
       "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
     },
     "firstSeen": "2026-11-01",
-    "count": 7
+    "count": 8
   },
   {
     "id": "credit-default-swap",
@@ -1650,6 +1650,20 @@ SAB.glossary = [
       "ko": "AI를 학습시키기 전에 사람이 정해 주는 설정값으로, 결과 성능을 크게 좌우한다."
     },
     "firstSeen": "2026-11-19",
+    "count": 1
+  },
+  {
+    "id": "pcie",
+    "term": {
+      "ko": "PCIe(주변장치 고속 연결 규격)"
+    },
+    "definition": {
+      "ko": "PCIe는 컴퓨터 안에서 프로세서와 저장장치, 네트워크 카드, GPU 같은 부품을 잇는 표준 데이터 통로 규격이다. 세대가 올라갈 때마다 같은 연결로 주고받을 수 있는 데이터 양이 늘어난다. AI 서버에서는 이 통로의 속도가 저장장치에서 GPU로 데이터를 보내는 속도를 좌우한다."
+    },
+    "plain": {
+      "ko": "컴퓨터 안에서 프로세서와 저장장치 사이에 데이터를 주고받는 통로 규격이다."
+    },
+    "firstSeen": "2026-11-20",
     "count": 1
   }
 ];
