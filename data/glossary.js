@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 224,
+    "count": 226,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 33,
+    "count": 34,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -99,7 +99,7 @@ SAB.glossary = [
       "en": "Deliberately attacking a model before release to surface harmful outputs and bypasses, run by internal teams or outside experts."
     },
     "firstSeen": "2026-09-01",
-    "count": 20,
+    "count": 21,
     "plain": {
       "ko": "문제를 미리 찾으려고 AI를 일부러 공격하거나 곤란한 질문을 하는 점검입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 78,
+    "count": 79,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 14,
+    "count": 15,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -1020,7 +1020,7 @@ SAB.glossary = [
       "ko": "AI 계산용 컴퓨터를 빌려주는 일을 전문으로 하는 신생 클라우드 회사다."
     },
     "firstSeen": "2026-10-20",
-    "count": 2
+    "count": 3
   },
   {
     "id": "dns",
@@ -1244,7 +1244,7 @@ SAB.glossary = [
       "ko": "구글이 AI 계산을 빠르게 하려고 직접 만든 전용 칩이다."
     },
     "firstSeen": "2026-10-31",
-    "count": 1
+    "count": 2
   },
   {
     "id": "vibe-coding",
@@ -1384,7 +1384,7 @@ SAB.glossary = [
       "ko": "나라가 외국 기술에 기대지 않고 직접 만들어 운영하는 AI를 말한다."
     },
     "firstSeen": "2026-11-06",
-    "count": 2
+    "count": 3
   },
   {
     "id": "decompilation",
@@ -1454,7 +1454,7 @@ SAB.glossary = [
       "ko": "일의 난이도와 비용에 맞춰 여러 AI 가운데 알맞은 것을 골라 쓰는 방식이다."
     },
     "firstSeen": "2026-11-09",
-    "count": 3
+    "count": 4
   },
   {
     "id": "ai-harness",
@@ -1664,6 +1664,20 @@ SAB.glossary = [
       "ko": "컴퓨터 안에서 프로세서와 저장장치 사이에 데이터를 주고받는 통로 규격이다."
     },
     "firstSeen": "2026-11-20",
+    "count": 1
+  },
+  {
+    "id": "review-bombing",
+    "term": {
+      "ko": "리뷰 폭탄"
+    },
+    "definition": {
+      "ko": "많은 이용자가 짧은 기간에 한 제품에 낮은 평점과 부정적인 리뷰를 몰아서 남기는 행동이다. 제품 품질 자체보다 개발사의 결정이나 논란에 항의하려고 벌어지는 경우가 많다. 스팀 같은 판매 장터에서는 전체 평가 등급이 크게 떨어진다."
+    },
+    "plain": {
+      "ko": "화난 이용자들이 한꺼번에 나쁜 평점을 남겨 항의하는 일."
+    },
+    "firstSeen": "2026-11-23",
     "count": 1
   }
 ];
