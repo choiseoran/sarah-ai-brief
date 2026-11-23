@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 226,
+    "count": 230,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 33,
+    "count": 34,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 79,
+    "count": 80,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -303,7 +303,7 @@ SAB.glossary = [
       "ko": "AI가 사람의 개입 없이 스스로 자신의 성능을 높이고, 그렇게 개선된 능력으로 다시 자신을 개선하는 과정을 뜻한다. 한 번 시작되면 개선 속도가 점점 빨라질 수 있어 통제 시점을 놓칠 위험이 안전 논의의 핵심 쟁점으로 꼽힌다."
     },
     "firstSeen": "2026-09-08",
-    "count": 15,
+    "count": 16,
     "plain": {
       "ko": "AI가 자신의 성능을 높이고, 개선된 능력으로 다시 자신을 개선하는 과정입니다."
     }
@@ -950,7 +950,7 @@ SAB.glossary = [
       "ko": "파일을 누가 만들었고 나중에 바뀌지 않았는지 확인해 주는 전자 도장이다."
     },
     "firstSeen": "2026-10-18",
-    "count": 2
+    "count": 3
   },
   {
     "id": "operational-technology",
@@ -1426,7 +1426,7 @@ SAB.glossary = [
       "ko": "나라가 안보 때문에 특정 물건을 아무에게나 팔지 못하게 막는 제도."
     },
     "firstSeen": "2026-11-08",
-    "count": 4
+    "count": 5
   },
   {
     "id": "motion-retargeting",
@@ -1678,6 +1678,20 @@ SAB.glossary = [
       "ko": "화난 이용자들이 한꺼번에 나쁜 평점을 남겨 항의하는 일."
     },
     "firstSeen": "2026-11-23",
+    "count": 1
+  },
+  {
+    "id": "pull-request",
+    "term": {
+      "ko": "풀 리퀘스트(PR)"
+    },
+    "definition": {
+      "ko": "개발자가 고친 코드를 공용 코드 저장소에 합쳐 달라고 요청하는 절차다. 다른 팀원이 변경 내용을 살펴보고 의견을 달거나 승인한 뒤에 실제로 합쳐진다. GitHub 같은 코드 협업 서비스에서 널리 쓰인다."
+    },
+    "plain": {
+      "ko": "내가 고친 코드를 팀 전체 코드에 합쳐도 되는지 동료에게 검토를 부탁하는 요청이다."
+    },
+    "firstSeen": "2026-11-24",
     "count": 1
   }
 ];
