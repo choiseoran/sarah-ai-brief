@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 230,
+    "count": 234,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 34,
+    "count": 35,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -147,7 +147,7 @@ SAB.glossary = [
       "en": "A mode of operation in which an AI provider processes a request and then discards the input and output instead of storing them. Regulated industries often require it by contract, because records held by an outside vendor can themselves create compliance exposure. The trade-off is that misuse spread across many sessions becomes hard to detect once nothing is kept to compare against."
     },
     "firstSeen": "2026-09-02",
-    "count": 2,
+    "count": 3,
     "plain": {
       "ko": "AI 서비스가 요청을 처리한 뒤 입력과 답변을 저장하지 않는 운영 방식입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 80,
+    "count": 81,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -233,7 +233,7 @@ SAB.glossary = [
       "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
     },
     "firstSeen": "2026-09-05",
-    "count": 7,
+    "count": 8,
     "plain": {
       "ko": "AI가 답하기 전에 관련 문서를 찾아보고 그 내용을 바탕으로 답하는 방식입니다."
     }
@@ -401,7 +401,7 @@ SAB.glossary = [
       "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
     },
     "firstSeen": "2026-09-12",
-    "count": 7,
+    "count": 8,
     "plain": {
       "ko": "AI가 사실이 아닌 내용이나 없는 출처를 그럴듯하게 만들어 답하는 현상입니다."
     }
@@ -471,7 +471,7 @@ SAB.glossary = [
       "ko": "AI 가 대량으로 생성해 인터넷에 뿌리는 저품질 콘텐츠를 가리키는 속어다. 사람이 검토하지 않고 자동으로 만들어져 정보 가치가 낮고 양만 많다는 뜻에서 '찌꺼기'라는 이름이 붙었다. 검색 결과, 소셜미디어, 이메일을 채워 진짜 정보를 찾기 어렵게 만드는 문제로 지적된다."
     },
     "firstSeen": "2026-09-15",
-    "count": 7,
+    "count": 11,
     "plain": {
       "ko": "AI로 대량 생산한, 정보 가치가 낮은 글이나 이미지 같은 콘텐츠를 뜻합니다."
     }
@@ -1384,7 +1384,7 @@ SAB.glossary = [
       "ko": "나라가 외국 기술에 기대지 않고 직접 만들어 운영하는 AI를 말한다."
     },
     "firstSeen": "2026-11-06",
-    "count": 3
+    "count": 4
   },
   {
     "id": "decompilation",
@@ -1496,7 +1496,7 @@ SAB.glossary = [
       "ko": "보낸 사람과 받는 사람만 내용을 볼 수 있고 서비스 회사도 못 보게 잠그는 방식."
     },
     "firstSeen": "2026-11-11",
-    "count": 1
+    "count": 2
   },
   {
     "id": "gpu-kernel",
@@ -1636,7 +1636,7 @@ SAB.glossary = [
       "ko": "AI로 실제 사람이 하지 않은 말이나 행동을 진짜처럼 꾸며 만든 영상이나 사진이다."
     },
     "firstSeen": "2026-11-18",
-    "count": 1
+    "count": 2
   },
   {
     "id": "hyperparameter",
@@ -1692,6 +1692,20 @@ SAB.glossary = [
       "ko": "내가 고친 코드를 팀 전체 코드에 합쳐도 되는지 동료에게 검토를 부탁하는 요청이다."
     },
     "firstSeen": "2026-11-24",
+    "count": 1
+  },
+  {
+    "id": "minibinder",
+    "term": {
+      "ko": "미니바인더"
+    },
+    "definition": {
+      "ko": "특정 표적 단백질에 달라붙도록 설계한 아주 작은 단백질이다. 표적의 특정 지점에 결합해 그 단백질의 기능을 막거나 표시하는 데 쓰인다. 크기가 작아 설계와 제작이 비교적 쉬워 신약·진단 후보를 빠르게 시험하는 데 활용된다."
+    },
+    "plain": {
+      "ko": "특정 단백질에 달라붙게 만든 아주 작은 단백질."
+    },
+    "firstSeen": "2026-11-25",
     "count": 1
   }
 ];
