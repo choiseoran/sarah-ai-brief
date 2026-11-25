@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 234,
+    "count": 238,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -35,7 +35,7 @@ SAB.glossary = [
       "en": "The unit a model chops text into — roughly three-quarters of an English word. API pricing and length limits are both counted in tokens."
     },
     "firstSeen": "2026-09-01",
-    "count": 34,
+    "count": 35,
     "plain": {
       "ko": "AI가 글을 읽고 만들 때 나눠 처리하는 작은 글 조각입니다."
     }
@@ -67,7 +67,7 @@ SAB.glossary = [
       "en": "A fixed problem set used to measure model capability. Scores inflate once the questions leak into training data, which is pushing the field toward held-out, private sets."
     },
     "firstSeen": "2026-09-01",
-    "count": 35,
+    "count": 36,
     "plain": {
       "ko": "정해진 문제로 AI의 실력을 비교하는 시험입니다."
     }
@@ -261,7 +261,7 @@ SAB.glossary = [
       "ko": "새 기술을 본격 도입하기 전에 작은 범위에서 실제로 작동하는지 시험해 보는 단계다. 성공해도 전사 확산으로 이어지지 않고 시범사업에 머무는 경우가 많아, 이 지점에 갇히는 현상을 '파일럿의 벽'이라 부른다."
     },
     "firstSeen": "2026-09-06",
-    "count": 15,
+    "count": 16,
     "plain": {
       "ko": "새 기술을 본격적으로 도입하기 전에 작은 규모로 가능한지 시험하는 단계입니다."
     }
@@ -401,7 +401,7 @@ SAB.glossary = [
       "ko": "AI 언어 모델이 실제로는 존재하지 않는 사실, 인용, 출처를 그럴듯하게 만들어 내는 현상이다. 모델은 정답을 찾는 것이 아니라 확률적으로 자연스러운 문장을 생성하기 때문에, 자신 있게 틀린 내용을 내놓을 수 있다. 법률·의료처럼 정확성이 중요한 분야에서는 사람이 원자료와 대조해 검증해야 한다."
     },
     "firstSeen": "2026-09-12",
-    "count": 8,
+    "count": 9,
     "plain": {
       "ko": "AI가 사실이 아닌 내용이나 없는 출처를 그럴듯하게 만들어 답하는 현상입니다."
     }
@@ -471,7 +471,7 @@ SAB.glossary = [
       "ko": "AI 가 대량으로 생성해 인터넷에 뿌리는 저품질 콘텐츠를 가리키는 속어다. 사람이 검토하지 않고 자동으로 만들어져 정보 가치가 낮고 양만 많다는 뜻에서 '찌꺼기'라는 이름이 붙었다. 검색 결과, 소셜미디어, 이메일을 채워 진짜 정보를 찾기 어렵게 만드는 문제로 지적된다."
     },
     "firstSeen": "2026-09-15",
-    "count": 11,
+    "count": 12,
     "plain": {
       "ko": "AI로 대량 생산한, 정보 가치가 낮은 글이나 이미지 같은 콘텐츠를 뜻합니다."
     }
@@ -656,7 +656,7 @@ SAB.glossary = [
       "ko": "정부가 쓰는 제품이 제대로 작동하지 않게 될 위험으로, 지정되면 정부 거래에서 빠진다."
     },
     "firstSeen": "2026-09-26",
-    "count": 4
+    "count": 5
   },
   {
     "id": "webmcp",
@@ -1020,7 +1020,7 @@ SAB.glossary = [
       "ko": "AI 계산용 컴퓨터를 빌려주는 일을 전문으로 하는 신생 클라우드 회사다."
     },
     "firstSeen": "2026-10-20",
-    "count": 3
+    "count": 4
   },
   {
     "id": "dns",
@@ -1202,7 +1202,7 @@ SAB.glossary = [
       "ko": "AI가 읽는 글 속에 몰래 숨긴 명령으로 AI를 속여 엉뚱하게 움직이게 하는 공격이다."
     },
     "firstSeen": "2026-10-29",
-    "count": 1
+    "count": 2
   },
   {
     "id": "mixture-of-experts",
@@ -1412,7 +1412,7 @@ SAB.glossary = [
       "ko": "AI를 만들고 돌리는 컴퓨터와 전력 설비를 공장처럼 대규모로 모아 둔 시설."
     },
     "firstSeen": "2026-11-07",
-    "count": 1
+    "count": 2
   },
   {
     "id": "export-control",
@@ -1538,7 +1538,7 @@ SAB.glossary = [
       "ko": "AI 도구가 바깥 데이터나 서비스에 붙을 때 쓰는 공통 연결 규칙이다."
     },
     "firstSeen": "2026-11-13",
-    "count": 3
+    "count": 4
   },
   {
     "id": "responsible-scaling-policy",
@@ -1706,6 +1706,20 @@ SAB.glossary = [
       "ko": "특정 단백질에 달라붙게 만든 아주 작은 단백질."
     },
     "firstSeen": "2026-11-25",
+    "count": 1
+  },
+  {
+    "id": "liquid-cooling",
+    "term": {
+      "ko": "액체 냉각(수냉)"
+    },
+    "definition": {
+      "ko": "서버에서 나는 열을 공기 대신 물 같은 액체를 흘려 식히는 방식이다. 액체는 공기보다 열을 훨씬 많이 옮길 수 있어, 전력을 많이 쓰는 AI 서버를 촘촘하게 놓을 때 쓰인다. 기존 공기 냉각 시설과는 배관 등 설비가 달라 전환에 투자가 필요하다."
+    },
+    "plain": {
+      "ko": "서버의 열을 바람 대신 액체를 흘려 식히는 방식이다."
+    },
+    "firstSeen": "2026-11-26",
     "count": 1
   }
 ];
