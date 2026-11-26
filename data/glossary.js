@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 238,
+    "count": 239,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -233,7 +233,7 @@ SAB.glossary = [
       "ko": "언어 모델이 답을 만들기 전에 외부 데이터베이스나 문서를 먼저 찾아보고, 거기서 얻은 내용을 근거로 답하게 하는 방식이다. 모델이 학습하지 않은 최신 정보나 사내 자료를 다룰 수 있게 해 주지만, 질의마다 대규모 데이터를 실시간으로 읽어야 해서 저장장치와 메모리에 부담이 크다."
     },
     "firstSeen": "2026-09-05",
-    "count": 8,
+    "count": 9,
     "plain": {
       "ko": "AI가 답하기 전에 관련 문서를 찾아보고 그 내용을 바탕으로 답하는 방식입니다."
     }
@@ -642,7 +642,7 @@ SAB.glossary = [
       "ko": "AI 계산을 빠르고 전기를 적게 쓰며 처리하도록 PC나 휴대폰에 넣는 전용 칩이다."
     },
     "firstSeen": "2026-09-26",
-    "count": 5
+    "count": 6
   },
   {
     "id": "supply-chain-risk",
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 8
+    "count": 9
   },
   {
     "id": "de-extinction",
@@ -1006,7 +1006,7 @@ SAB.glossary = [
       "ko": "여러 AI에게 일을 나눠 주고 순서를 정하는 지휘 역할의 프로그램."
     },
     "firstSeen": "2026-10-20",
-    "count": 3
+    "count": 4
   },
   {
     "id": "neocloud",
@@ -1104,7 +1104,7 @@ SAB.glossary = [
       "ko": "AI가 앞서 읽은 내용을 다시 계산하지 않으려고 따로 적어 두는 임시 메모장이다."
     },
     "firstSeen": "2026-10-23",
-    "count": 1
+    "count": 2
   },
   {
     "id": "speech-to-speech-model",
@@ -1412,7 +1412,7 @@ SAB.glossary = [
       "ko": "AI를 만들고 돌리는 컴퓨터와 전력 설비를 공장처럼 대규모로 모아 둔 시설."
     },
     "firstSeen": "2026-11-07",
-    "count": 2
+    "count": 3
   },
   {
     "id": "export-control",
@@ -1636,7 +1636,7 @@ SAB.glossary = [
       "ko": "AI로 실제 사람이 하지 않은 말이나 행동을 진짜처럼 꾸며 만든 영상이나 사진이다."
     },
     "firstSeen": "2026-11-18",
-    "count": 2
+    "count": 3
   },
   {
     "id": "hyperparameter",
@@ -1720,6 +1720,20 @@ SAB.glossary = [
       "ko": "서버의 열을 바람 대신 액체를 흘려 식히는 방식이다."
     },
     "firstSeen": "2026-11-26",
+    "count": 2
+  },
+  {
+    "id": "voiceprint",
+    "term": {
+      "ko": "성문정보"
+    },
+    "definition": {
+      "ko": "사람마다 다른 목소리의 고유한 특징을 담은 정보다. 지문처럼 특정인을 알아보는 데 쓰여 생체정보로 보호된다. 이 기사에서는 범죄자 목소리를 알아내는 AI에 쓰였다."
+    },
+    "plain": {
+      "ko": "지문처럼 사람마다 다른 목소리의 고유한 특징 정보."
+    },
+    "firstSeen": "2026-11-27",
     "count": 1
   }
 ];
