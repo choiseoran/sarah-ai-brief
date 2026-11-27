@@ -19,7 +19,7 @@ SAB.glossary = [
       "en": "A program that calls tools, reads the results, and decides its next step without a human directing each move — unlike a chatbot, which answers once per question."
     },
     "firstSeen": "2026-09-01",
-    "count": 239,
+    "count": 242,
     "plain": {
       "ko": "목표를 주면 필요한 도구를 쓰며 여러 단계의 일을 수행하는 AI입니다."
     }
@@ -163,7 +163,7 @@ SAB.glossary = [
       "en": "A term for the most advanced large-scale AI models at the current state of the art. Because their capabilities are broad, regulators treat them as a separate category subject to extra review, on the view that they carry national-security-relevant risks such as cyberattack or weapons development."
     },
     "firstSeen": "2026-09-03",
-    "count": 81,
+    "count": 82,
     "plain": {
       "ko": "현재 가장 앞선 수준의 성능을 가진 AI를 가리키는 말입니다."
     }
@@ -866,7 +866,7 @@ SAB.glossary = [
       "ko": "외부와 차단된 안전한 공간에서 프로그램을 미리 시험해 보는 환경이다."
     },
     "firstSeen": "2026-10-15",
-    "count": 9
+    "count": 10
   },
   {
     "id": "de-extinction",
@@ -1258,7 +1258,7 @@ SAB.glossary = [
       "ko": "AI에게 원하는 기능을 말로 설명해 프로그램을 대신 만들게 하는 방식."
     },
     "firstSeen": "2026-11-01",
-    "count": 4
+    "count": 5
   },
   {
     "id": "ai-transformation",
@@ -1272,7 +1272,7 @@ SAB.glossary = [
       "ko": "회사 업무 전반에 AI를 들여 일하는 방식을 바꾸는 일이다."
     },
     "firstSeen": "2026-11-01",
-    "count": 8
+    "count": 10
   },
   {
     "id": "credit-default-swap",
@@ -1384,7 +1384,7 @@ SAB.glossary = [
       "ko": "나라가 외국 기술에 기대지 않고 직접 만들어 운영하는 AI를 말한다."
     },
     "firstSeen": "2026-11-06",
-    "count": 4
+    "count": 5
   },
   {
     "id": "decompilation",
@@ -1734,6 +1734,20 @@ SAB.glossary = [
       "ko": "지문처럼 사람마다 다른 목소리의 고유한 특징 정보."
     },
     "firstSeen": "2026-11-27",
+    "count": 1
+  },
+  {
+    "id": "physical-ai",
+    "term": {
+      "ko": "피지컬 AI"
+    },
+    "definition": {
+      "ko": "화면 속에서만 답을 내는 것이 아니라 로봇이나 기계에 들어가 현실 세계에서 직접 움직이고 물건을 다루는 인공지능을 말한다. 실제 공간에서 작동하므로 잘못 움직이면 사람이 다치거나 물건이 부서질 수 있다."
+    },
+    "plain": {
+      "ko": "로봇 같은 기계에 들어가 현실에서 직접 몸을 움직이는 인공지능."
+    },
+    "firstSeen": "2026-11-28",
     "count": 1
   }
 ];
